@@ -1,0 +1,6787 @@
+{
+ "n_questions": 150,
+ "n_chunks": 41525,
+ "n_filings": 84,
+ "ks": [
+  1,
+  3,
+  5,
+  10
+ ],
+ "single": {
+  "bm25": {
+   "recall@1": {
+    "mean": 0.16666666666666666,
+    "lo": 0.10666666666666667,
+    "hi": 0.22666666666666666
+   },
+   "recall@3": {
+    "mean": 0.30666666666666664,
+    "lo": 0.23333333333333334,
+    "hi": 0.38
+   },
+   "recall@5": {
+    "mean": 0.3466666666666667,
+    "lo": 0.2733333333333333,
+    "hi": 0.4266666666666667
+   },
+   "recall@10": {
+    "mean": 0.47333333333333333,
+    "lo": 0.3933333333333333,
+    "hi": 0.5533333333333333
+   },
+   "mrr": {
+    "mean": 0.2688159596039101,
+    "lo": 0.2114301561508668,
+    "hi": 0.328308319867644
+   }
+  },
+  "dense": {
+   "recall@1": {
+    "mean": 0.3333333333333333,
+    "lo": 0.26,
+    "hi": 0.4066666666666667
+   },
+   "recall@3": {
+    "mean": 0.48,
+    "lo": 0.4066666666666667,
+    "hi": 0.56
+   },
+   "recall@5": {
+    "mean": 0.54,
+    "lo": 0.4666666666666667,
+    "hi": 0.62
+   },
+   "recall@10": {
+    "mean": 0.6533333333333333,
+    "lo": 0.5798333333333333,
+    "hi": 0.7266666666666667
+   },
+   "mrr": {
+    "mean": 0.43909107277267573,
+    "lo": 0.37637241644487135,
+    "hi": 0.5048009635669594
+   }
+  },
+  "hybrid": {
+   "recall@1": {
+    "mean": 0.26,
+    "lo": 0.19333333333333333,
+    "hi": 0.3333333333333333
+   },
+   "recall@3": {
+    "mean": 0.47333333333333333,
+    "lo": 0.3933333333333333,
+    "hi": 0.5533333333333333
+   },
+   "recall@5": {
+    "mean": 0.5266666666666666,
+    "lo": 0.44,
+    "hi": 0.6066666666666667
+   },
+   "recall@10": {
+    "mean": 0.6666666666666666,
+    "lo": 0.5866666666666667,
+    "hi": 0.74
+   },
+   "mrr": {
+    "mean": 0.39781140903413453,
+    "lo": 0.3371270808987125,
+    "hi": 0.46131895182365346
+   }
+  }
+ },
+ "single_diff": {
+  "hybrid - bm25": {
+   "recall@1": {
+    "diff": 0.09333333333333335,
+    "lo": 0.026666666666666672,
+    "hi": 0.16
+   },
+   "recall@3": {
+    "diff": 0.16666666666666669,
+    "lo": 0.08666666666666667,
+    "hi": 0.24666666666666667
+   },
+   "recall@5": {
+    "diff": 0.17999999999999994,
+    "lo": 0.09999999999999998,
+    "hi": 0.2666666666666666
+   },
+   "recall@10": {
+    "diff": 0.1933333333333333,
+    "lo": 0.12000000000000005,
+    "hi": 0.2666666666666667
+   },
+   "mrr": {
+    "diff": 0.12899544943022445,
+    "lo": 0.07911539950246531,
+    "hi": 0.17991830633512174
+   }
+  },
+  "dense - bm25": {
+   "recall@1": {
+    "diff": 0.16666666666666666,
+    "lo": 0.08666666666666667,
+    "hi": 0.24666666666666667
+   },
+   "recall@3": {
+    "diff": 0.17333333333333334,
+    "lo": 0.08666666666666667,
+    "hi": 0.2666666666666666
+   },
+   "recall@5": {
+    "diff": 0.19333333333333336,
+    "lo": 0.09999999999999998,
+    "hi": 0.29333333333333333
+   },
+   "recall@10": {
+    "diff": 0.18,
+    "lo": 0.08666666666666667,
+    "hi": 0.27333333333333326
+   },
+   "mrr": {
+    "diff": 0.17027511316876565,
+    "lo": 0.10295162502527555,
+    "hi": 0.24168793318815207
+   }
+  }
+ },
+ "random": {
+  "recall@1": 0.02013805470496406,
+  "recall@3": 0.05498118618507686,
+  "recall@5": 0.08435738899876316,
+  "recall@10": 0.1424500432774327
+ },
+ "multi_page": {
+  "bm25": {
+   "n": 35,
+   "all_gold@1": {
+    "mean": 0.0,
+    "lo": 0.0,
+    "hi": 0.0
+   },
+   "all_gold@3": {
+    "mean": 0.0,
+    "lo": 0.0,
+    "hi": 0.0
+   },
+   "all_gold@5": {
+    "mean": 0.0,
+    "lo": 0.0,
+    "hi": 0.0
+   },
+   "all_gold@10": {
+    "mean": 0.0,
+    "lo": 0.0,
+    "hi": 0.0
+   }
+  },
+  "dense": {
+   "n": 35,
+   "all_gold@1": {
+    "mean": 0.0,
+    "lo": 0.0,
+    "hi": 0.0
+   },
+   "all_gold@3": {
+    "mean": 0.2,
+    "lo": 0.08571428571428572,
+    "hi": 0.34285714285714286
+   },
+   "all_gold@5": {
+    "mean": 0.22857142857142856,
+    "lo": 0.11428571428571428,
+    "hi": 0.37142857142857144
+   },
+   "all_gold@10": {
+    "mean": 0.34285714285714286,
+    "lo": 0.2,
+    "hi": 0.5142857142857142
+   }
+  },
+  "hybrid": {
+   "n": 35,
+   "all_gold@1": {
+    "mean": 0.0,
+    "lo": 0.0,
+    "hi": 0.0
+   },
+   "all_gold@3": {
+    "mean": 0.02857142857142857,
+    "lo": 0.0,
+    "hi": 0.08571428571428572
+   },
+   "all_gold@5": {
+    "mean": 0.05714285714285714,
+    "lo": 0.0,
+    "hi": 0.14285714285714285
+   },
+   "all_gold@10": {
+    "mean": 0.17142857142857143,
+    "lo": 0.05714285714285714,
+    "hi": 0.3142857142857143
+   }
+  }
+ },
+ "by_qtype": {
+  "domain-relevant": {
+   "bm25": {
+    "n": 50,
+    "recall@5": {
+     "mean": 0.26,
+     "lo": 0.14,
+     "hi": 0.38
+    },
+    "mrr": {
+     "mean": 0.20507084388999836,
+     "lo": 0.1260663320043485,
+     "hi": 0.3059003656798808
+    }
+   },
+   "dense": {
+    "n": 50,
+    "recall@5": {
+     "mean": 0.32,
+     "lo": 0.2,
+     "hi": 0.44
+    },
+    "mrr": {
+     "mean": 0.245578829378016,
+     "lo": 0.16032246075326226,
+     "hi": 0.344650147027777
+    }
+   },
+   "hybrid": {
+    "n": 50,
+    "recall@5": {
+     "mean": 0.36,
+     "lo": 0.24,
+     "hi": 0.48
+    },
+    "mrr": {
+     "mean": 0.250004609213045,
+     "lo": 0.16268638692477538,
+     "hi": 0.35213837202002096
+    }
+   }
+  },
+  "metrics-generated": {
+   "bm25": {
+    "n": 50,
+    "recall@5": {
+     "mean": 0.18,
+     "lo": 0.08,
+     "hi": 0.3
+    },
+    "mrr": {
+     "mean": 0.15525597198778399,
+     "lo": 0.09693052261249506,
+     "hi": 0.22973902302908064
+    }
+   },
+   "dense": {
+    "n": 50,
+    "recall@5": {
+     "mean": 0.76,
+     "lo": 0.64,
+     "hi": 0.88
+    },
+    "mrr": {
+     "mean": 0.5894739833012144,
+     "lo": 0.478941517035596,
+     "hi": 0.6978088106115851
+    }
+   },
+   "hybrid": {
+    "n": 50,
+    "recall@5": {
+     "mean": 0.7,
+     "lo": 0.58,
+     "hi": 0.82
+    },
+    "mrr": {
+     "mean": 0.4669160533965116,
+     "lo": 0.3719742442414412,
+     "hi": 0.5666939419494798
+    }
+   }
+  },
+  "novel-generated": {
+   "bm25": {
+    "n": 50,
+    "recall@5": {
+     "mean": 0.6,
+     "lo": 0.46,
+     "hi": 0.74
+    },
+    "mrr": {
+     "mean": 0.4461210629339479,
+     "lo": 0.3354928648078835,
+     "hi": 0.565410722018018
+    }
+   },
+   "dense": {
+    "n": 50,
+    "recall@5": {
+     "mean": 0.54,
+     "lo": 0.4,
+     "hi": 0.68
+    },
+    "mrr": {
+     "mean": 0.48222040563879665,
+     "lo": 0.3662071533847434,
+     "hi": 0.6070784131988533
+    }
+   },
+   "hybrid": {
+    "n": 50,
+    "recall@5": {
+     "mean": 0.52,
+     "lo": 0.38,
+     "hi": 0.66
+    },
+    "mrr": {
+     "mean": 0.47651356449284704,
+     "lo": 0.3604898458468528,
+     "hi": 0.601922307543633
+    }
+   }
+  }
+ },
+ "shared": {
+  "bm25": {
+   "doc@1": {
+    "mean": 0.28,
+    "lo": 0.21333333333333335,
+    "hi": 0.35333333333333333
+   },
+   "doc@3": {
+    "mean": 0.4533333333333333,
+    "lo": 0.37333333333333335,
+    "hi": 0.5266666666666666
+   },
+   "doc@5": {
+    "mean": 0.5533333333333333,
+    "lo": 0.47333333333333333,
+    "hi": 0.6333333333333333
+   },
+   "doc@10": {
+    "mean": 0.6866666666666666,
+    "lo": 0.6133333333333333,
+    "hi": 0.76
+   },
+   "company@1": {
+    "mean": 0.4666666666666667,
+    "lo": 0.38666666666666666,
+    "hi": 0.54
+   },
+   "company@3": {
+    "mean": 0.5933333333333334,
+    "lo": 0.5133333333333333,
+    "hi": 0.6666666666666666
+   },
+   "company@5": {
+    "mean": 0.6866666666666666,
+    "lo": 0.6066666666666667,
+    "hi": 0.76
+   },
+   "company@10": {
+    "mean": 0.7733333333333333,
+    "lo": 0.7066666666666667,
+    "hi": 0.84
+   },
+   "page@1": {
+    "mean": 0.08,
+    "lo": 0.04,
+    "hi": 0.12666666666666668
+   },
+   "page@3": {
+    "mean": 0.13333333333333333,
+    "lo": 0.08,
+    "hi": 0.19333333333333333
+   },
+   "page@5": {
+    "mean": 0.15333333333333332,
+    "lo": 0.09983333333333334,
+    "hi": 0.21333333333333335
+   },
+   "page@10": {
+    "mean": 0.18666666666666668,
+    "lo": 0.12666666666666668,
+    "hi": 0.25333333333333335
+   }
+  },
+  "dense": {
+   "doc@1": {
+    "mean": 0.44666666666666666,
+    "lo": 0.37333333333333335,
+    "hi": 0.5266666666666666
+   },
+   "doc@3": {
+    "mean": 0.6933333333333334,
+    "lo": 0.62,
+    "hi": 0.7666666666666667
+   },
+   "doc@5": {
+    "mean": 0.8,
+    "lo": 0.74,
+    "hi": 0.86
+   },
+   "doc@10": {
+    "mean": 0.8933333333333333,
+    "lo": 0.8466666666666667,
+    "hi": 0.94
+   },
+   "company@1": {
+    "mean": 0.82,
+    "lo": 0.7533333333333333,
+    "hi": 0.88
+   },
+   "company@3": {
+    "mean": 0.9,
+    "lo": 0.8466666666666667,
+    "hi": 0.9466666666666667
+   },
+   "company@5": {
+    "mean": 0.94,
+    "lo": 0.9,
+    "hi": 0.9733333333333334
+   },
+   "company@10": {
+    "mean": 0.9733333333333334,
+    "lo": 0.9466666666666667,
+    "hi": 0.9933333333333333
+   },
+   "page@1": {
+    "mean": 0.16,
+    "lo": 0.1,
+    "hi": 0.22
+   },
+   "page@3": {
+    "mean": 0.30666666666666664,
+    "lo": 0.24,
+    "hi": 0.38
+   },
+   "page@5": {
+    "mean": 0.36666666666666664,
+    "lo": 0.29333333333333333,
+    "hi": 0.44
+   },
+   "page@10": {
+    "mean": 0.4666666666666667,
+    "lo": 0.38666666666666666,
+    "hi": 0.5466666666666666
+   }
+  },
+  "hybrid": {
+   "doc@1": {
+    "mean": 0.42,
+    "lo": 0.34,
+    "hi": 0.5066666666666667
+   },
+   "doc@3": {
+    "mean": 0.64,
+    "lo": 0.5666666666666667,
+    "hi": 0.72
+   },
+   "doc@5": {
+    "mean": 0.7533333333333333,
+    "lo": 0.6866666666666666,
+    "hi": 0.82
+   },
+   "doc@10": {
+    "mean": 0.8333333333333334,
+    "lo": 0.7733333333333333,
+    "hi": 0.8933333333333333
+   },
+   "company@1": {
+    "mean": 0.7133333333333334,
+    "lo": 0.64,
+    "hi": 0.7866666666666666
+   },
+   "company@3": {
+    "mean": 0.78,
+    "lo": 0.7133333333333334,
+    "hi": 0.8401666666666657
+   },
+   "company@5": {
+    "mean": 0.8133333333333334,
+    "lo": 0.7533333333333333,
+    "hi": 0.8733333333333333
+   },
+   "company@10": {
+    "mean": 0.8866666666666667,
+    "lo": 0.8333333333333334,
+    "hi": 0.9333333333333333
+   },
+   "page@1": {
+    "mean": 0.14666666666666667,
+    "lo": 0.09333333333333334,
+    "hi": 0.20666666666666667
+   },
+   "page@3": {
+    "mean": 0.18,
+    "lo": 0.12,
+    "hi": 0.24666666666666667
+   },
+   "page@5": {
+    "mean": 0.24,
+    "lo": 0.17333333333333334,
+    "hi": 0.3068333333333324
+   },
+   "page@10": {
+    "mean": 0.31333333333333335,
+    "lo": 0.24,
+    "hi": 0.38666666666666666
+   }
+  }
+ },
+ "shared_diff": {
+  "hybrid - bm25": {
+   "page@1": {
+    "diff": 0.06666666666666667,
+    "lo": 0.026666666666666658,
+    "hi": 0.11333333333333334
+   },
+   "page@3": {
+    "diff": 0.04666666666666666,
+    "lo": 0.013333333333333322,
+    "hi": 0.08666666666666667
+   },
+   "page@5": {
+    "diff": 0.08666666666666667,
+    "lo": 0.03999999999999998,
+    "hi": 0.14
+   },
+   "page@10": {
+    "diff": 0.12666666666666668,
+    "lo": 0.0733333333333333,
+    "hi": 0.18666666666666668
+   }
+  },
+  "dense - bm25": {
+   "page@1": {
+    "diff": 0.08,
+    "lo": 0.020000000000000004,
+    "hi": 0.13349999999999912
+   },
+   "page@3": {
+    "diff": 0.1733333333333333,
+    "lo": 0.10000000000000003,
+    "hi": 0.24666666666666665
+   },
+   "page@5": {
+    "diff": 0.21333333333333332,
+    "lo": 0.14666666666666667,
+    "hi": 0.2866666666666666
+   },
+   "page@10": {
+    "diff": 0.28,
+    "lo": 0.20666666666666667,
+    "hi": 0.36
+   }
+  }
+ },
+ "curves": {
+  "k": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13,
+   14,
+   15,
+   16,
+   17,
+   18,
+   19,
+   20
+  ],
+  "single": {
+   "bm25": [
+    0.16666666666666666,
+    0.24666666666666667,
+    0.30666666666666664,
+    0.3333333333333333,
+    0.3466666666666667,
+    0.36666666666666664,
+    0.37333333333333335,
+    0.3933333333333333,
+    0.42,
+    0.47333333333333333,
+    0.5,
+    0.5266666666666666,
+    0.5533333333333333,
+    0.5733333333333334,
+    0.5866666666666667,
+    0.6,
+    0.62,
+    0.6266666666666667,
+    0.6266666666666667,
+    0.6266666666666667
+   ],
+   "dense": [
+    0.3333333333333333,
+    0.4266666666666667,
+    0.48,
+    0.5,
+    0.54,
+    0.5866666666666667,
+    0.6066666666666667,
+    0.6133333333333333,
+    0.6333333333333333,
+    0.6533333333333333,
+    0.6533333333333333,
+    0.6933333333333334,
+    0.7133333333333334,
+    0.72,
+    0.72,
+    0.7333333333333333,
+    0.7333333333333333,
+    0.74,
+    0.7533333333333333,
+    0.7533333333333333
+   ],
+   "hybrid": [
+    0.26,
+    0.4066666666666667,
+    0.47333333333333333,
+    0.52,
+    0.5266666666666666,
+    0.5466666666666666,
+    0.5933333333333334,
+    0.6066666666666667,
+    0.6533333333333333,
+    0.6666666666666666,
+    0.6733333333333333,
+    0.68,
+    0.6866666666666666,
+    0.7066666666666667,
+    0.7133333333333334,
+    0.72,
+    0.74,
+    0.76,
+    0.76,
+    0.7733333333333333
+   ]
+  },
+  "shared": {
+   "bm25": [
+    0.08,
+    0.10666666666666667,
+    0.13333333333333333,
+    0.13333333333333333,
+    0.15333333333333332,
+    0.15333333333333332,
+    0.15333333333333332,
+    0.15333333333333332,
+    0.18,
+    0.18666666666666668,
+    0.19333333333333333,
+    0.20666666666666667,
+    0.21333333333333335,
+    0.21333333333333335,
+    0.22,
+    0.22,
+    0.22,
+    0.22666666666666666,
+    0.22666666666666666,
+    0.22666666666666666
+   ],
+   "dense": [
+    0.16,
+    0.24666666666666667,
+    0.30666666666666664,
+    0.34,
+    0.36666666666666664,
+    0.38,
+    0.4066666666666667,
+    0.41333333333333333,
+    0.44,
+    0.4666666666666667,
+    0.5,
+    0.5,
+    0.5,
+    0.5066666666666667,
+    0.52,
+    0.52,
+    0.52,
+    0.54,
+    0.5466666666666666,
+    0.5466666666666666
+   ],
+   "hybrid": [
+    0.14666666666666667,
+    0.17333333333333334,
+    0.18,
+    0.20666666666666667,
+    0.24,
+    0.26666666666666666,
+    0.26666666666666666,
+    0.29333333333333333,
+    0.30666666666666664,
+    0.31333333333333335,
+    0.31333333333333335,
+    0.3466666666666667,
+    0.36,
+    0.38,
+    0.38666666666666666,
+    0.4066666666666667,
+    0.4266666666666667,
+    0.44666666666666666,
+    0.4666666666666667,
+    0.47333333333333333
+   ]
+  }
+ },
+ "unreachable": [],
+ "missing_docs": [],
+ "per_question": [
+  {
+   "id": "financebench_id_03029",
+   "doc": "3M_2018_10K",
+   "qtype": "metrics-generated",
+   "gold_pages": [
+    59
+   ],
+   "reachable": true,
+   "single": {
+    "bm25": {
+     "first": 17,
+     "all": 17
+    },
+    "dense": {
+     "first": 23,
+     "all": 23
+    },
+    "hybrid": {
+     "first": 7,
+     "all": 7
+    }
+   },
+   "shared": {
+    "bm25": {
+     "doc": 3,
+     "company": 3,
+     "page": null
+    },
+    "dense": {
+     "doc": 5,
+     "company": 1,
+     "page": null
+    },
+    "hybrid": {
+     "doc": 1,
+     "company": 1,
+     "page": null
+    }
+   }
+  },
+  {
+   "id": "financebench_id_04672",
+   "doc": "3M_2018_10K",
+   "qtype": "metrics-generated",
+   "gold_pages": [
+    57
+   ],
+   "reachable": true,
+   "single": {
+    "bm25": {
+     "first": 197,
+     "all": 197
+    },
+    "dense": {
+     "first": 55,
+     "all": 55
+    },
+    "hybrid": {
+     "first": 109,
+     "all": 109
+    }
+   },
+   "shared": {
+    "bm25": {
+     "doc": 18,
+     "company": 9,
+     "page": null
+    },
+    "dense": {
+     "doc": 4,
+     "company": 3,
+     "page": null
+    },
+    "hybrid": {
+     "doc": 4,
+     "company": 1,
+     "page": null
+    }
+   }
+  },
+  {
+   "id": "financebench_id_00499",
+   "doc": "3M_2022_10K",
+   "qtype": "domain-relevant",
+   "gold_pages": [
+    47,
+    49,
+    51
+   ],
+   "reachable": true,
+   "single": {
+    "bm25": {
+     "first": 95,
+     "all": 181
+    },
+    "dense": {
+     "first": 30,
+     "all": 61
+    },
+    "hybrid": {
+     "first": 51,
+     "all": 98
+    }
+   },
+   "shared": {
+    "bm25": {
+     "doc": 1,
+     "company": 1,
+     "page": null
+    },
+    "dense": {
+     "doc": 1,
+     "company": 1,
+     "page": null
+    },
+    "hybrid": {
+     "doc": 2,
+     "company": 1,
+     "page": null
+    }
+   }
+  },
+  {
+   "id": "financebench_id_01226",
+   "doc": "3M_2022_10K",
+   "qtype": "domain-relevant",
+   "gold_pages": [
+    26
+   ],
+   "reachable": true,
+   "single": {
+    "bm25": {
+     "first": 2,
+     "all": 2
+    },
+    "dense": {
+     "first": 45,
+     "all": 45
+    },
+    "hybrid": {
+     "first": 11,
+     "all": 11
+    }
+   },
+   "shared": {
+    "bm25": {
+     "doc": null,
+     "company": 1,
+     "page": null
+    },
+    "dense": {
+     "doc": 6,
+     "company": 1,
+     "page": null
+    },
+    "hybrid": {
+     "doc": 13,
+     "company": 3,
+     "page": null
+    }
+   }
+  },
+  {
+   "id": "financebench_id_01865",
+   "doc": "3M_2022_10K",
+   "qtype": "novel-generated",
+   "gold_pages": [
+    24
+   ],
+   "reachable": true,
+   "single": {
+    "bm25": {
+     "first": 48,
+     "all": 48
+    },
+    "dense": {
+     "first": 113,
+     "all": 113
+    },
+    "hybrid": {
+     "first": 76,
+     "all": 76
+    }
+   },
+   "shared": {
+    "bm25": {
+     "doc": 4,
+     "company": 1,
+     "page": null
+    },
+    "dense": {
+     "doc": 1,
+     "company": 1,
+     "page": null
+    },
+    "hybrid": {
+     "doc": 2,
+     "company": 1,
+     "page": null
+    }
+   }
+  },
+  {
+   "id": "financebench_id_00807",
+   "doc": "3M_2023Q2_10Q",
+   "qtype": "domain-relevant",
+   "gold_pages": [
+    4
+   ],
+   "reachable": true,
+   "single": {
+    "bm25": {
+     "first": 236,
+     "all": 236
+    },
+    "dense": {
+     "first": 84,
+     "all": 84
+    },
+    "hybrid": {
+     "first": 175,
+     "all": 175
+    }
+   },
+   "shared": {
+    "bm25": {
+     "doc": 3,
+     "company": 3,
+     "page": null
+    },
+    "dense": {
+     "doc": 2,
+     "company": 1,
+     "page": null
+    },
+    "hybrid": {
+     "doc": 1,
+     "company": 1,
+     "page": null
+    }
+   }
+  },
+  {
+   "id": "financebench_id_00941",
+   "doc": "3M_2023Q2_10Q",
+   "qtype": "domain-relevant",
+   "gold_pages": [
+    0
+   ],
+   "reachable": true,
+   "single": {
+    "bm25": {
+     "first": 1,
+     "all": 1
+    },
+    "dense": {
+     "first": 24,
+     "all": 24
+    },
+    "hybrid": {
+     "first": 9,
+     "all": 9
+    }
+   },
+   "shared": {
+    "bm25": {
+     "doc": 1,
+     "company": 1,
+     "page": 1
+    },
+    "dense": {
+     "doc": 1,
+     "company": 1,
+     "page": null
+    },
+    "hybrid": {
+     "doc": 1,
+     "company": 1,
+     "page": 8
+    }
+   }
+  },
+  {
+   "id": "financebench_id_01858",
+   "doc": "3M_2023Q2_10Q",
+   "qtype": "novel-generated",
+   "gold_pages": [
+    61
+   ],
+   "reachable": true,
+   "single": {
+    "bm25": {
+     "first": 2,
+     "all": 2
+    },
+    "dense": {
+     "first": 5,
+     "all": 5
+    },
+    "hybrid": {
+     "first": 2,
+     "all": 2
+    }
+   },
+   "shared": {
+    "bm25": {
+     "doc": 9,
+     "company": 1,
+     "page": 9
+    },
+    "dense": {
+     "doc": 4,
+     "company": 1,
+     "page": null
+    },
+    "hybrid": {
+     "doc": 5,
+     "company": 1,
+     "page": 5
+    }
+   }
+  },
+  {
+   "id": "financebench_id_02987",
+   "doc": "ACTIVISIONBLIZZARD_2019_10K",
+   "qtype": "metrics-generated",
+   "gold_pages": [
+    68,
+    69
+   ],
+   "reachable": true,
+   "single": {
+    "bm25": {
+     "first": 142,
+     "all": 150
+    },
+    "dense": {
+     "first": 1,
+     "all": 6
+    },
+    "hybrid": {
+     "first": 22,
+     "all": 28
+    }
+   },
+   "shared": {
+    "bm25": {
+     "doc": 1,
+     "company": 1,
+     "page": null
+    },
+    "dense": {
+     "doc": 1,
+     "company": 1,
+     "page": 1
+    },
+    "hybrid": {
+     "doc": 1,
+     "company": 1,
+     "page": null
+    }
+   }
+  },
+  {
+   "id": "financebench_id_07966",
+   "doc": "ACTIVISIONBLIZZARD_2019_10K",
+   "qtype": "metrics-generated",
+   "gold_pages": [
+    69,
+    72
+   ],
+   "reachable": true,
+   "single": {
+    "bm25": {
+     "first": 67,
+     "all": 83
+    },
+    "dense": {
+     "first": 1,
+     "all": 2
+    },
+    "hybrid": {
+     "first": 7,
+     "all": 9
+    }
+   },
+   "shared": {
+    "bm25": {
+     "doc": 1,
+     "company": 1,
+     "page": null
+    },
+    "dense": {
+     "doc": 1,
+     "company": 1,
+     "page": 1
+    },
+    "hybrid": {
+     "doc": 1,
+     "company": 1,
+     "page": null
+    }
+   }
+  },
+  {
+   "id": "financebench_id_04735",
+   "doc": "ADOBE_2015_10K",
+   "qtype": "metrics-generated",
+   "gold_pages": [
+    58,
+    62
+   ],
+   "reachable": true,
+   "single": {
+    "bm25": {
+     "first": 10,
+     "all": 20
+    },
+    "dense": {
+     "first": 2,
+     "all": 3
+    },
+    "hybrid": {
+     "first": 2,
+     "all": 6
+    }
+   },
+   "shared": {
+    "bm25": {
+     "doc": null,
+     "company": null,
+     "page": null
+    },
+    "dense": {
+     "doc": null,
+     "company": 1,
+     "page": null
+    },
+    "hybrid": {
+     "doc": null,
+     "company": null,
+     "page": null
+    }
+   }
+  },
+  {
+   "id": "financebench_id_07507",
+   "doc": "ADOBE_2016_10K",
+   "qtype": "metrics-generated",
+   "gold_pages": [
+    61
+   ],
+   "reachable": true,
+   "single": {
+    "bm25": {
+     "first": 26,
+     "all": 26
+    },
+    "dense": {
+     "first": 1,
+     "all": 1
+    },
+    "hybrid": {
+     "first": 3,
+     "all": 3
+    }
+   },
+   "shared": {
+    "bm25": {
+     "doc": 10,
+     "company": 4,
+     "page": null
+    },
+    "dense": {
+     "doc": 2,
+     "company": 1,
+     "page": 2
+    },
+    "hybrid": {
+     "doc": 2,
+     "company": 1,
+     "page": 12
+    }
+   }
+  },
+  {
+   "id": "financebench_id_03856",
+   "doc": "ADOBE_2017_10K",
+   "qtype": "metrics-generated",
+   "gold_pages": [
+    56,
+    60
+   ],
+   "reachable": true,
+   "single": {
+    "bm25": {
+     "first": 10,
+     "all": 27
+    },
+    "dense": {
+     "first": 1,
+     "all": 2
+    },
+    "hybrid": {
+     "first": 1,
+     "all": 5
+    }
+   },
+   "shared": {
+    "bm25": {
+     "doc": null,
+     "company": null,
+     "page": null
+    },
+    "dense": {
+     "doc": 4,
+     "company": 1,
+     "page": 4
+    },
+    "hybrid": {
+     "doc": null,
+     "company": null,
+     "page": null
+    }
+   }
+  },
+  {
+   "id": "financebench_id_00438",
+   "doc": "ADOBE_2022_10K",
+   "qtype": "domain-relevant",
+   "gold_pages": [
+    53
+   ],
+   "reachable": true,
+   "single": {
+    "bm25": {
+     "first": 26,
+     "all": 26
+    },
+    "dense": {
+     "first": 7,
+     "all": 7
+    },
+    "hybrid": {
+     "first": 4,
+     "all": 4
+    }
+   },
+   "shared": {
+    "bm25": {
+     "doc": null,
+     "company": null,
+     "page": null
+    },
+    "dense": {
+     "doc": 4,
+     "company": 2,
+     "page": null
+    },
+    "hybrid": {
+     "doc": 6,
+     "company": 6,
+     "page": null
+    }
+   }
+  },
+  {
+   "id": "financebench_id_00591",
+   "doc": "ADOBE_2022_10K",
+   "qtype": "novel-generated",
+   "gold_pages": [
+    56
+   ],
+   "reachable": true,
+   "single": {
+    "bm25": {
+     "first": 113,
+     "all": 113
+    },
+    "dense": {
+     "first": 1,
+     "all": 1
+    },
+    "hybrid": {
+     "first": 18,
+     "all": 18
+    }
+   },
+   "shared": {
+    "bm25": {
+     "doc": 8,
+     "company": 2,
+     "page": null
+    },
+    "dense": {
+     "doc": 2,
+     "company": 2,
+     "page": 2
+    },
+    "hybrid": {
+     "doc": 2,
+     "company": 2,
+     "page": null
+    }
+   }
+  },
+  {
+   "id": "financebench_id_01319",
+   "doc": "AES_2022_10K",
+   "qtype": "domain-relevant",
+   "gold_pages": [
+    131
+   ],
+   "reachable": true,
+   "single": {
+    "bm25": {
+     "first": 2,
+     "all": 2
+    },
+    "dense": {
+     "first": 13,
+     "all": 13
+    },
+    "hybrid": {
+     "first": 3,
+     "all": 3
+    }
+   },
+   "shared": {
+    "bm25": {
+     "doc": 15,
+     "company": 15,
+     "page": 15
+    },
+    "dense": {
+     "doc": 1,
+     "company": 1,
+     "page": null
+    },
+    "hybrid": {
+     "doc": 1,
+     "company": 1,
+     "page": 4
+    }
+   }
+  },
+  {
+   "id": "financebench_id_00540",
+   "doc": "AES_2022_10K",
+   "qtype": "domain-relevant",
+   "gold_pages": [
+    129,
+    131
+   ],
+   "reachable": true,
+   "single": {
+    "bm25": {
+     "first": 13,
+     "all": 163
+    },
+    "dense": {
+     "first": 23,
+     "all": 56
+    },
+    "hybrid": {
+     "first": 38,
+     "all": 43
+    }
+   },
+   "shared": {
+    "bm25": {
+     "doc": null,
+     "company": null,
+     "page": null
+    },
+    "dense": {
+     "doc": 1,
+     "company": 1,
+     "page": null
+    },
+    "hybrid": {
+     "doc": 10,
+     "company": 10,
+     "page": null
+    }
+   }
+  },
+  {
+   "id": "financebench_id_10420",
+   "doc": "AES_2022_10K",
+   "qtype": "metrics-generated",
+   "gold_pages": [
+    129,
+    131
+   ],
+   "reachable": true,
+   "single": {
+    "bm25": {
+     "first": 49,
+     "all": 113
+    },
+    "dense": {
+     "first": 76,
+     "all": 119
+    },
+    "hybrid": {
+     "first": 66,
+     "all": 124
+    }
+   },
+   "shared": {
+    "bm25": {
+     "doc": 12,
+     "company": 12,
+     "page": null
+    },
+    "dense": {
+     "doc": 12,
+     "company": 12,
+     "page": null
+    },
+    "hybrid": {
+     "doc": 13,
+     "company": 13,
+     "page": null
+    }
+   }
+  },
+  {
+   "id": "financebench_id_06655",
+   "doc": "AMAZON_2017_10K",
+   "qtype": "metrics-generated",
+   "gold_pages": [
+    37,
+    39
+   ],
+   "reachable": true,
+   "single": {
+    "bm25": {
+     "first": 6,
+     "all": 144
+    },
+    "dense": {
+     "first": 6,
+     "all": 7
+    },
+    "hybrid": {
+     "first": 1,
+     "all": 35
+    }
+   },
+   "shared": {
+    "bm25": {
+     "doc": 13,
+     "company": 13,
+     "page": null
+    },
+    "dense": {
+     "doc": 2,
+     "company": 1,
+     "page": null
+    },
+    "hybrid": {
+     "doc": 5,
+     "company": 5,
+     "page": null
+    }
+   }
+  },
+  {
+   "id": "financebench_id_08135",
+   "doc": "AMAZON_2017_10K",
+   "qtype": "metrics-generated",
+   "gold_pages": [
+    37
+   ],
+   "reachable": true,
+   "single": {
+    "bm25": {
+     "first": 60,
+     "all": 60
+    },
+    "dense": {
+     "first": 5,
+     "all": 5
+    },
+    "hybrid": {
+     "first": 16,
+     "all": 16
+    }
+   },
+   "shared": {
+    "bm25": {
+     "doc": 14,
+     "company": 14,
+     "page": null
+    },
+    "dense": {
+     "doc": 1,
+     "company": 1,
+     "page": 9
+    },
+    "hybrid": {
+     "doc": 1,
+     "company": 1,
+     "page": 19
+    }
+   }
+  },
+  {
+   "id": "financebench_id_08286",
+   "doc": "AMAZON_2019_10K",
+   "qtype": "metrics-generated",
+   "gold_pages": [
+    37
+   ],
+   "reachable": true,
+   "single": {
+    "bm25": {
+     "first": 8,
+     "all": 8
+    },
+    "dense": {
+     "first": 1,
+     "all": 1
+    },
+    "hybrid": {
+     "first": 1,
+     "all": 1
+    }
+   },
+   "shared": {
+    "bm25": {
+     "doc": null,
+     "company": null,
+     "page": null
+    },
+    "dense": {
+     "doc": 1,
+     "company": 1,
+     "page": 1
+    },
+    "hybrid": {
+     "doc": 9,
+     "company": 9,
+     "page": 9
+    }
+   }
+  },
+  {
+   "id": "financebench_id_03882",
+   "doc": "AMCOR_2020_10K",
+   "qtype": "metrics-generated",
+   "gold_pages": [
+    49
+   ],
+   "reachable": true,
+   "single": {
+    "bm25": {
+     "first": 56,
+     "all": 56
+    },
+    "dense": {
+     "first": 1,
+     "all": 1
+    },
+    "hybrid": {
+     "first": 4,
+     "all": 4
+    }
+   },
+   "shared": {
+    "bm25": {
+     "doc": 9,
+     "company": 5,
+     "page": null
+    },
+    "dense": {
+     "doc": 2,
+     "company": 1,
+     "page": 2
+    },
+    "hybrid": {
+     "doc": 2,
+     "company": 1,
+     "page": 6
+    }
+   }
+  },
+  {
+   "id": "financebench_id_01935",
+   "doc": "AMCOR_2022_8K_dated-2022-07-01",
+   "qtype": "novel-generated",
+   "gold_pages": [
+    1
+   ],
+   "reachable": true,
+   "single": {
+    "bm25": {
+     "first": 3,
+     "all": 3
+    },
+    "dense": {
+     "first": 1,
+     "all": 1
+    },
+    "hybrid": {
+     "first": 3,
+     "all": 3
+    }
+   },
+   "shared": {
+    "bm25": {
+     "doc": 6,
+     "company": 1,
+     "page": 9
+    },
+    "dense": {
+     "doc": 9,
+     "company": 1,
+     "page": 9
+    },
+    "hybrid": {
+     "doc": 9,
+     "company": 1,
+     "page": 12
+    }
+   }
+  },
+  {
+   "id": "financebench_id_00799",
+   "doc": "AMCOR_2023_10K",
+   "qtype": "domain-relevant",
+   "gold_pages": [
+    51
+   ],
+   "reachable": true,
+   "single": {
+    "bm25": {
+     "first": 307,
+     "all": 307
+    },
+    "dense": {
+     "first": 44,
+     "all": 44
+    },
+    "hybrid": {
+     "first": 108,
+     "all": 108
+    }
+   },
+   "shared": {
+    "bm25": {
+     "doc": null,
+     "company": null,
+     "page": null
+    },
+    "dense": {
+     "doc": 8,
+     "company": 1,
+     "page": null
+    },
+    "hybrid": {
+     "doc": 4,
+     "company": 3,
+     "page": null
+    }
+   }
+  },
+  {
+   "id": "financebench_id_01079",
+   "doc": "AMCOR_2023_10K",
+   "qtype": "domain-relevant",
+   "gold_pages": [
+    63
+   ],
+   "reachable": true,
+   "single": {
+    "bm25": {
+     "first": 24,
+     "all": 24
+    },
+    "dense": {
+     "first": 47,
+     "all": 47
+    },
+    "hybrid": {
+     "first": 20,
+     "all": 20
+    }
+   },
+   "shared": {
+    "bm25": {
+     "doc": 4,
+     "company": 1,
+     "page": null
+    },
+    "dense": {
+     "doc": 1,
+     "company": 1,
+     "page": null
+    },
+    "hybrid": {
+     "doc": 1,
+     "company": 1,
+     "page": null
+    }
+   }
+  },
+  {
+   "id": "financebench_id_01148",
+   "doc": "AMCOR_2023_10K",
+   "qtype": "domain-relevant",
+   "gold_pages": [
+    4
+   ],
+   "reachable": true,
+   "single": {
+    "bm25": {
+     "first": 11,
+     "all": 11
+    },
+    "dense": {
+     "first": 3,
+     "all": 3
+    },
+    "hybrid": {
+     "first": 2,
+     "all": 2
+    }
+   },
+   "shared": {
+    "bm25": {
+     "doc": 1,
+     "company": 1,
+     "page": null
+    },
+    "dense": {
+     "doc": 2,
+     "company": 1,
+     "page": 6
+    },
+    "hybrid": {
+     "doc": 2,
+     "company": 1,
+     "page": 8
+    }
+   }
+  },
+  {
+   "id": "financebench_id_00684",
+   "doc": "AMCOR_2023_10K",
+   "qtype": "domain-relevant",
+   "gold_pages": [
+    49
+   ],
+   "reachable": true,
+   "single": {
+    "bm25": {
+     "first": 16,
+     "all": 16
+    },
+    "dense": {
+     "first": 2,
+     "all": 2
+    },
+    "hybrid": {
+     "first": 1,
+     "all": 1
+    }
+   },
+   "shared": {
+    "bm25": {
+     "doc": null,
+     "company": null,
+     "page": null
+    },
+    "dense": {
+     "doc": 4,
+     "company": 1,
+     "page": null
+    },
+    "hybrid": {
+     "doc": 8,
+     "company": 6,
+     "page": null
+    }
+   }
+  },
+  {
+   "id": "financebench_id_01936",
+   "doc": "AMCOR_2023Q2_10Q",
+   "qtype": "novel-generated",
+   "gold_pages": [
+    14
+   ],
+   "reachable": true,
+   "single": {
+    "bm25": {
+     "first": 2,
+     "all": 2
+    },
+    "dense": {
+     "first": 8,
+     "all": 8
+    },
+    "hybrid": {
+     "first": 1,
+     "all": 1
+    }
+   },
+   "shared": {
+    "bm25": {
+     "doc": 2,
+     "company": 1,
+     "page": null
+    },
+    "dense": {
+     "doc": 6,
+     "company": 1,
+     "page": null
+    },
+    "hybrid": {
+     "doc": null,
+     "company": 1,
+     "page": null
+    }
+   }
+  },
+  {
+   "id": "financebench_id_01928",
+   "doc": "AMCOR_2023Q4_EARNINGS",
+   "qtype": "novel-generated",
+   "gold_pages": [
+    11
+   ],
+   "reachable": true,
+   "single": {
+    "bm25": {
+     "first": 5,
+     "all": 5
+    },
+    "dense": {
+     "first": 16,
+     "all": 16
+    },
+    "hybrid": {
+     "first": 9,
+     "all": 9
+    }
+   },
+   "shared": {
+    "bm25": {
+     "doc": 1,
+     "company": 1,
+     "page": null
+    },
+    "dense": {
+     "doc": 2,
+     "company": 1,
+     "page": null
+    },
+    "hybrid": {
+     "doc": 1,
+     "company": 1,
+     "page": null
+    }
+   }
+  },
+  {
+   "id": "financebench_id_01930",
+   "doc": "AMCOR_2023Q4_EARNINGS",
+   "qtype": "novel-generated",
+   "gold_pages": [
+    9
+   ],
+   "reachable": true,
+   "single": {
+    "bm25": {
+     "first": 1,
+     "all": 1
+    },
+    "dense": {
+     "first": 27,
+     "all": 27
+    },
+    "hybrid": {
+     "first": 9,
+     "all": 9
+    }
+   },
+   "shared": {
+    "bm25": {
+     "doc": 9,
+     "company": 1,
+     "page": null
+    },
+    "dense": {
+     "doc": 1,
+     "company": 1,
+     "page": null
+    },
+    "hybrid": {
+     "doc": 1,
+     "company": 1,
+     "page": null
+    }
+   }
+  },
+  {
+   "id": "financebench_id_03069",
+   "doc": "AMD_2015_10K",
+   "qtype": "metrics-generated",
+   "gold_pages": [
+    55,
+    59
+   ],
+   "reachable": true,
+   "single": {
+    "bm25": {
+     "first": 17,
+     "all": 79
+    },
+    "dense": {
+     "first": 23,
+     "all": 112
+    },
+    "hybrid": {
+     "first": 2,
+     "all": 93
+    }
+   },
+   "shared": {
+    "bm25": {
+     "doc": 12,
+     "company": 12,
+     "page": null
+    },
+    "dense": {
+     "doc": 1,
+     "company": 1,
+     "page": null
+    },
+    "hybrid": {
+     "doc": 3,
+     "company": 3,
+     "page": null
+    }
+   }
+  },
+  {
+   "id": "financebench_id_00222",
+   "doc": "AMD_2022_10K",
+   "qtype": "domain-relevant",
+   "gold_pages": [
+    55
+   ],
+   "reachable": true,
+   "single": {
+    "bm25": {
+     "first": 359,
+     "all": 359
+    },
+    "dense": {
+     "first": 83,
+     "all": 83
+    },
+    "hybrid": {
+     "first": 171,
+     "all": 171
+    }
+   },
+   "shared": {
+    "bm25": {
+     "doc": null,
+     "company": null,
+     "page": null
+    },
+    "dense": {
+     "doc": 9,
+     "company": 2,
+     "page": null
+    },
+    "hybrid": {
+     "doc": null,
+     "company": 16,
+     "page": null
+    }
+   }
+  },
+  {
+   "id": "financebench_id_00995",
+   "doc": "AMD_2022_10K",
+   "qtype": "domain-relevant",
+   "gold_pages": [
+    3
+   ],
+   "reachable": true,
+   "single": {
+    "bm25": {
+     "first": 31,
+     "all": 31
+    },
+    "dense": {
+     "first": 12,
+     "all": 12
+    },
+    "hybrid": {
+     "first": 10,
+     "all": 10
+    }
+   },
+   "shared": {
+    "bm25": {
+     "doc": 1,
+     "company": 1,
+     "page": null
+    },
+    "dense": {
+     "doc": 1,
+     "company": 1,
+     "page": null
+    },
+    "hybrid": {
+     "doc": 1,
+     "company": 1,
+     "page": null
+    }
+   }
+  },
+  {
+   "id": "financebench_id_01198",
+   "doc": "AMD_2022_10K",
+   "qtype": "domain-relevant",
+   "gold_pages": [
+    42
+   ],
+   "reachable": true,
+   "single": {
+    "bm25": {
+     "first": 13,
+     "all": 13
+    },
+    "dense": {
+     "first": 4,
+     "all": 4
+    },
+    "hybrid": {
+     "first": 9,
+     "all": 9
+    }
+   },
+   "shared": {
+    "bm25": {
+     "doc": 2,
+     "company": 2,
+     "page": null
+    },
+    "dense": {
+     "doc": 3,
+     "company": 1,
+     "page": 6
+    },
+    "hybrid": {
+     "doc": 3,
+     "company": 1,
+     "page": 10
+    }
+   }
+  },
+  {
+   "id": "financebench_id_00917",
+   "doc": "AMD_2022_10K",
+   "qtype": "domain-relevant",
+   "gold_pages": [
+    42
+   ],
+   "reachable": true,
+   "single": {
+    "bm25": {
+     "first": 1,
+     "all": 1
+    },
+    "dense": {
+     "first": 6,
+     "all": 6
+    },
+    "hybrid": {
+     "first": 1,
+     "all": 1
+    }
+   },
+   "shared": {
+    "bm25": {
+     "doc": null,
+     "company": 2,
+     "page": null
+    },
+    "dense": {
+     "doc": null,
+     "company": 1,
+     "page": null
+    },
+    "hybrid": {
+     "doc": null,
+     "company": 1,
+     "page": null
+    }
+   }
+  },
+  {
+   "id": "financebench_id_01279",
+   "doc": "AMD_2022_10K",
+   "qtype": "domain-relevant",
+   "gold_pages": [
+    57
+   ],
+   "reachable": true,
+   "single": {
+    "bm25": {
+     "first": 4,
+     "all": 4
+    },
+    "dense": {
+     "first": 2,
+     "all": 2
+    },
+    "hybrid": {
+     "first": 1,
+     "all": 1
+    }
+   },
+   "shared": {
+    "bm25": {
+     "doc": 17,
+     "company": 17,
+     "page": null
+    },
+    "dense": {
+     "doc": null,
+     "company": 2,
+     "page": null
+    },
+    "hybrid": {
+     "doc": null,
+     "company": null,
+     "page": null
+    }
+   }
+  },
+  {
+   "id": "financebench_id_00563",
+   "doc": "AMD_2022_10K",
+   "qtype": "novel-generated",
+   "gold_pages": [
+    47
+   ],
+   "reachable": true,
+   "single": {
+    "bm25": {
+     "first": 4,
+     "all": 4
+    },
+    "dense": {
+     "first": 28,
+     "all": 28
+    },
+    "hybrid": {
+     "first": 7,
+     "all": 7
+    }
+   },
+   "shared": {
+    "bm25": {
+     "doc": 1,
+     "company": 1,
+     "page": 11
+    },
+    "dense": {
+     "doc": 2,
+     "company": 1,
+     "page": null
+    },
+    "hybrid": {
+     "doc": 2,
+     "company": 1,
+     "page": 13
+    }
+   }
+  },
+  {
+   "id": "financebench_id_00757",
+   "doc": "AMD_2022_10K",
+   "qtype": "novel-generated",
+   "gold_pages": [
+    11
+   ],
+   "reachable": true,
+   "single": {
+    "bm25": {
+     "first": 40,
+     "all": 40
+    },
+    "dense": {
+     "first": 9,
+     "all": 9
+    },
+    "hybrid": {
+     "first": 17,
+     "all": 17
+    }
+   },
+   "shared": {
+    "bm25": {
+     "doc": 1,
+     "company": 1,
+     "page": null
+    },
+    "dense": {
+     "doc": 1,
+     "company": 1,
+     "page": 18
+    },
+    "hybrid": {
+     "doc": 1,
+     "company": 1,
+     "page": null
+    }
+   }
+  },
+  {
+   "id": "financebench_id_00476",
+   "doc": "AMERICANEXPRESS_2022_10K",
+   "qtype": "domain-relevant",
+   "gold_pages": [
+    0
+   ],
+   "reachable": true,
+   "single": {
+    "bm25": {
+     "first": 1,
+     "all": 1
+    },
+    "dense": {
+     "first": 1,
+     "all": 1
+    },
+    "hybrid": {
+     "first": 1,
+     "all": 1
+    }
+   },
+   "shared": {
+    "bm25": {
+     "doc": 1,
+     "company": 1,
+     "page": 1
+    },
+    "dense": {
+     "doc": 1,
+     "company": 1,
+     "page": 1
+    },
+    "hybrid": {
+     "doc": 1,
+     "company": 1,
+     "page": 1
+    }
+   }
+  },
+  {
+   "id": "financebench_id_01028",
+   "doc": "AMERICANEXPRESS_2022_10K",
+   "qtype": "domain-relevant",
+   "gold_pages": [
+    154
+   ],
+   "reachable": true,
+   "single": {
+    "bm25": {
+     "first": 290,
+     "all": 290
+    },
+    "dense": {
+     "first": 85,
+     "all": 85
+    },
+    "hybrid": {
+     "first": 141,
+     "all": 141
+    }
+   },
+   "shared": {
+    "bm25": {
+     "doc": 1,
+     "company": 1,
+     "page": null
+    },
+    "dense": {
+     "doc": 1,
+     "company": 1,
+     "page": null
+    },
+    "hybrid": {
+     "doc": 1,
+     "company": 1,
+     "page": null
+    }
+   }
+  },
+  {
+   "id": "financebench_id_00723",
+   "doc": "AMERICANEXPRESS_2022_10K",
+   "qtype": "domain-relevant",
+   "gold_pages": [
+    95
+   ],
+   "reachable": true,
+   "single": {
+    "bm25": {
+     "first": 398,
+     "all": 398
+    },
+    "dense": {
+     "first": 316,
+     "all": 316
+    },
+    "hybrid": {
+     "first": 453,
+     "all": 453
+    }
+   },
+   "shared": {
+    "bm25": {
+     "doc": null,
+     "company": null,
+     "page": null
+    },
+    "dense": {
+     "doc": 8,
+     "company": 8,
+     "page": null
+    },
+    "hybrid": {
+     "doc": null,
+     "company": null,
+     "page": null
+    }
+   }
+  },
+  {
+   "id": "financebench_id_00720",
+   "doc": "AMERICANEXPRESS_2022_10K",
+   "qtype": "domain-relevant",
+   "gold_pages": [
+    95
+   ],
+   "reachable": true,
+   "single": {
+    "bm25": {
+     "first": 456,
+     "all": 456
+    },
+    "dense": {
+     "first": 312,
+     "all": 312
+    },
+    "hybrid": {
+     "first": 420,
+     "all": 420
+    }
+   },
+   "shared": {
+    "bm25": {
+     "doc": null,
+     "company": null,
+     "page": null
+    },
+    "dense": {
+     "doc": 5,
+     "company": 5,
+     "page": null
+    },
+    "hybrid": {
+     "doc": 9,
+     "company": 9,
+     "page": null
+    }
+   }
+  },
+  {
+   "id": "financebench_id_01351",
+   "doc": "AMERICANEXPRESS_2022_10K",
+   "qtype": "domain-relevant",
+   "gold_pages": [
+    43
+   ],
+   "reachable": true,
+   "single": {
+    "bm25": {
+     "first": 83,
+     "all": 83
+    },
+    "dense": {
+     "first": 203,
+     "all": 203
+    },
+    "hybrid": {
+     "first": 123,
+     "all": 123
+    }
+   },
+   "shared": {
+    "bm25": {
+     "doc": 1,
+     "company": 1,
+     "page": null
+    },
+    "dense": {
+     "doc": 3,
+     "company": 3,
+     "page": null
+    },
+    "hybrid": {
+     "doc": 1,
+     "company": 1,
+     "page": null
+    }
+   }
+  },
+  {
+   "id": "financebench_id_01964",
+   "doc": "AMERICANEXPRESS_2022_10K",
+   "qtype": "novel-generated",
+   "gold_pages": [
+    97
+   ],
+   "reachable": true,
+   "single": {
+    "bm25": {
+     "first": 150,
+     "all": 150
+    },
+    "dense": {
+     "first": 57,
+     "all": 57
+    },
+    "hybrid": {
+     "first": 88,
+     "all": 88
+    }
+   },
+   "shared": {
+    "bm25": {
+     "doc": 2,
+     "company": 2,
+     "page": null
+    },
+    "dense": {
+     "doc": 1,
+     "company": 1,
+     "page": null
+    },
+    "hybrid": {
+     "doc": 1,
+     "company": 1,
+     "page": null
+    }
+   }
+  },
+  {
+   "id": "financebench_id_01981",
+   "doc": "AMERICANEXPRESS_2022_10K",
+   "qtype": "novel-generated",
+   "gold_pages": [
+    44
+   ],
+   "reachable": true,
+   "single": {
+    "bm25": {
+     "first": 59,
+     "all": 59
+    },
+    "dense": {
+     "first": 119,
+     "all": 119
+    },
+    "hybrid": {
+     "first": 122,
+     "all": 122
+    }
+   },
+   "shared": {
+    "bm25": {
+     "doc": 1,
+     "company": 1,
+     "page": null
+    },
+    "dense": {
+     "doc": 1,
+     "company": 1,
+     "page": null
+    },
+    "hybrid": {
+     "doc": 1,
+     "company": 1,
+     "page": null
+    }
+   }
+  },
+  {
+   "id": "financebench_id_05718",
+   "doc": "AMERICANWATERWORKS_2020_10K",
+   "qtype": "metrics-generated",
+   "gold_pages": [
+    85
+   ],
+   "reachable": true,
+   "single": {
+    "bm25": {
+     "first": 16,
+     "all": 16
+    },
+    "dense": {
+     "first": 1,
+     "all": 1
+    },
+    "hybrid": {
+     "first": 2,
+     "all": 2
+    }
+   },
+   "shared": {
+    "bm25": {
+     "doc": 1,
+     "company": 1,
+     "page": null
+    },
+    "dense": {
+     "doc": 3,
+     "company": 1,
+     "page": 3
+    },
+    "hybrid": {
+     "doc": 4,
+     "company": 1,
+     "page": 4
+    }
+   }
+  },
+  {
+   "id": "financebench_id_04254",
+   "doc": "AMERICANWATERWORKS_2021_10K",
+   "qtype": "metrics-generated",
+   "gold_pages": [
+    85,
+    87
+   ],
+   "reachable": true,
+   "single": {
+    "bm25": {
+     "first": 3,
+     "all": 11
+    },
+    "dense": {
+     "first": 1,
+     "all": 2
+    },
+    "hybrid": {
+     "first": 1,
+     "all": 3
+    }
+   },
+   "shared": {
+    "bm25": {
+     "doc": 5,
+     "company": 5,
+     "page": null
+    },
+    "dense": {
+     "doc": 1,
+     "company": 1,
+     "page": 1
+    },
+    "hybrid": {
+     "doc": 2,
+     "company": 1,
+     "page": 2
+    }
+   }
+  },
+  {
+   "id": "financebench_id_00070",
+   "doc": "AMERICANWATERWORKS_2022_10K",
+   "qtype": "domain-relevant",
+   "gold_pages": [
+    80,
+    81
+   ],
+   "reachable": true,
+   "single": {
+    "bm25": {
+     "first": 68,
+     "all": 132
+    },
+    "dense": {
+     "first": 2,
+     "all": 13
+    },
+    "hybrid": {
+     "first": 14,
+     "all": 37
+    }
+   },
+   "shared": {
+    "bm25": {
+     "doc": 3,
+     "company": 1,
+     "page": null
+    },
+    "dense": {
+     "doc": 1,
+     "company": 1,
+     "page": 3
+    },
+    "hybrid": {
+     "doc": 1,
+     "company": 1,
+     "page": null
+    }
+   }
+  },
+  {
+   "id": "financebench_id_02608",
+   "doc": "BESTBUY_2017_10K",
+   "qtype": "metrics-generated",
+   "gold_pages": [
+    55
+   ],
+   "reachable": true,
+   "single": {
+    "bm25": {
+     "first": 8,
+     "all": 8
+    },
+    "dense": {
+     "first": 1,
+     "all": 1
+    },
+    "hybrid": {
+     "first": 4,
+     "all": 4
+    }
+   },
+   "shared": {
+    "bm25": {
+     "doc": 3,
+     "company": 1,
+     "page": 9
+    },
+    "dense": {
+     "doc": 7,
+     "company": 1,
+     "page": 7
+    },
+    "hybrid": {
+     "doc": 1,
+     "company": 1,
+     "page": 8
+    }
+   }
+  },
+  {
+   "id": "financebench_id_04417",
+   "doc": "BESTBUY_2019_10K",
+   "qtype": "metrics-generated",
+   "gold_pages": [
+    51
+   ],
+   "reachable": true,
+   "single": {
+    "bm25": {
+     "first": 14,
+     "all": 14
+    },
+    "dense": {
+     "first": 6,
+     "all": 6
+    },
+    "hybrid": {
+     "first": 3,
+     "all": 3
+    }
+   },
+   "shared": {
+    "bm25": {
+     "doc": 2,
+     "company": 1,
+     "page": null
+    },
+    "dense": {
+     "doc": 2,
+     "company": 1,
+     "page": null
+    },
+    "hybrid": {
+     "doc": 1,
+     "company": 1,
+     "page": null
+    }
+   }
+  },
+  {
+   "id": "financebench_id_00685",
+   "doc": "BESTBUY_2023_10K",
+   "qtype": "domain-relevant",
+   "gold_pages": [
+    39
+   ],
+   "reachable": true,
+   "single": {
+    "bm25": {
+     "first": 114,
+     "all": 114
+    },
+    "dense": {
+     "first": 114,
+     "all": 114
+    },
+    "hybrid": {
+     "first": 119,
+     "all": 119
+    }
+   },
+   "shared": {
+    "bm25": {
+     "doc": 6,
+     "company": 1,
+     "page": null
+    },
+    "dense": {
+     "doc": 2,
+     "company": 1,
+     "page": null
+    },
+    "hybrid": {
+     "doc": 1,
+     "company": 1,
+     "page": null
+    }
+   }
+  },
+  {
+   "id": "financebench_id_01077",
+   "doc": "BESTBUY_2023_10K",
+   "qtype": "domain-relevant",
+   "gold_pages": [
+    50
+   ],
+   "reachable": true,
+   "single": {
+    "bm25": {
+     "first": 7,
+     "all": 7
+    },
+    "dense": {
+     "first": 51,
+     "all": 51
+    },
+    "hybrid": {
+     "first": 18,
+     "all": 18
+    }
+   },
+   "shared": {
+    "bm25": {
+     "doc": 1,
+     "company": 1,
+     "page": null
+    },
+    "dense": {
+     "doc": 2,
+     "company": 1,
+     "page": null
+    },
+    "hybrid": {
+     "doc": 1,
+     "company": 1,
+     "page": null
+    }
+   }
+  },
+  {
+   "id": "financebench_id_01275",
+   "doc": "BESTBUY_2023_10K",
+   "qtype": "domain-relevant",
+   "gold_pages": [
+    41
+   ],
+   "reachable": true,
+   "single": {
+    "bm25": {
+     "first": 3,
+     "all": 3
+    },
+    "dense": {
+     "first": 12,
+     "all": 12
+    },
+    "hybrid": {
+     "first": 4,
+     "all": 4
+    }
+   },
+   "shared": {
+    "bm25": {
+     "doc": 9,
+     "company": 9,
+     "page": null
+    },
+    "dense": {
+     "doc": 7,
+     "company": 1,
+     "page": null
+    },
+    "hybrid": {
+     "doc": 1,
+     "company": 1,
+     "page": null
+    }
+   }
+  },
+  {
+   "id": "financebench_id_00288",
+   "doc": "BESTBUY_2024Q2_10Q",
+   "qtype": "novel-generated",
+   "gold_pages": [
+    19
+   ],
+   "reachable": true,
+   "single": {
+    "bm25": {
+     "first": 3,
+     "all": 3
+    },
+    "dense": {
+     "first": 1,
+     "all": 1
+    },
+    "hybrid": {
+     "first": 1,
+     "all": 1
+    }
+   },
+   "shared": {
+    "bm25": {
+     "doc": 1,
+     "company": 1,
+     "page": 3
+    },
+    "dense": {
+     "doc": 1,
+     "company": 1,
+     "page": 1
+    },
+    "hybrid": {
+     "doc": 1,
+     "company": 1,
+     "page": 1
+    }
+   }
+  },
+  {
+   "id": "financebench_id_00460",
+   "doc": "BESTBUY_2024Q2_10Q",
+   "qtype": "novel-generated",
+   "gold_pages": [
+    16
+   ],
+   "reachable": true,
+   "single": {
+    "bm25": {
+     "first": 1,
+     "all": 1
+    },
+    "dense": {
+     "first": 1,
+     "all": 1
+    },
+    "hybrid": {
+     "first": 1,
+     "all": 1
+    }
+   },
+   "shared": {
+    "bm25": {
+     "doc": 2,
+     "company": 1,
+     "page": 3
+    },
+    "dense": {
+     "doc": 1,
+     "company": 1,
+     "page": 1
+    },
+    "hybrid": {
+     "doc": 2,
+     "company": 1,
+     "page": 3
+    }
+   }
+  },
+  {
+   "id": "financebench_id_01902",
+   "doc": "BESTBUY_2024Q2_10Q",
+   "qtype": "novel-generated",
+   "gold_pages": [
+    17
+   ],
+   "reachable": true,
+   "single": {
+    "bm25": {
+     "first": 4,
+     "all": 4
+    },
+    "dense": {
+     "first": 21,
+     "all": 21
+    },
+    "hybrid": {
+     "first": 13,
+     "all": 13
+    }
+   },
+   "shared": {
+    "bm25": {
+     "doc": null,
+     "company": 1,
+     "page": null
+    },
+    "dense": {
+     "doc": 1,
+     "company": 1,
+     "page": null
+    },
+    "hybrid": {
+     "doc": 4,
+     "company": 1,
+     "page": null
+    }
+   }
+  },
+  {
+   "id": "financebench_id_04660",
+   "doc": "BLOCK_2016_10K",
+   "qtype": "metrics-generated",
+   "gold_pages": [
+    67
+   ],
+   "reachable": true,
+   "single": {
+    "bm25": {
+     "first": 1,
+     "all": 1
+    },
+    "dense": {
+     "first": 1,
+     "all": 1
+    },
+    "hybrid": {
+     "first": 1,
+     "all": 1
+    }
+   },
+   "shared": {
+    "bm25": {
+     "doc": null,
+     "company": null,
+     "page": null
+    },
+    "dense": {
+     "doc": 11,
+     "company": 9,
+     "page": 11
+    },
+    "hybrid": {
+     "doc": 18,
+     "company": 18,
+     "page": 18
+    }
+   }
+  },
+  {
+   "id": "financebench_id_03838",
+   "doc": "BLOCK_2020_10K",
+   "qtype": "metrics-generated",
+   "gold_pages": [
+    85
+   ],
+   "reachable": true,
+   "single": {
+    "bm25": {
+     "first": 17,
+     "all": 17
+    },
+    "dense": {
+     "first": 2,
+     "all": 2
+    },
+    "hybrid": {
+     "first": 3,
+     "all": 3
+    }
+   },
+   "shared": {
+    "bm25": {
+     "doc": 2,
+     "company": 2,
+     "page": null
+    },
+    "dense": {
+     "doc": 1,
+     "company": 1,
+     "page": 2
+    },
+    "hybrid": {
+     "doc": 1,
+     "company": 1,
+     "page": 14
+    }
+   }
+  },
+  {
+   "id": "financebench_id_07661",
+   "doc": "BLOCK_2020_10K",
+   "qtype": "metrics-generated",
+   "gold_pages": [
+    89
+   ],
+   "reachable": true,
+   "single": {
+    "bm25": {
+     "first": 10,
+     "all": 10
+    },
+    "dense": {
+     "first": 2,
+     "all": 2
+    },
+    "hybrid": {
+     "first": 1,
+     "all": 1
+    }
+   },
+   "shared": {
+    "bm25": {
+     "doc": null,
+     "company": null,
+     "page": null
+    },
+    "dense": {
+     "doc": 1,
+     "company": 1,
+     "page": 2
+    },
+    "hybrid": {
+     "doc": 18,
+     "company": 18,
+     "page": 18
+    }
+   }
+  },
+  {
+   "id": "financebench_id_10285",
+   "doc": "BOEING_2018_10K",
+   "qtype": "metrics-generated",
+   "gold_pages": [
+    51
+   ],
+   "reachable": true,
+   "single": {
+    "bm25": {
+     "first": 13,
+     "all": 13
+    },
+    "dense": {
+     "first": 3,
+     "all": 3
+    },
+    "hybrid": {
+     "first": 2,
+     "all": 2
+    }
+   },
+   "shared": {
+    "bm25": {
+     "doc": null,
+     "company": null,
+     "page": null
+    },
+    "dense": {
+     "doc": 1,
+     "company": 1,
+     "page": 4
+    },
+    "hybrid": {
+     "doc": 3,
+     "company": 3,
+     "page": 18
+    }
+   }
+  },
+  {
+   "id": "financebench_id_00517",
+   "doc": "BOEING_2022_10K",
+   "qtype": "domain-relevant",
+   "gold_pages": [
+    61
+   ],
+   "reachable": true,
+   "single": {
+    "bm25": {
+     "first": 102,
+     "all": 102
+    },
+    "dense": {
+     "first": 2,
+     "all": 2
+    },
+    "hybrid": {
+     "first": 9,
+     "all": 9
+    }
+   },
+   "shared": {
+    "bm25": {
+     "doc": null,
+     "company": null,
+     "page": null
+    },
+    "dense": {
+     "doc": 1,
+     "company": 1,
+     "page": 2
+    },
+    "hybrid": {
+     "doc": 4,
+     "company": 4,
+     "page": 5
+    }
+   }
+  },
+  {
+   "id": "financebench_id_01091",
+   "doc": "BOEING_2022_10K",
+   "qtype": "domain-relevant",
+   "gold_pages": [
+    112
+   ],
+   "reachable": true,
+   "single": {
+    "bm25": {
+     "first": 8,
+     "all": 8
+    },
+    "dense": {
+     "first": 1,
+     "all": 1
+    },
+    "hybrid": {
+     "first": 2,
+     "all": 2
+    }
+   },
+   "shared": {
+    "bm25": {
+     "doc": 1,
+     "company": 1,
+     "page": null
+    },
+    "dense": {
+     "doc": 2,
+     "company": 1,
+     "page": 2
+    },
+    "hybrid": {
+     "doc": 1,
+     "company": 1,
+     "page": 16
+    }
+   }
+  },
+  {
+   "id": "financebench_id_00678",
+   "doc": "BOEING_2022_10K",
+   "qtype": "domain-relevant",
+   "gold_pages": [
+    54
+   ],
+   "reachable": true,
+   "single": {
+    "bm25": {
+     "first": 101,
+     "all": 101
+    },
+    "dense": {
+     "first": 7,
+     "all": 7
+    },
+    "hybrid": {
+     "first": 18,
+     "all": 18
+    }
+   },
+   "shared": {
+    "bm25": {
+     "doc": null,
+     "company": null,
+     "page": null
+    },
+    "dense": {
+     "doc": 1,
+     "company": 1,
+     "page": 10
+    },
+    "hybrid": {
+     "doc": 10,
+     "company": 10,
+     "page": null
+    }
+   }
+  },
+  {
+   "id": "financebench_id_01290",
+   "doc": "BOEING_2022_10K",
+   "qtype": "domain-relevant",
+   "gold_pages": [
+    7,
+    9,
+    13
+   ],
+   "reachable": true,
+   "single": {
+    "bm25": {
+     "first": 54,
+     "all": 320
+    },
+    "dense": {
+     "first": 52,
+     "all": 209
+    },
+    "hybrid": {
+     "first": 51,
+     "all": 264
+    }
+   },
+   "shared": {
+    "bm25": {
+     "doc": 1,
+     "company": 1,
+     "page": null
+    },
+    "dense": {
+     "doc": 1,
+     "company": 1,
+     "page": null
+    },
+    "hybrid": {
+     "doc": 1,
+     "company": 1,
+     "page": null
+    }
+   }
+  },
+  {
+   "id": "financebench_id_00464",
+   "doc": "BOEING_2022_10K",
+   "qtype": "novel-generated",
+   "gold_pages": [
+    7
+   ],
+   "reachable": true,
+   "single": {
+    "bm25": {
+     "first": 42,
+     "all": 42
+    },
+    "dense": {
+     "first": 13,
+     "all": 13
+    },
+    "hybrid": {
+     "first": 38,
+     "all": 38
+    }
+   },
+   "shared": {
+    "bm25": {
+     "doc": 2,
+     "company": 1,
+     "page": null
+    },
+    "dense": {
+     "doc": 1,
+     "company": 1,
+     "page": null
+    },
+    "hybrid": {
+     "doc": 2,
+     "company": 1,
+     "page": null
+    }
+   }
+  },
+  {
+   "id": "financebench_id_00494",
+   "doc": "BOEING_2022_10K",
+   "qtype": "novel-generated",
+   "gold_pages": [
+    8
+   ],
+   "reachable": true,
+   "single": {
+    "bm25": {
+     "first": 1,
+     "all": 1
+    },
+    "dense": {
+     "first": 1,
+     "all": 1
+    },
+    "hybrid": {
+     "first": 1,
+     "all": 1
+    }
+   },
+   "shared": {
+    "bm25": {
+     "doc": 1,
+     "company": 1,
+     "page": 1
+    },
+    "dense": {
+     "doc": 1,
+     "company": 1,
+     "page": 1
+    },
+    "hybrid": {
+     "doc": 1,
+     "company": 1,
+     "page": 1
+    }
+   }
+  },
+  {
+   "id": "financebench_id_00585",
+   "doc": "BOEING_2022_10K",
+   "qtype": "novel-generated",
+   "gold_pages": [
+    54
+   ],
+   "reachable": true,
+   "single": {
+    "bm25": {
+     "first": 44,
+     "all": 44
+    },
+    "dense": {
+     "first": 2,
+     "all": 2
+    },
+    "hybrid": {
+     "first": 12,
+     "all": 12
+    }
+   },
+   "shared": {
+    "bm25": {
+     "doc": 13,
+     "company": 13,
+     "page": null
+    },
+    "dense": {
+     "doc": 5,
+     "company": 5,
+     "page": 11
+    },
+    "hybrid": {
+     "doc": 10,
+     "company": 10,
+     "page": null
+    }
+   }
+  },
+  {
+   "id": "financebench_id_03473",
+   "doc": "COCACOLA_2017_10K",
+   "qtype": "metrics-generated",
+   "gold_pages": [
+    73,
+    75
+   ],
+   "reachable": true,
+   "single": {
+    "bm25": {
+     "first": 22,
+     "all": 154
+    },
+    "dense": {
+     "first": 1,
+     "all": 5
+    },
+    "hybrid": {
+     "first": 2,
+     "all": 23
+    }
+   },
+   "shared": {
+    "bm25": {
+     "doc": 7,
+     "company": 7,
+     "page": null
+    },
+    "dense": {
+     "doc": 7,
+     "company": 3,
+     "page": 7
+    },
+    "hybrid": {
+     "doc": 10,
+     "company": 10,
+     "page": 19
+    }
+   }
+  },
+  {
+   "id": "financebench_id_09724",
+   "doc": "COCACOLA_2021_10K",
+   "qtype": "metrics-generated",
+   "gold_pages": [
+    61
+   ],
+   "reachable": true,
+   "single": {
+    "bm25": {
+     "first": 35,
+     "all": 35
+    },
+    "dense": {
+     "first": 1,
+     "all": 1
+    },
+    "hybrid": {
+     "first": 7,
+     "all": 7
+    }
+   },
+   "shared": {
+    "bm25": {
+     "doc": 2,
+     "company": 1,
+     "page": null
+    },
+    "dense": {
+     "doc": 2,
+     "company": 1,
+     "page": 2
+    },
+    "hybrid": {
+     "doc": 2,
+     "company": 1,
+     "page": 2
+    }
+   }
+  },
+  {
+   "id": "financebench_id_06272",
+   "doc": "COCACOLA_2022_10K",
+   "qtype": "metrics-generated",
+   "gold_pages": [
+    62,
+    65
+   ],
+   "reachable": true,
+   "single": {
+    "bm25": {
+     "first": 12,
+     "all": 19
+    },
+    "dense": {
+     "first": 5,
+     "all": 7
+    },
+    "hybrid": {
+     "first": 4,
+     "all": 6
+    }
+   },
+   "shared": {
+    "bm25": {
+     "doc": null,
+     "company": 6,
+     "page": null
+    },
+    "dense": {
+     "doc": 1,
+     "company": 1,
+     "page": 10
+    },
+    "hybrid": {
+     "doc": 3,
+     "company": 1,
+     "page": 14
+    }
+   }
+  },
+  {
+   "id": "financebench_id_10130",
+   "doc": "CORNING_2020_10K",
+   "qtype": "metrics-generated",
+   "gold_pages": [
+    69,
+    71
+   ],
+   "reachable": true,
+   "single": {
+    "bm25": {
+     "first": 10,
+     "all": 219
+    },
+    "dense": {
+     "first": 6,
+     "all": 30
+    },
+    "hybrid": {
+     "first": 2,
+     "all": 72
+    }
+   },
+   "shared": {
+    "bm25": {
+     "doc": 1,
+     "company": 1,
+     "page": null
+    },
+    "dense": {
+     "doc": 4,
+     "company": 1,
+     "page": 11
+    },
+    "hybrid": {
+     "doc": 2,
+     "company": 1,
+     "page": 20
+    }
+   }
+  },
+  {
+   "id": "financebench_id_02981",
+   "doc": "CORNING_2021_10K",
+   "qtype": "metrics-generated",
+   "gold_pages": [
+    64
+   ],
+   "reachable": true,
+   "single": {
+    "bm25": {
+     "first": 3,
+     "all": 3
+    },
+    "dense": {
+     "first": 2,
+     "all": 2
+    },
+    "hybrid": {
+     "first": 2,
+     "all": 2
+    }
+   },
+   "shared": {
+    "bm25": {
+     "doc": 1,
+     "company": 1,
+     "page": 1
+    },
+    "dense": {
+     "doc": 1,
+     "company": 1,
+     "page": 5
+    },
+    "hybrid": {
+     "doc": 1,
+     "company": 1,
+     "page": 1
+    }
+   }
+  },
+  {
+   "id": "financebench_id_01346",
+   "doc": "CORNING_2022_10K",
+   "qtype": "domain-relevant",
+   "gold_pages": [
+    23
+   ],
+   "reachable": true,
+   "single": {
+    "bm25": {
+     "first": 9,
+     "all": 9
+    },
+    "dense": {
+     "first": 3,
+     "all": 3
+    },
+    "hybrid": {
+     "first": 3,
+     "all": 3
+    }
+   },
+   "shared": {
+    "bm25": {
+     "doc": 3,
+     "company": 3,
+     "page": null
+    },
+    "dense": {
+     "doc": 3,
+     "company": 1,
+     "page": 9
+    },
+    "hybrid": {
+     "doc": 1,
+     "company": 1,
+     "page": 14
+    }
+   }
+  },
+  {
+   "id": "financebench_id_00005",
+   "doc": "CORNING_2022_10K",
+   "qtype": "domain-relevant",
+   "gold_pages": [
+    59
+   ],
+   "reachable": true,
+   "single": {
+    "bm25": {
+     "first": 58,
+     "all": 58
+    },
+    "dense": {
+     "first": 12,
+     "all": 12
+    },
+    "hybrid": {
+     "first": 50,
+     "all": 50
+    }
+   },
+   "shared": {
+    "bm25": {
+     "doc": 17,
+     "company": 5,
+     "page": null
+    },
+    "dense": {
+     "doc": 12,
+     "company": 1,
+     "page": null
+    },
+    "hybrid": {
+     "doc": 8,
+     "company": 2,
+     "page": null
+    }
+   }
+  },
+  {
+   "id": "financebench_id_04209",
+   "doc": "COSTCO_2021_10K",
+   "qtype": "metrics-generated",
+   "gold_pages": [
+    37
+   ],
+   "reachable": true,
+   "single": {
+    "bm25": {
+     "first": 5,
+     "all": 5
+    },
+    "dense": {
+     "first": 1,
+     "all": 1
+    },
+    "hybrid": {
+     "first": 1,
+     "all": 1
+    }
+   },
+   "shared": {
+    "bm25": {
+     "doc": 20,
+     "company": 20,
+     "page": null
+    },
+    "dense": {
+     "doc": 1,
+     "company": 1,
+     "page": 1
+    },
+    "hybrid": {
+     "doc": 4,
+     "company": 4,
+     "page": 4
+    }
+   }
+  },
+  {
+   "id": "financebench_id_05915",
+   "doc": "CVSHEALTH_2018_10K",
+   "qtype": "metrics-generated",
+   "gold_pages": [
+    301,
+    303
+   ],
+   "reachable": true,
+   "single": {
+    "bm25": {
+     "first": 151,
+     "all": 233
+    },
+    "dense": {
+     "first": 1,
+     "all": 15
+    },
+    "hybrid": {
+     "first": 24,
+     "all": 50
+    }
+   },
+   "shared": {
+    "bm25": {
+     "doc": 7,
+     "company": 6,
+     "page": null
+    },
+    "dense": {
+     "doc": 1,
+     "company": 1,
+     "page": 1
+    },
+    "hybrid": {
+     "doc": 2,
+     "company": 1,
+     "page": 9
+    }
+   }
+  },
+  {
+   "id": "financebench_id_00790",
+   "doc": "CVSHEALTH_2022_10K",
+   "qtype": "domain-relevant",
+   "gold_pages": [
+    107,
+    109
+   ],
+   "reachable": true,
+   "single": {
+    "bm25": {
+     "first": 66,
+     "all": 115
+    },
+    "dense": {
+     "first": 37,
+     "all": 39
+    },
+    "hybrid": {
+     "first": 41,
+     "all": 77
+    }
+   },
+   "shared": {
+    "bm25": {
+     "doc": 1,
+     "company": 1,
+     "page": null
+    },
+    "dense": {
+     "doc": 1,
+     "company": 1,
+     "page": null
+    },
+    "hybrid": {
+     "doc": 4,
+     "company": 1,
+     "page": null
+    }
+   }
+  },
+  {
+   "id": "financebench_id_01107",
+   "doc": "CVSHEALTH_2022_10K",
+   "qtype": "domain-relevant",
+   "gold_pages": [
+    172,
+    173
+   ],
+   "reachable": true,
+   "single": {
+    "bm25": {
+     "first": 10,
+     "all": 78
+    },
+    "dense": {
+     "first": 1,
+     "all": 41
+    },
+    "hybrid": {
+     "first": 2,
+     "all": 111
+    }
+   },
+   "shared": {
+    "bm25": {
+     "doc": 1,
+     "company": 1,
+     "page": 2
+    },
+    "dense": {
+     "doc": 1,
+     "company": 1,
+     "page": 1
+    },
+    "hybrid": {
+     "doc": 1,
+     "company": 1,
+     "page": 1
+    }
+   }
+  },
+  {
+   "id": "financebench_id_01244",
+   "doc": "CVSHEALTH_2022_10K",
+   "qtype": "domain-relevant",
+   "gold_pages": [
+    67
+   ],
+   "reachable": true,
+   "single": {
+    "bm25": {
+     "first": 1,
+     "all": 1
+    },
+    "dense": {
+     "first": 1,
+     "all": 1
+    },
+    "hybrid": {
+     "first": 1,
+     "all": 1
+    }
+   },
+   "shared": {
+    "bm25": {
+     "doc": 1,
+     "company": 1,
+     "page": 1
+    },
+    "dense": {
+     "doc": 1,
+     "company": 1,
+     "page": 1
+    },
+    "hybrid": {
+     "doc": 1,
+     "company": 1,
+     "page": 1
+    }
+   }
+  },
+  {
+   "id": "financebench_id_00839",
+   "doc": "FOOTLOCKER_2022_8K_dated_2022-08-19",
+   "qtype": "novel-generated",
+   "gold_pages": [
+    1
+   ],
+   "reachable": true,
+   "single": {
+    "bm25": {
+     "first": 25,
+     "all": 25
+    },
+    "dense": {
+     "first": 10,
+     "all": 10
+    },
+    "hybrid": {
+     "first": 17,
+     "all": 17
+    }
+   },
+   "shared": {
+    "bm25": {
+     "doc": 1,
+     "company": 1,
+     "page": null
+    },
+    "dense": {
+     "doc": 1,
+     "company": 1,
+     "page": 10
+    },
+    "hybrid": {
+     "doc": 1,
+     "company": 1,
+     "page": 15
+    }
+   }
+  },
+  {
+   "id": "financebench_id_00822",
+   "doc": "FOOTLOCKER_2022_8K_dated-2022-05-20",
+   "qtype": "novel-generated",
+   "gold_pages": [
+    1
+   ],
+   "reachable": true,
+   "single": {
+    "bm25": {
+     "first": 1,
+     "all": 1
+    },
+    "dense": {
+     "first": 1,
+     "all": 1
+    },
+    "hybrid": {
+     "first": 1,
+     "all": 1
+    }
+   },
+   "shared": {
+    "bm25": {
+     "doc": 2,
+     "company": 2,
+     "page": 2
+    },
+    "dense": {
+     "doc": 5,
+     "company": 5,
+     "page": 5
+    },
+    "hybrid": {
+     "doc": 2,
+     "company": 2,
+     "page": 2
+    }
+   }
+  },
+  {
+   "id": "financebench_id_04103",
+   "doc": "GENERALMILLS_2019_10K",
+   "qtype": "metrics-generated",
+   "gold_pages": [
+    52,
+    54
+   ],
+   "reachable": true,
+   "single": {
+    "bm25": {
+     "first": 97,
+     "all": 175
+    },
+    "dense": {
+     "first": 3,
+     "all": 12
+    },
+    "hybrid": {
+     "first": 10,
+     "all": 38
+    }
+   },
+   "shared": {
+    "bm25": {
+     "doc": 8,
+     "company": 8,
+     "page": null
+    },
+    "dense": {
+     "doc": 1,
+     "company": 1,
+     "page": 9
+    },
+    "hybrid": {
+     "doc": 4,
+     "company": 2,
+     "page": 17
+    }
+   }
+  },
+  {
+   "id": "financebench_id_03471",
+   "doc": "GENERALMILLS_2020_10K",
+   "qtype": "metrics-generated",
+   "gold_pages": [
+    49
+   ],
+   "reachable": true,
+   "single": {
+    "bm25": {
+     "first": 2,
+     "all": 2
+    },
+    "dense": {
+     "first": 1,
+     "all": 1
+    },
+    "hybrid": {
+     "first": 1,
+     "all": 1
+    }
+   },
+   "shared": {
+    "bm25": {
+     "doc": null,
+     "company": null,
+     "page": null
+    },
+    "dense": {
+     "doc": 2,
+     "company": 2,
+     "page": 2
+    },
+    "hybrid": {
+     "doc": 12,
+     "company": 12,
+     "page": 12
+    }
+   }
+  },
+  {
+   "id": "financebench_id_04854",
+   "doc": "GENERALMILLS_2020_10K",
+   "qtype": "metrics-generated",
+   "gold_pages": [
+    51
+   ],
+   "reachable": true,
+   "single": {
+    "bm25": {
+     "first": 9,
+     "all": 9
+    },
+    "dense": {
+     "first": 1,
+     "all": 1
+    },
+    "hybrid": {
+     "first": 2,
+     "all": 2
+    }
+   },
+   "shared": {
+    "bm25": {
+     "doc": null,
+     "company": null,
+     "page": null
+    },
+    "dense": {
+     "doc": 1,
+     "company": 1,
+     "page": 1
+    },
+    "hybrid": {
+     "doc": 19,
+     "company": 19,
+     "page": 19
+    }
+   }
+  },
+  {
+   "id": "financebench_id_10136",
+   "doc": "GENERALMILLS_2022_10K",
+   "qtype": "metrics-generated",
+   "gold_pages": [
+    44,
+    48
+   ],
+   "reachable": true,
+   "single": {
+    "bm25": {
+     "first": 11,
+     "all": 33
+    },
+    "dense": {
+     "first": 5,
+     "all": 12
+    },
+    "hybrid": {
+     "first": 3,
+     "all": 13
+    }
+   },
+   "shared": {
+    "bm25": {
+     "doc": 8,
+     "company": 8,
+     "page": null
+    },
+    "dense": {
+     "doc": 2,
+     "company": 1,
+     "page": 15
+    },
+    "hybrid": {
+     "doc": 2,
+     "company": 1,
+     "page": null
+    }
+   }
+  },
+  {
+   "id": "financebench_id_00956",
+   "doc": "JOHNSON_JOHNSON_2022_10K",
+   "qtype": "domain-relevant",
+   "gold_pages": [
+    27
+   ],
+   "reachable": true,
+   "single": {
+    "bm25": {
+     "first": 2,
+     "all": 2
+    },
+    "dense": {
+     "first": 46,
+     "all": 46
+    },
+    "hybrid": {
+     "first": 6,
+     "all": 6
+    }
+   },
+   "shared": {
+    "bm25": {
+     "doc": 5,
+     "company": 1,
+     "page": null
+    },
+    "dense": {
+     "doc": 5,
+     "company": 1,
+     "page": null
+    },
+    "hybrid": {
+     "doc": 3,
+     "company": 1,
+     "page": null
+    }
+   }
+  },
+  {
+   "id": "financebench_id_00669",
+   "doc": "JOHNSON_JOHNSON_2022_10K",
+   "qtype": "domain-relevant",
+   "gold_pages": [
+    33
+   ],
+   "reachable": true,
+   "single": {
+    "bm25": {
+     "first": 320,
+     "all": 320
+    },
+    "dense": {
+     "first": 192,
+     "all": 192
+    },
+    "hybrid": {
+     "first": 293,
+     "all": 293
+    }
+   },
+   "shared": {
+    "bm25": {
+     "doc": null,
+     "company": null,
+     "page": null
+    },
+    "dense": {
+     "doc": null,
+     "company": 9,
+     "page": null
+    },
+    "hybrid": {
+     "doc": null,
+     "company": null,
+     "page": null
+    }
+   }
+  },
+  {
+   "id": "financebench_id_00711",
+   "doc": "JOHNSON_JOHNSON_2022_10K",
+   "qtype": "domain-relevant",
+   "gold_pages": [
+    45,
+    46
+   ],
+   "reachable": true,
+   "single": {
+    "bm25": {
+     "first": 151,
+     "all": 342
+    },
+    "dense": {
+     "first": 18,
+     "all": 23
+    },
+    "hybrid": {
+     "first": 47,
+     "all": 62
+    }
+   },
+   "shared": {
+    "bm25": {
+     "doc": null,
+     "company": null,
+     "page": null
+    },
+    "dense": {
+     "doc": 1,
+     "company": 1,
+     "page": null
+    },
+    "hybrid": {
+     "doc": 17,
+     "company": 17,
+     "page": null
+    }
+   }
+  },
+  {
+   "id": "financebench_id_00651",
+   "doc": "JOHNSON_JOHNSON_2022Q4_EARNINGS",
+   "qtype": "novel-generated",
+   "gold_pages": [
+    0
+   ],
+   "reachable": true,
+   "single": {
+    "bm25": {
+     "first": 1,
+     "all": 1
+    },
+    "dense": {
+     "first": 1,
+     "all": 1
+    },
+    "hybrid": {
+     "first": 1,
+     "all": 1
+    }
+   },
+   "shared": {
+    "bm25": {
+     "doc": 3,
+     "company": 1,
+     "page": 3
+    },
+    "dense": {
+     "doc": 2,
+     "company": 1,
+     "page": 2
+    },
+    "hybrid": {
+     "doc": 2,
+     "company": 1,
+     "page": 2
+    }
+   }
+  },
+  {
+   "id": "financebench_id_01484",
+   "doc": "JOHNSON_JOHNSON_2022Q4_EARNINGS",
+   "qtype": "novel-generated",
+   "gold_pages": [
+    1
+   ],
+   "reachable": true,
+   "single": {
+    "bm25": {
+     "first": 18,
+     "all": 18
+    },
+    "dense": {
+     "first": 19,
+     "all": 19
+    },
+    "hybrid": {
+     "first": 17,
+     "all": 17
+    }
+   },
+   "shared": {
+    "bm25": {
+     "doc": 2,
+     "company": 2,
+     "page": null
+    },
+    "dense": {
+     "doc": 6,
+     "company": 1,
+     "page": null
+    },
+    "hybrid": {
+     "doc": 2,
+     "company": 1,
+     "page": null
+    }
+   }
+  },
+  {
+   "id": "financebench_id_01488",
+   "doc": "JOHNSON_JOHNSON_2023_8K_dated-2023-08-30",
+   "qtype": "novel-generated",
+   "gold_pages": [
+    3
+   ],
+   "reachable": true,
+   "single": {
+    "bm25": {
+     "first": 1,
+     "all": 1
+    },
+    "dense": {
+     "first": 1,
+     "all": 1
+    },
+    "hybrid": {
+     "first": 1,
+     "all": 1
+    }
+   },
+   "shared": {
+    "bm25": {
+     "doc": 3,
+     "company": 3,
+     "page": 3
+    },
+    "dense": {
+     "doc": 1,
+     "company": 1,
+     "page": 1
+    },
+    "hybrid": {
+     "doc": 1,
+     "company": 1,
+     "page": 1
+    }
+   }
+  },
+  {
+   "id": "financebench_id_01490",
+   "doc": "JOHNSON_JOHNSON_2023_8K_dated-2023-08-30",
+   "qtype": "novel-generated",
+   "gold_pages": [
+    3
+   ],
+   "reachable": true,
+   "single": {
+    "bm25": {
+     "first": 1,
+     "all": 1
+    },
+    "dense": {
+     "first": 1,
+     "all": 1
+    },
+    "hybrid": {
+     "first": 1,
+     "all": 1
+    }
+   },
+   "shared": {
+    "bm25": {
+     "doc": 2,
+     "company": 1,
+     "page": 2
+    },
+    "dense": {
+     "doc": 5,
+     "company": 2,
+     "page": 5
+    },
+    "hybrid": {
+     "doc": 1,
+     "company": 1,
+     "page": 1
+    }
+   }
+  },
+  {
+   "id": "financebench_id_01491",
+   "doc": "JOHNSON_JOHNSON_2023_8K_dated-2023-08-30",
+   "qtype": "novel-generated",
+   "gold_pages": [
+    3
+   ],
+   "reachable": true,
+   "single": {
+    "bm25": {
+     "first": 1,
+     "all": 1
+    },
+    "dense": {
+     "first": 1,
+     "all": 1
+    },
+    "hybrid": {
+     "first": 1,
+     "all": 1
+    }
+   },
+   "shared": {
+    "bm25": {
+     "doc": 1,
+     "company": 1,
+     "page": 1
+    },
+    "dense": {
+     "doc": 1,
+     "company": 1,
+     "page": 1
+    },
+    "hybrid": {
+     "doc": 1,
+     "company": 1,
+     "page": 1
+    }
+   }
+  },
+  {
+   "id": "financebench_id_01487",
+   "doc": "JOHNSON_JOHNSON_2023Q2_EARNINGS",
+   "qtype": "novel-generated",
+   "gold_pages": [
+    9
+   ],
+   "reachable": true,
+   "single": {
+    "bm25": {
+     "first": 3,
+     "all": 3
+    },
+    "dense": {
+     "first": 6,
+     "all": 6
+    },
+    "hybrid": {
+     "first": 3,
+     "all": 3
+    }
+   },
+   "shared": {
+    "bm25": {
+     "doc": 1,
+     "company": 1,
+     "page": null
+    },
+    "dense": {
+     "doc": 1,
+     "company": 1,
+     "page": 11
+    },
+    "hybrid": {
+     "doc": 1,
+     "company": 1,
+     "page": 12
+    }
+   }
+  },
+  {
+   "id": "financebench_id_00299",
+   "doc": "JPMORGAN_2021Q1_10Q",
+   "qtype": "novel-generated",
+   "gold_pages": [
+    18
+   ],
+   "reachable": true,
+   "single": {
+    "bm25": {
+     "first": 53,
+     "all": 53
+    },
+    "dense": {
+     "first": 9,
+     "all": 9
+    },
+    "hybrid": {
+     "first": 21,
+     "all": 21
+    }
+   },
+   "shared": {
+    "bm25": {
+     "doc": 6,
+     "company": 1,
+     "page": null
+    },
+    "dense": {
+     "doc": 7,
+     "company": 1,
+     "page": null
+    },
+    "hybrid": {
+     "doc": 5,
+     "company": 1,
+     "page": null
+    }
+   }
+  },
+  {
+   "id": "financebench_id_02119",
+   "doc": "JPMORGAN_2021Q1_10Q",
+   "qtype": "novel-generated",
+   "gold_pages": [
+    5
+   ],
+   "reachable": true,
+   "single": {
+    "bm25": {
+     "first": 37,
+     "all": 37
+    },
+    "dense": {
+     "first": 65,
+     "all": 65
+    },
+    "hybrid": {
+     "first": 92,
+     "all": 92
+    }
+   },
+   "shared": {
+    "bm25": {
+     "doc": 6,
+     "company": 4,
+     "page": null
+    },
+    "dense": {
+     "doc": 3,
+     "company": 2,
+     "page": null
+    },
+    "hybrid": {
+     "doc": 2,
+     "company": 1,
+     "page": null
+    }
+   }
+  },
+  {
+   "id": "financebench_id_00206",
+   "doc": "JPMORGAN_2022_10K",
+   "qtype": "domain-relevant",
+   "gold_pages": [
+    2
+   ],
+   "reachable": true,
+   "single": {
+    "bm25": {
+     "first": 204,
+     "all": 204
+    },
+    "dense": {
+     "first": 482,
+     "all": 482
+    },
+    "hybrid": {
+     "first": 311,
+     "all": 311
+    }
+   },
+   "shared": {
+    "bm25": {
+     "doc": null,
+     "company": null,
+     "page": null
+    },
+    "dense": {
+     "doc": 13,
+     "company": 5,
+     "page": null
+    },
+    "hybrid": {
+     "doc": null,
+     "company": 18,
+     "page": null
+    }
+   }
+  },
+  {
+   "id": "financebench_id_00394",
+   "doc": "JPMORGAN_2022Q2_10Q",
+   "qtype": "novel-generated",
+   "gold_pages": [
+    20
+   ],
+   "reachable": true,
+   "single": {
+    "bm25": {
+     "first": 47,
+     "all": 47
+    },
+    "dense": {
+     "first": 6,
+     "all": 6
+    },
+    "hybrid": {
+     "first": 14,
+     "all": 14
+    }
+   },
+   "shared": {
+    "bm25": {
+     "doc": 4,
+     "company": 4,
+     "page": null
+    },
+    "dense": {
+     "doc": 2,
+     "company": 1,
+     "page": 19
+    },
+    "hybrid": {
+     "doc": 1,
+     "company": 1,
+     "page": null
+    }
+   }
+  },
+  {
+   "id": "financebench_id_02049",
+   "doc": "JPMORGAN_2023Q2_10Q",
+   "qtype": "novel-generated",
+   "gold_pages": [
+    84
+   ],
+   "reachable": true,
+   "single": {
+    "bm25": {
+     "first": 1,
+     "all": 1
+    },
+    "dense": {
+     "first": 3,
+     "all": 3
+    },
+    "hybrid": {
+     "first": 1,
+     "all": 1
+    }
+   },
+   "shared": {
+    "bm25": {
+     "doc": 1,
+     "company": 1,
+     "page": 1
+    },
+    "dense": {
+     "doc": 2,
+     "company": 1,
+     "page": 11
+    },
+    "hybrid": {
+     "doc": 1,
+     "company": 1,
+     "page": 1
+    }
+   }
+  },
+  {
+   "id": "financebench_id_10499",
+   "doc": "KRAFTHEINZ_2019_10K",
+   "qtype": "metrics-generated",
+   "gold_pages": [
+    49,
+    51
+   ],
+   "reachable": true,
+   "single": {
+    "bm25": {
+     "first": 179,
+     "all": 287
+    },
+    "dense": {
+     "first": 3,
+     "all": 11
+    },
+    "hybrid": {
+     "first": 15,
+     "all": 48
+    }
+   },
+   "shared": {
+    "bm25": {
+     "doc": 3,
+     "company": 3,
+     "page": null
+    },
+    "dense": {
+     "doc": 1,
+     "company": 1,
+     "page": 3
+    },
+    "hybrid": {
+     "doc": 1,
+     "company": 1,
+     "page": null
+    }
+   }
+  },
+  {
+   "id": "financebench_id_04412",
+   "doc": "LOCKHEEDMARTIN_2020_10K",
+   "qtype": "metrics-generated",
+   "gold_pages": [
+    66,
+    68
+   ],
+   "reachable": true,
+   "single": {
+    "bm25": {
+     "first": 45,
+     "all": 230
+    },
+    "dense": {
+     "first": 1,
+     "all": 3
+    },
+    "hybrid": {
+     "first": 6,
+     "all": 31
+    }
+   },
+   "shared": {
+    "bm25": {
+     "doc": 4,
+     "company": 4,
+     "page": null
+    },
+    "dense": {
+     "doc": 2,
+     "company": 1,
+     "page": 2
+    },
+    "hybrid": {
+     "doc": 10,
+     "company": 10,
+     "page": 16
+    }
+   }
+  },
+  {
+   "id": "financebench_id_03031",
+   "doc": "LOCKHEEDMARTIN_2021_10K",
+   "qtype": "metrics-generated",
+   "gold_pages": [
+    67
+   ],
+   "reachable": true,
+   "single": {
+    "bm25": {
+     "first": 1,
+     "all": 1
+    },
+    "dense": {
+     "first": 1,
+     "all": 1
+    },
+    "hybrid": {
+     "first": 1,
+     "all": 1
+    }
+   },
+   "shared": {
+    "bm25": {
+     "doc": 12,
+     "company": 9,
+     "page": 12
+    },
+    "dense": {
+     "doc": 3,
+     "company": 3,
+     "page": 3
+    },
+    "hybrid": {
+     "doc": 5,
+     "company": 4,
+     "page": 5
+    }
+   }
+  },
+  {
+   "id": "financebench_id_03718",
+   "doc": "LOCKHEEDMARTIN_2022_10K",
+   "qtype": "metrics-generated",
+   "gold_pages": [
+    62
+   ],
+   "reachable": true,
+   "single": {
+    "bm25": {
+     "first": 38,
+     "all": 38
+    },
+    "dense": {
+     "first": 1,
+     "all": 1
+    },
+    "hybrid": {
+     "first": 7,
+     "all": 7
+    }
+   },
+   "shared": {
+    "bm25": {
+     "doc": 1,
+     "company": 1,
+     "page": null
+    },
+    "dense": {
+     "doc": 1,
+     "company": 1,
+     "page": 1
+    },
+    "hybrid": {
+     "doc": 2,
+     "company": 1,
+     "page": 16
+    }
+   }
+  },
+  {
+   "id": "financebench_id_04171",
+   "doc": "MGMRESORTS_2018_10K",
+   "qtype": "metrics-generated",
+   "gold_pages": [
+    56
+   ],
+   "reachable": true,
+   "single": {
+    "bm25": {
+     "first": 10,
+     "all": 10
+    },
+    "dense": {
+     "first": 1,
+     "all": 1
+    },
+    "hybrid": {
+     "first": 1,
+     "all": 1
+    }
+   },
+   "shared": {
+    "bm25": {
+     "doc": 2,
+     "company": 2,
+     "page": null
+    },
+    "dense": {
+     "doc": 4,
+     "company": 1,
+     "page": 4
+    },
+    "hybrid": {
+     "doc": 1,
+     "company": 1,
+     "page": 1
+    }
+   }
+  },
+  {
+   "id": "financebench_id_03849",
+   "doc": "MGMRESORTS_2020_10K",
+   "qtype": "metrics-generated",
+   "gold_pages": [
+    64,
+    66
+   ],
+   "reachable": true,
+   "single": {
+    "bm25": {
+     "first": 11,
+     "all": 49
+    },
+    "dense": {
+     "first": 1,
+     "all": 2
+    },
+    "hybrid": {
+     "first": 2,
+     "all": 24
+    }
+   },
+   "shared": {
+    "bm25": {
+     "doc": 4,
+     "company": 1,
+     "page": null
+    },
+    "dense": {
+     "doc": 2,
+     "company": 1,
+     "page": 2
+    },
+    "hybrid": {
+     "doc": 2,
+     "company": 1,
+     "page": 5
+    }
+   }
+  },
+  {
+   "id": "financebench_id_01254",
+   "doc": "MGMRESORTS_2022_10K",
+   "qtype": "domain-relevant",
+   "gold_pages": [
+    31
+   ],
+   "reachable": true,
+   "single": {
+    "bm25": {
+     "first": 2,
+     "all": 2
+    },
+    "dense": {
+     "first": 2,
+     "all": 2
+    },
+    "hybrid": {
+     "first": 2,
+     "all": 2
+    }
+   },
+   "shared": {
+    "bm25": {
+     "doc": 2,
+     "company": 1,
+     "page": 9
+    },
+    "dense": {
+     "doc": 2,
+     "company": 1,
+     "page": 10
+    },
+    "hybrid": {
+     "doc": 1,
+     "company": 1,
+     "page": 6
+    }
+   }
+  },
+  {
+   "id": "financebench_id_00382",
+   "doc": "MGMRESORTS_2022Q4_EARNINGS",
+   "qtype": "novel-generated",
+   "gold_pages": [
+    12
+   ],
+   "reachable": true,
+   "single": {
+    "bm25": {
+     "first": 1,
+     "all": 1
+    },
+    "dense": {
+     "first": 4,
+     "all": 4
+    },
+    "hybrid": {
+     "first": 3,
+     "all": 3
+    }
+   },
+   "shared": {
+    "bm25": {
+     "doc": 3,
+     "company": 1,
+     "page": 5
+    },
+    "dense": {
+     "doc": 11,
+     "company": 1,
+     "page": null
+    },
+    "hybrid": {
+     "doc": 4,
+     "company": 1,
+     "page": 12
+    }
+   }
+  },
+  {
+   "id": "financebench_id_01911",
+   "doc": "MGMRESORTS_2022Q4_EARNINGS",
+   "qtype": "novel-generated",
+   "gold_pages": [
+    13
+   ],
+   "reachable": true,
+   "single": {
+    "bm25": {
+     "first": 1,
+     "all": 1
+    },
+    "dense": {
+     "first": 1,
+     "all": 1
+    },
+    "hybrid": {
+     "first": 1,
+     "all": 1
+    }
+   },
+   "shared": {
+    "bm25": {
+     "doc": null,
+     "company": 2,
+     "page": null
+    },
+    "dense": {
+     "doc": 15,
+     "company": 1,
+     "page": 15
+    },
+    "hybrid": {
+     "doc": null,
+     "company": 1,
+     "page": null
+    }
+   }
+  },
+  {
+   "id": "financebench_id_01912",
+   "doc": "MGMRESORTS_2022Q4_EARNINGS",
+   "qtype": "novel-generated",
+   "gold_pages": [
+    2,
+    3
+   ],
+   "reachable": true,
+   "single": {
+    "bm25": {
+     "first": 10,
+     "all": 21
+    },
+    "dense": {
+     "first": 7,
+     "all": 21
+    },
+    "hybrid": {
+     "first": 14,
+     "all": 15
+    }
+   },
+   "shared": {
+    "bm25": {
+     "doc": null,
+     "company": 2,
+     "page": null
+    },
+    "dense": {
+     "doc": 17,
+     "company": 1,
+     "page": null
+    },
+    "hybrid": {
+     "doc": 1,
+     "company": 1,
+     "page": null
+    }
+   }
+  },
+  {
+   "id": "financebench_id_00407",
+   "doc": "MGMRESORTS_2023Q2_10Q",
+   "qtype": "novel-generated",
+   "gold_pages": [
+    10
+   ],
+   "reachable": true,
+   "single": {
+    "bm25": {
+     "first": 2,
+     "all": 2
+    },
+    "dense": {
+     "first": 1,
+     "all": 1
+    },
+    "hybrid": {
+     "first": 1,
+     "all": 1
+    }
+   },
+   "shared": {
+    "bm25": {
+     "doc": 5,
+     "company": 5,
+     "page": 5
+    },
+    "dense": {
+     "doc": 3,
+     "company": 1,
+     "page": 3
+    },
+    "hybrid": {
+     "doc": 1,
+     "company": 1,
+     "page": 1
+    }
+   }
+  },
+  {
+   "id": "financebench_id_04700",
+   "doc": "MICROSOFT_2016_10K",
+   "qtype": "metrics-generated",
+   "gold_pages": [
+    51
+   ],
+   "reachable": true,
+   "single": {
+    "bm25": {
+     "first": 72,
+     "all": 72
+    },
+    "dense": {
+     "first": 13,
+     "all": 13
+    },
+    "hybrid": {
+     "first": 23,
+     "all": 23
+    }
+   },
+   "shared": {
+    "bm25": {
+     "doc": 7,
+     "company": 7,
+     "page": null
+    },
+    "dense": {
+     "doc": 10,
+     "company": 9,
+     "page": null
+    },
+    "hybrid": {
+     "doc": 1,
+     "company": 1,
+     "page": null
+    }
+   }
+  },
+  {
+   "id": "financebench_id_00552",
+   "doc": "MICROSOFT_2023_10K",
+   "qtype": "domain-relevant",
+   "gold_pages": [
+    59
+   ],
+   "reachable": true,
+   "single": {
+    "bm25": {
+     "first": 36,
+     "all": 36
+    },
+    "dense": {
+     "first": 41,
+     "all": 41
+    },
+    "hybrid": {
+     "first": 28,
+     "all": 28
+    }
+   },
+   "shared": {
+    "bm25": {
+     "doc": 5,
+     "company": 5,
+     "page": null
+    },
+    "dense": {
+     "doc": 12,
+     "company": 10,
+     "page": null
+    },
+    "hybrid": {
+     "doc": 2,
+     "company": 2,
+     "page": null
+    }
+   }
+  },
+  {
+   "id": "financebench_id_04458",
+   "doc": "NETFLIX_2015_10K",
+   "qtype": "metrics-generated",
+   "gold_pages": [
+    39,
+    41
+   ],
+   "reachable": true,
+   "single": {
+    "bm25": {
+     "first": 10,
+     "all": 42
+    },
+    "dense": {
+     "first": 2,
+     "all": 28
+    },
+    "hybrid": {
+     "first": 4,
+     "all": 27
+    }
+   },
+   "shared": {
+    "bm25": {
+     "doc": null,
+     "company": null,
+     "page": null
+    },
+    "dense": {
+     "doc": null,
+     "company": null,
+     "page": null
+    },
+    "hybrid": {
+     "doc": null,
+     "company": null,
+     "page": null
+    }
+   }
+  },
+  {
+   "id": "financebench_id_03282",
+   "doc": "NETFLIX_2017_10K",
+   "qtype": "metrics-generated",
+   "gold_pages": [
+    44
+   ],
+   "reachable": true,
+   "single": {
+    "bm25": {
+     "first": 2,
+     "all": 2
+    },
+    "dense": {
+     "first": 1,
+     "all": 1
+    },
+    "hybrid": {
+     "first": 1,
+     "all": 1
+    }
+   },
+   "shared": {
+    "bm25": {
+     "doc": 10,
+     "company": 10,
+     "page": 10
+    },
+    "dense": {
+     "doc": 1,
+     "company": 1,
+     "page": 1
+    },
+    "hybrid": {
+     "doc": 1,
+     "company": 1,
+     "page": 1
+    }
+   }
+  },
+  {
+   "id": "financebench_id_04302",
+   "doc": "NIKE_2018_10K",
+   "qtype": "metrics-generated",
+   "gold_pages": [
+    45
+   ],
+   "reachable": true,
+   "single": {
+    "bm25": {
+     "first": 15,
+     "all": 15
+    },
+    "dense": {
+     "first": 5,
+     "all": 5
+    },
+    "hybrid": {
+     "first": 2,
+     "all": 2
+    }
+   },
+   "shared": {
+    "bm25": {
+     "doc": 14,
+     "company": 2,
+     "page": null
+    },
+    "dense": {
+     "doc": 4,
+     "company": 1,
+     "page": 18
+    },
+    "hybrid": {
+     "doc": 5,
+     "company": 1,
+     "page": 6
+    }
+   }
+  },
+  {
+   "id": "financebench_id_03531",
+   "doc": "NIKE_2019_10K",
+   "qtype": "metrics-generated",
+   "gold_pages": [
+    53
+   ],
+   "reachable": true,
+   "single": {
+    "bm25": {
+     "first": 3,
+     "all": 3
+    },
+    "dense": {
+     "first": 1,
+     "all": 1
+    },
+    "hybrid": {
+     "first": 1,
+     "all": 1
+    }
+   },
+   "shared": {
+    "bm25": {
+     "doc": 4,
+     "company": 4,
+     "page": null
+    },
+    "dense": {
+     "doc": 1,
+     "company": 1,
+     "page": 1
+    },
+    "hybrid": {
+     "doc": 1,
+     "company": 1,
+     "page": 1
+    }
+   }
+  },
+  {
+   "id": "financebench_id_04080",
+   "doc": "NIKE_2021_10K",
+   "qtype": "metrics-generated",
+   "gold_pages": [
+    58,
+    60
+   ],
+   "reachable": true,
+   "single": {
+    "bm25": {
+     "first": 11,
+     "all": 30
+    },
+    "dense": {
+     "first": 2,
+     "all": 3
+    },
+    "hybrid": {
+     "first": 2,
+     "all": 24
+    }
+   },
+   "shared": {
+    "bm25": {
+     "doc": 7,
+     "company": 7,
+     "page": null
+    },
+    "dense": {
+     "doc": 1,
+     "company": 1,
+     "page": 3
+    },
+    "hybrid": {
+     "doc": 1,
+     "company": 1,
+     "page": 4
+    }
+   }
+  },
+  {
+   "id": "financebench_id_01163",
+   "doc": "NIKE_2023_10K",
+   "qtype": "domain-relevant",
+   "gold_pages": [
+    61
+   ],
+   "reachable": true,
+   "single": {
+    "bm25": {
+     "first": 1,
+     "all": 1
+    },
+    "dense": {
+     "first": 1,
+     "all": 1
+    },
+    "hybrid": {
+     "first": 1,
+     "all": 1
+    }
+   },
+   "shared": {
+    "bm25": {
+     "doc": 18,
+     "company": 18,
+     "page": 18
+    },
+    "dense": {
+     "doc": 5,
+     "company": 1,
+     "page": 5
+    },
+    "hybrid": {
+     "doc": 1,
+     "company": 1,
+     "page": 1
+    }
+   }
+  },
+  {
+   "id": "financebench_id_00080",
+   "doc": "PAYPAL_2022_10K",
+   "qtype": "domain-relevant",
+   "gold_pages": [
+    60
+   ],
+   "reachable": true,
+   "single": {
+    "bm25": {
+     "first": 44,
+     "all": 44
+    },
+    "dense": {
+     "first": 6,
+     "all": 6
+    },
+    "hybrid": {
+     "first": 27,
+     "all": 27
+    }
+   },
+   "shared": {
+    "bm25": {
+     "doc": 1,
+     "company": 1,
+     "page": null
+    },
+    "dense": {
+     "doc": 1,
+     "company": 1,
+     "page": 7
+    },
+    "hybrid": {
+     "doc": 1,
+     "company": 1,
+     "page": null
+    }
+   }
+  },
+  {
+   "id": "financebench_id_04980",
+   "doc": "PEPSICO_2021_10K",
+   "qtype": "metrics-generated",
+   "gold_pages": [
+    62
+   ],
+   "reachable": true,
+   "single": {
+    "bm25": {
+     "first": 6,
+     "all": 6
+    },
+    "dense": {
+     "first": 4,
+     "all": 4
+    },
+    "hybrid": {
+     "first": 1,
+     "all": 1
+    }
+   },
+   "shared": {
+    "bm25": {
+     "doc": 12,
+     "company": 2,
+     "page": null
+    },
+    "dense": {
+     "doc": 3,
+     "company": 1,
+     "page": 8
+    },
+    "hybrid": {
+     "doc": 5,
+     "company": 1,
+     "page": 5
+    }
+   }
+  },
+  {
+   "id": "financebench_id_01009",
+   "doc": "PEPSICO_2022_10K",
+   "qtype": "domain-relevant",
+   "gold_pages": [
+    3,
+    4
+   ],
+   "reachable": true,
+   "single": {
+    "bm25": {
+     "first": 53,
+     "all": 413
+    },
+    "dense": {
+     "first": 16,
+     "all": 184
+    },
+    "hybrid": {
+     "first": 62,
+     "all": 107
+    }
+   },
+   "shared": {
+    "bm25": {
+     "doc": 6,
+     "company": 3,
+     "page": null
+    },
+    "dense": {
+     "doc": 2,
+     "company": 1,
+     "page": null
+    },
+    "hybrid": {
+     "doc": 2,
+     "company": 1,
+     "page": null
+    }
+   }
+  },
+  {
+   "id": "financebench_id_00735",
+   "doc": "PEPSICO_2022_10K",
+   "qtype": "domain-relevant",
+   "gold_pages": [
+    25
+   ],
+   "reachable": true,
+   "single": {
+    "bm25": {
+     "first": 158,
+     "all": 158
+    },
+    "dense": {
+     "first": 422,
+     "all": 422
+    },
+    "hybrid": {
+     "first": 262,
+     "all": 262
+    }
+   },
+   "shared": {
+    "bm25": {
+     "doc": 5,
+     "company": 2,
+     "page": null
+    },
+    "dense": {
+     "doc": 1,
+     "company": 1,
+     "page": null
+    },
+    "hybrid": {
+     "doc": 5,
+     "company": 1,
+     "page": null
+    }
+   }
+  },
+  {
+   "id": "financebench_id_01328",
+   "doc": "PEPSICO_2022_10K",
+   "qtype": "domain-relevant",
+   "gold_pages": [
+    77
+   ],
+   "reachable": true,
+   "single": {
+    "bm25": {
+     "first": 4,
+     "all": 4
+    },
+    "dense": {
+     "first": 9,
+     "all": 9
+    },
+    "hybrid": {
+     "first": 2,
+     "all": 2
+    }
+   },
+   "shared": {
+    "bm25": {
+     "doc": null,
+     "company": null,
+     "page": null
+    },
+    "dense": {
+     "doc": 3,
+     "company": 1,
+     "page": 18
+    },
+    "hybrid": {
+     "doc": null,
+     "company": 4,
+     "page": null
+    }
+   }
+  },
+  {
+   "id": "financebench_id_03620",
+   "doc": "PEPSICO_2022_10K",
+   "qtype": "metrics-generated",
+   "gold_pages": [
+    61,
+    63
+   ],
+   "reachable": true,
+   "single": {
+    "bm25": {
+     "first": 1,
+     "all": 20
+    },
+    "dense": {
+     "first": 10,
+     "all": 92
+    },
+    "hybrid": {
+     "first": 2,
+     "all": 21
+    }
+   },
+   "shared": {
+    "bm25": {
+     "doc": null,
+     "company": null,
+     "page": null
+    },
+    "dense": {
+     "doc": null,
+     "company": null,
+     "page": null
+    },
+    "hybrid": {
+     "doc": null,
+     "company": null,
+     "page": null
+    }
+   }
+  },
+  {
+   "id": "financebench_id_04481",
+   "doc": "PEPSICO_2022_10K",
+   "qtype": "metrics-generated",
+   "gold_pages": [
+    61,
+    63
+   ],
+   "reachable": true,
+   "single": {
+    "bm25": {
+     "first": 12,
+     "all": 39
+    },
+    "dense": {
+     "first": 14,
+     "all": 57
+    },
+    "hybrid": {
+     "first": 2,
+     "all": 20
+    }
+   },
+   "shared": {
+    "bm25": {
+     "doc": 8,
+     "company": 4,
+     "page": null
+    },
+    "dense": {
+     "doc": 6,
+     "company": 5,
+     "page": null
+    },
+    "hybrid": {
+     "doc": null,
+     "company": 17,
+     "page": null
+    }
+   }
+  },
+  {
+   "id": "financebench_id_01482",
+   "doc": "PEPSICO_2023_8K_dated-2023-05-05",
+   "qtype": "novel-generated",
+   "gold_pages": [
+    3
+   ],
+   "reachable": true,
+   "single": {
+    "bm25": {
+     "first": 1,
+     "all": 1
+    },
+    "dense": {
+     "first": 2,
+     "all": 2
+    },
+    "hybrid": {
+     "first": 2,
+     "all": 2
+    }
+   },
+   "shared": {
+    "bm25": {
+     "doc": 1,
+     "company": 1,
+     "page": 1
+    },
+    "dense": {
+     "doc": 1,
+     "company": 1,
+     "page": 2
+    },
+    "hybrid": {
+     "doc": 1,
+     "company": 1,
+     "page": 1
+    }
+   }
+  },
+  {
+   "id": "financebench_id_00705",
+   "doc": "PEPSICO_2023_8K_dated-2023-05-30",
+   "qtype": "novel-generated",
+   "gold_pages": [
+    1
+   ],
+   "reachable": true,
+   "single": {
+    "bm25": {
+     "first": 1,
+     "all": 1
+    },
+    "dense": {
+     "first": 1,
+     "all": 1
+    },
+    "hybrid": {
+     "first": 1,
+     "all": 1
+    }
+   },
+   "shared": {
+    "bm25": {
+     "doc": 1,
+     "company": 1,
+     "page": 1
+    },
+    "dense": {
+     "doc": 1,
+     "company": 1,
+     "page": 1
+    },
+    "hybrid": {
+     "doc": 1,
+     "company": 1,
+     "page": 1
+    }
+   }
+  },
+  {
+   "id": "financebench_id_00882",
+   "doc": "PEPSICO_2023_8K_dated-2023-05-30",
+   "qtype": "novel-generated",
+   "gold_pages": [
+    1
+   ],
+   "reachable": true,
+   "single": {
+    "bm25": {
+     "first": 1,
+     "all": 1
+    },
+    "dense": {
+     "first": 1,
+     "all": 1
+    },
+    "hybrid": {
+     "first": 1,
+     "all": 1
+    }
+   },
+   "shared": {
+    "bm25": {
+     "doc": 1,
+     "company": 1,
+     "page": 1
+    },
+    "dense": {
+     "doc": 1,
+     "company": 1,
+     "page": 1
+    },
+    "hybrid": {
+     "doc": 1,
+     "company": 1,
+     "page": 1
+    }
+   }
+  },
+  {
+   "id": "financebench_id_01474",
+   "doc": "PEPSICO_2023Q1_EARNINGS",
+   "qtype": "novel-generated",
+   "gold_pages": [
+    0
+   ],
+   "reachable": true,
+   "single": {
+    "bm25": {
+     "first": 2,
+     "all": 2
+    },
+    "dense": {
+     "first": 1,
+     "all": 1
+    },
+    "hybrid": {
+     "first": 1,
+     "all": 1
+    }
+   },
+   "shared": {
+    "bm25": {
+     "doc": 1,
+     "company": 1,
+     "page": 1
+    },
+    "dense": {
+     "doc": 1,
+     "company": 1,
+     "page": 1
+    },
+    "hybrid": {
+     "doc": 1,
+     "company": 1,
+     "page": 1
+    }
+   }
+  },
+  {
+   "id": "financebench_id_01476",
+   "doc": "PEPSICO_2023Q1_EARNINGS",
+   "qtype": "novel-generated",
+   "gold_pages": [
+    0
+   ],
+   "reachable": true,
+   "single": {
+    "bm25": {
+     "first": 2,
+     "all": 2
+    },
+    "dense": {
+     "first": 1,
+     "all": 1
+    },
+    "hybrid": {
+     "first": 1,
+     "all": 1
+    }
+   },
+   "shared": {
+    "bm25": {
+     "doc": 1,
+     "company": 1,
+     "page": 1
+    },
+    "dense": {
+     "doc": 1,
+     "company": 1,
+     "page": 1
+    },
+    "hybrid": {
+     "doc": 1,
+     "company": 1,
+     "page": 1
+    }
+   }
+  },
+  {
+   "id": "financebench_id_00302",
+   "doc": "PFIZER_2021_10K",
+   "qtype": "novel-generated",
+   "gold_pages": [
+    58
+   ],
+   "reachable": true,
+   "single": {
+    "bm25": {
+     "first": 32,
+     "all": 32
+    },
+    "dense": {
+     "first": 58,
+     "all": 58
+    },
+    "hybrid": {
+     "first": 20,
+     "all": 20
+    }
+   },
+   "shared": {
+    "bm25": {
+     "doc": 1,
+     "company": 1,
+     "page": 13
+    },
+    "dense": {
+     "doc": 1,
+     "company": 1,
+     "page": null
+    },
+    "hybrid": {
+     "doc": 1,
+     "company": 1,
+     "page": 17
+    }
+   }
+  },
+  {
+   "id": "financebench_id_00702",
+   "doc": "PFIZER_2021_10K",
+   "qtype": "novel-generated",
+   "gold_pages": [
+    56
+   ],
+   "reachable": true,
+   "single": {
+    "bm25": {
+     "first": 13,
+     "all": 13
+    },
+    "dense": {
+     "first": 3,
+     "all": 3
+    },
+    "hybrid": {
+     "first": 2,
+     "all": 2
+    }
+   },
+   "shared": {
+    "bm25": {
+     "doc": 1,
+     "company": 1,
+     "page": 5
+    },
+    "dense": {
+     "doc": 1,
+     "company": 1,
+     "page": 3
+    },
+    "hybrid": {
+     "doc": 1,
+     "company": 1,
+     "page": 1
+    }
+   }
+  },
+  {
+   "id": "financebench_id_02416",
+   "doc": "PFIZER_2021_10K",
+   "qtype": "novel-generated",
+   "gold_pages": [
+    69,
+    70
+   ],
+   "reachable": true,
+   "single": {
+    "bm25": {
+     "first": 14,
+     "all": 23
+    },
+    "dense": {
+     "first": 19,
+     "all": 20
+    },
+    "hybrid": {
+     "first": 7,
+     "all": 10
+    }
+   },
+   "shared": {
+    "bm25": {
+     "doc": 1,
+     "company": 1,
+     "page": null
+    },
+    "dense": {
+     "doc": 1,
+     "company": 1,
+     "page": null
+    },
+    "hybrid": {
+     "doc": 3,
+     "company": 1,
+     "page": null
+    }
+   }
+  },
+  {
+   "id": "financebench_id_00283",
+   "doc": "Pfizer_2023Q2_10Q",
+   "qtype": "novel-generated",
+   "gold_pages": [
+    40
+   ],
+   "reachable": true,
+   "single": {
+    "bm25": {
+     "first": 9,
+     "all": 9
+    },
+    "dense": {
+     "first": 1,
+     "all": 1
+    },
+    "hybrid": {
+     "first": 1,
+     "all": 1
+    }
+   },
+   "shared": {
+    "bm25": {
+     "doc": 7,
+     "company": 1,
+     "page": null
+    },
+    "dense": {
+     "doc": 3,
+     "company": 1,
+     "page": 3
+    },
+    "hybrid": {
+     "doc": 17,
+     "company": 1,
+     "page": 17
+    }
+   }
+  },
+  {
+   "id": "financebench_id_00724",
+   "doc": "Pfizer_2023Q2_10Q",
+   "qtype": "novel-generated",
+   "gold_pages": [
+    37
+   ],
+   "reachable": true,
+   "single": {
+    "bm25": {
+     "first": 12,
+     "all": 12
+    },
+    "dense": {
+     "first": 26,
+     "all": 26
+    },
+    "hybrid": {
+     "first": 9,
+     "all": 9
+    }
+   },
+   "shared": {
+    "bm25": {
+     "doc": null,
+     "company": 8,
+     "page": null
+    },
+    "dense": {
+     "doc": 3,
+     "company": 1,
+     "page": null
+    },
+    "hybrid": {
+     "doc": null,
+     "company": 1,
+     "page": null
+    }
+   }
+  },
+  {
+   "id": "financebench_id_02419",
+   "doc": "Pfizer_2023Q2_10Q",
+   "qtype": "novel-generated",
+   "gold_pages": [
+    40
+   ],
+   "reachable": true,
+   "single": {
+    "bm25": {
+     "first": 15,
+     "all": 15
+    },
+    "dense": {
+     "first": 3,
+     "all": 3
+    },
+    "hybrid": {
+     "first": 2,
+     "all": 2
+    }
+   },
+   "shared": {
+    "bm25": {
+     "doc": 2,
+     "company": 1,
+     "page": null
+    },
+    "dense": {
+     "doc": 2,
+     "company": 1,
+     "page": 4
+    },
+    "hybrid": {
+     "doc": 2,
+     "company": 1,
+     "page": 6
+    }
+   }
+  },
+  {
+   "id": "financebench_id_00746",
+   "doc": "ULTABEAUTY_2023_10K",
+   "qtype": "domain-relevant",
+   "gold_pages": [
+    0
+   ],
+   "reachable": true,
+   "single": {
+    "bm25": {
+     "first": 1,
+     "all": 1
+    },
+    "dense": {
+     "first": 1,
+     "all": 1
+    },
+    "hybrid": {
+     "first": 1,
+     "all": 1
+    }
+   },
+   "shared": {
+    "bm25": {
+     "doc": 1,
+     "company": 1,
+     "page": 2
+    },
+    "dense": {
+     "doc": 1,
+     "company": 1,
+     "page": 1
+    },
+    "hybrid": {
+     "doc": 1,
+     "company": 1,
+     "page": 1
+    }
+   }
+  },
+  {
+   "id": "financebench_id_00521",
+   "doc": "ULTABEAUTY_2023_10K",
+   "qtype": "domain-relevant",
+   "gold_pages": [
+    56
+   ],
+   "reachable": true,
+   "single": {
+    "bm25": {
+     "first": 6,
+     "all": 6
+    },
+    "dense": {
+     "first": 12,
+     "all": 12
+    },
+    "hybrid": {
+     "first": 5,
+     "all": 5
+    }
+   },
+   "shared": {
+    "bm25": {
+     "doc": 1,
+     "company": 1,
+     "page": null
+    },
+    "dense": {
+     "doc": 1,
+     "company": 1,
+     "page": 14
+    },
+    "hybrid": {
+     "doc": 2,
+     "company": 1,
+     "page": null
+    }
+   }
+  },
+  {
+   "id": "financebench_id_00601",
+   "doc": "ULTABEAUTY_2023Q4_EARNINGS",
+   "qtype": "novel-generated",
+   "gold_pages": [
+    1
+   ],
+   "reachable": true,
+   "single": {
+    "bm25": {
+     "first": 2,
+     "all": 2
+    },
+    "dense": {
+     "first": 1,
+     "all": 1
+    },
+    "hybrid": {
+     "first": 1,
+     "all": 1
+    }
+   },
+   "shared": {
+    "bm25": {
+     "doc": null,
+     "company": null,
+     "page": null
+    },
+    "dense": {
+     "doc": null,
+     "company": 15,
+     "page": null
+    },
+    "hybrid": {
+     "doc": null,
+     "company": 20,
+     "page": null
+    }
+   }
+  },
+  {
+   "id": "financebench_id_00603",
+   "doc": "ULTABEAUTY_2023Q4_EARNINGS",
+   "qtype": "novel-generated",
+   "gold_pages": [
+    2
+   ],
+   "reachable": true,
+   "single": {
+    "bm25": {
+     "first": 1,
+     "all": 1
+    },
+    "dense": {
+     "first": 12,
+     "all": 12
+    },
+    "hybrid": {
+     "first": 8,
+     "all": 8
+    }
+   },
+   "shared": {
+    "bm25": {
+     "doc": 4,
+     "company": 1,
+     "page": null
+    },
+    "dense": {
+     "doc": 6,
+     "company": 1,
+     "page": null
+    },
+    "hybrid": {
+     "doc": 4,
+     "company": 1,
+     "page": null
+    }
+   }
+  },
+  {
+   "id": "financebench_id_00605",
+   "doc": "ULTABEAUTY_2023Q4_EARNINGS",
+   "qtype": "novel-generated",
+   "gold_pages": [
+    2
+   ],
+   "reachable": true,
+   "single": {
+    "bm25": {
+     "first": 3,
+     "all": 3
+    },
+    "dense": {
+     "first": 12,
+     "all": 12
+    },
+    "hybrid": {
+     "first": 7,
+     "all": 7
+    }
+   },
+   "shared": {
+    "bm25": {
+     "doc": 3,
+     "company": 1,
+     "page": null
+    },
+    "dense": {
+     "doc": 1,
+     "company": 1,
+     "page": null
+    },
+    "hybrid": {
+     "doc": 2,
+     "company": 1,
+     "page": null
+    }
+   }
+  },
+  {
+   "id": "financebench_id_00606",
+   "doc": "ULTABEAUTY_2023Q4_EARNINGS",
+   "qtype": "novel-generated",
+   "gold_pages": [
+    1
+   ],
+   "reachable": true,
+   "single": {
+    "bm25": {
+     "first": 9,
+     "all": 9
+    },
+    "dense": {
+     "first": 10,
+     "all": 10
+    },
+    "hybrid": {
+     "first": 9,
+     "all": 9
+    }
+   },
+   "shared": {
+    "bm25": {
+     "doc": 3,
+     "company": 1,
+     "page": null
+    },
+    "dense": {
+     "doc": 1,
+     "company": 1,
+     "page": null
+    },
+    "hybrid": {
+     "doc": 1,
+     "company": 1,
+     "page": null
+    }
+   }
+  },
+  {
+   "id": "financebench_id_00859",
+   "doc": "VERIZON_2021_10K",
+   "qtype": "novel-generated",
+   "gold_pages": [
+    84
+   ],
+   "reachable": true,
+   "single": {
+    "bm25": {
+     "first": 1,
+     "all": 1
+    },
+    "dense": {
+     "first": 1,
+     "all": 1
+    },
+    "hybrid": {
+     "first": 1,
+     "all": 1
+    }
+   },
+   "shared": {
+    "bm25": {
+     "doc": 12,
+     "company": 10,
+     "page": 12
+    },
+    "dense": {
+     "doc": 4,
+     "company": 2,
+     "page": 4
+    },
+    "hybrid": {
+     "doc": null,
+     "company": 10,
+     "page": null
+    }
+   }
+  },
+  {
+   "id": "financebench_id_02024",
+   "doc": "VERIZON_2021_10K",
+   "qtype": "novel-generated",
+   "gold_pages": [
+    62,
+    93
+   ],
+   "reachable": true,
+   "single": {
+    "bm25": {
+     "first": 3,
+     "all": 257
+    },
+    "dense": {
+     "first": 1,
+     "all": 132
+    },
+    "hybrid": {
+     "first": 8,
+     "all": 248
+    }
+   },
+   "shared": {
+    "bm25": {
+     "doc": 3,
+     "company": 1,
+     "page": null
+    },
+    "dense": {
+     "doc": 1,
+     "company": 1,
+     "page": 1
+    },
+    "hybrid": {
+     "doc": 1,
+     "company": 1,
+     "page": 13
+    }
+   }
+  },
+  {
+   "id": "financebench_id_00216",
+   "doc": "VERIZON_2022_10K",
+   "qtype": "domain-relevant",
+   "gold_pages": [
+    55
+   ],
+   "reachable": true,
+   "single": {
+    "bm25": {
+     "first": 375,
+     "all": 375
+    },
+    "dense": {
+     "first": 24,
+     "all": 24
+    },
+    "hybrid": {
+     "first": 72,
+     "all": 72
+    }
+   },
+   "shared": {
+    "bm25": {
+     "doc": null,
+     "company": null,
+     "page": null
+    },
+    "dense": {
+     "doc": 2,
+     "company": 1,
+     "page": null
+    },
+    "hybrid": {
+     "doc": 2,
+     "company": 2,
+     "page": null
+    }
+   }
+  },
+  {
+   "id": "financebench_id_00215",
+   "doc": "VERIZON_2022_10K",
+   "qtype": "domain-relevant",
+   "gold_pages": [
+    22,
+    55
+   ],
+   "reachable": true,
+   "single": {
+    "bm25": {
+     "first": 12,
+     "all": 108
+    },
+    "dense": {
+     "first": 1,
+     "all": 9
+    },
+    "hybrid": {
+     "first": 4,
+     "all": 29
+    }
+   },
+   "shared": {
+    "bm25": {
+     "doc": 1,
+     "company": 1,
+     "page": null
+    },
+    "dense": {
+     "doc": 3,
+     "company": 1,
+     "page": 3
+    },
+    "hybrid": {
+     "doc": 2,
+     "company": 1,
+     "page": 8
+    }
+   }
+  },
+  {
+   "id": "financebench_id_00566",
+   "doc": "VERIZON_2022_10K",
+   "qtype": "domain-relevant",
+   "gold_pages": [
+    76
+   ],
+   "reachable": true,
+   "single": {
+    "bm25": {
+     "first": 23,
+     "all": 23
+    },
+    "dense": {
+     "first": 5,
+     "all": 5
+    },
+    "hybrid": {
+     "first": 6,
+     "all": 6
+    }
+   },
+   "shared": {
+    "bm25": {
+     "doc": 5,
+     "company": 4,
+     "page": null
+    },
+    "dense": {
+     "doc": 1,
+     "company": 1,
+     "page": 7
+    },
+    "hybrid": {
+     "doc": 1,
+     "company": 1,
+     "page": null
+    }
+   }
+  },
+  {
+   "id": "financebench_id_06247",
+   "doc": "WALMART_2018_10K",
+   "qtype": "metrics-generated",
+   "gold_pages": [
+    56,
+    58
+   ],
+   "reachable": true,
+   "single": {
+    "bm25": {
+     "first": 168,
+     "all": 172
+    },
+    "dense": {
+     "first": 65,
+     "all": 178
+    },
+    "hybrid": {
+     "first": 87,
+     "all": 190
+    }
+   },
+   "shared": {
+    "bm25": {
+     "doc": 5,
+     "company": 5,
+     "page": null
+    },
+    "dense": {
+     "doc": 1,
+     "company": 1,
+     "page": null
+    },
+    "hybrid": {
+     "doc": 1,
+     "company": 1,
+     "page": null
+    }
+   }
+  },
+  {
+   "id": "financebench_id_04784",
+   "doc": "WALMART_2019_10K",
+   "qtype": "metrics-generated",
+   "gold_pages": [
+    47
+   ],
+   "reachable": true,
+   "single": {
+    "bm25": {
+     "first": 55,
+     "all": 55
+    },
+    "dense": {
+     "first": 24,
+     "all": 24
+    },
+    "hybrid": {
+     "first": 22,
+     "all": 22
+    }
+   },
+   "shared": {
+    "bm25": {
+     "doc": 1,
+     "company": 1,
+     "page": null
+    },
+    "dense": {
+     "doc": 3,
+     "company": 1,
+     "page": null
+    },
+    "hybrid": {
+     "doc": 1,
+     "company": 1,
+     "page": null
+    }
+   }
+  },
+  {
+   "id": "financebench_id_06741",
+   "doc": "WALMART_2020_10K",
+   "qtype": "metrics-generated",
+   "gold_pages": [
+    50,
+    55
+   ],
+   "reachable": true,
+   "single": {
+    "bm25": {
+     "first": 14,
+     "all": 81
+    },
+    "dense": {
+     "first": 2,
+     "all": 100
+    },
+    "hybrid": {
+     "first": 3,
+     "all": 74
+    }
+   },
+   "shared": {
+    "bm25": {
+     "doc": 4,
+     "company": 4,
+     "page": null
+    },
+    "dense": {
+     "doc": 14,
+     "company": 5,
+     "page": null
+    },
+    "hybrid": {
+     "doc": 8,
+     "company": 8,
+     "page": null
+    }
+   }
+  }
+ ]
+}
