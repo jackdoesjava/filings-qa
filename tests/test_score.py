@@ -143,6 +143,10 @@ def test_is_hedge(line, want):
     ("Answer: 63.9 days", "63.86", "", "correct", "correct"),  # less precise, but consistent
     ("Answer: 63.59 days", "63.86", "", "correct", "incorrect"),
     ("Answer: $1.62 billion", "$1616.00", Q_MILLIONS, "correct", "correct"),
+    # PepsiCo FY2021 capex: the gold "$4.60" is 4,625 rounded and padded, so the filing's figure passes
+    ("Answer: $4.625 billion", "$4.60", Q_BILLIONS, "correct", "correct"),
+    ("Answer: $4,625 million", "$4.60", Q_BILLIONS, "correct", "correct"),
+    ("Answer: $4.7 billion", "$4.60", Q_BILLIONS, "incorrect", "incorrect"),
 ])
 def test_strict_grading(pred, gold, question, main, strict):
     assert grade_numeric(pred, gold, question=question) == main

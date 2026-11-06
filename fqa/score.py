@@ -112,6 +112,11 @@ def parse_numbers(text: str) -> list[float]:
 _ANSWER = re.compile(r"^[ \t*#>_-]*(?:final\s+)?answer\s*\**\s*:", re.I | re.M)
 
 
+def has_answer_line(text: str) -> bool:
+    """Whether the reply has a line starting "Answer:", the way extract_answer_line looks for one."""
+    return bool(_ANSWER.search(text or ""))
+
+
 def extract_answer_line(text: str) -> str:
     text = text or ""
     hits = list(_ANSWER.finditer(text))
@@ -193,10 +198,11 @@ def grade_numeric(pred: str, gold: str, rel_tol: float = 0.01, question: str = "
 
     strict=True also asks the answer and the gold to agree at the coarser of
     their two precisions, so 31.0% misses a gold of 30.8% even though it is
-    within 1%, while 63.9 days still passes for 63.86. A money gold whose
-    decimals are all zero counts to the whole unit, because FinanceBench pads
-    every money gold to two places ("$1616.00" for a filing's $1,615.9 million).
-    Anything strict accepts, the main rule accepts too.
+    within 1%, while 63.9 days still passes for 63.86. Trailing zeros in a money
+    gold are not counted as precision, because FinanceBench pads money golds to
+    two places: "$1616.00" for a filing's $1,615.9 million is read to the whole
+    million, and "$4.60" for $4,625 million to a tenth of a billion. Anything
+    strict accepts, the main rule accepts too.
     """
     unit = question_unit(question)
     asked = asked_decimals(question)
@@ -212,8 +218,11 @@ def grade_numeric(pred: str, gold: str, rel_tol: float = 0.01, question: str = "
         decimals = max(g.decimals, asked)
         tol = max(rel_tol * abs(target), 0.5 * 10.0 ** -decimals * scale if decimals else 0.0)
         money = g.money or scale != 1
-        # half a unit of the gold's last place, for strict
-        gold_half = 0.5 * 10.0 ** -(0 if money and g.value == round(g.value) else g.decimals) * scale
+        # half a unit of the gold's last place, for strict; FinanceBench pads money golds
+        # to two decimals, so trailing zeros there are not precision ("$4.60" is 4,625 in
+        # PepsiCo's filing, "$1616.00" is 1,615.9 in Amcor's)
+        places = len(f"{g.value:.{g.decimals}f}".partition(".")[2].rstrip("0")) if money else g.decimals
+        gold_half = 0.5 * 10.0 ** -places * scale
         # a bare predicted number may be in the unit the question asked for, else the gold's
         bare_unit = 1.0 if g.pct else (unit if unit != 1 else scale)
         for p in preds:
@@ -363,8 +372,9 @@ def load_judgements(path) -> dict:
 
 def judge_cached(q: dict, row: dict, cache: dict, path, model: str = JUDGE, call: bool = True) -> dict | None:
     """The judge's verdict on row["answer"], from the cache if this exact answer to this
-    question from this config and model has been judged before. Only the question, gold
-    and answer go to the judge. With call=False a missing verdict comes back as None."""
+    question from this config and model has been judged before. Only the question, the
+    gold answer and its justification, and the answer go to the judge, never the config
+    or model. With call=False a missing verdict comes back as None."""
     key = (q["id"], row["config"], row["model"], answer_sha1(row["answer"]), model)
     if key not in cache:
         if not call:
