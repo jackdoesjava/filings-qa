@@ -132,6 +132,34 @@ def test_is_hedge(line, want):
     assert score.is_hedge(line) == want
 
 
+@pytest.mark.parametrize("pred, gold, question, main, strict", [
+    ("Answer: 31.0%", "30.8%", "", "correct", "incorrect"),  # within 1%, but not 30.8 to one place
+    ("Answer: 1.74", "1.73", Q_TWO_DP, "correct", "incorrect"),
+    ("Answer: $9,000 million", "$9068.00", Q_MILLIONS, "correct", "incorrect"),
+    ("Answer: $1,615.9 million", "$1616.00", Q_MILLIONS, "correct", "correct"),  # .00 is padding
+    ("Answer: 80.13%", "0.8", "", "correct", "correct"),
+    ("Answer: 1.46%", "0.01", Q_TWO_DP, "correct", "correct"),  # 0.0146 is 0.01 to two places
+    ("Answer: 36.4%", "36%", "", "incorrect", "incorrect"),  # strict is never the looser one
+    ("Answer: 63.9 days", "63.86", "", "correct", "correct"),  # less precise, but consistent
+    ("Answer: 63.59 days", "63.86", "", "correct", "incorrect"),
+    ("Answer: $1.62 billion", "$1616.00", Q_MILLIONS, "correct", "correct"),
+])
+def test_strict_grading(pred, gold, question, main, strict):
+    assert grade_numeric(pred, gold, question=question) == main
+    assert grade_numeric(pred, gold, question=question, strict=True) == strict
+
+
+@needs_data
+def test_strict_never_accepts_what_the_main_rule_rejects():
+    qs = [q for q in load_questions() if is_numeric_gold(gold_answer(q), q["question"])]
+    for q in qs:
+        for x in parse_numbers(gold_answer(q))[:1]:
+            for f in (0.9, 0.99, 0.995, 0.999, 1.0, 1.001, 1.005, 1.01, 1.1):
+                pred = f"Answer: {x * f:.6g}"
+                if grade_numeric(pred, gold_answer(q), question=q["question"], strict=True) == "correct":
+                    assert grade_numeric(pred, gold_answer(q), question=q["question"]) == "correct", (q["id"], pred)
+
+
 def test_a_hedge_is_wrong_even_when_one_figure_is_right():
     # the one hedge among qwen2.5:3b's first RAG answers, on AWK's FY2020 dividends
     assert grade_numeric("Answer: $389 million or $3.89 billion", "$0.39", question=Q_BILLIONS) == "incorrect"

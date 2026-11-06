@@ -176,7 +176,7 @@ def is_hedge(line: str) -> bool:
     return False
 
 
-def grade_numeric(pred: str, gold: str, rel_tol: float = 0.01, question: str = "") -> str:
+def grade_numeric(pred: str, gold: str, rel_tol: float = 0.01, question: str = "", strict: bool = False) -> str:
     """'correct', 'unit_error' or 'incorrect'.
 
     pred can be the whole reply or just its answer line; only the answer line is
@@ -190,6 +190,13 @@ def grade_numeric(pred: str, gold: str, rel_tol: float = 0.01, question: str = "
     them as negatives. A money figure that is off by a factor of 1e3, 1e6 or 1e9
     is a unit error. Offering two figures, "$389 million or $3.89 billion", is
     wrong however close one of them is, as it is for the judge.
+
+    strict=True also asks the answer and the gold to agree at the coarser of
+    their two precisions, so 31.0% misses a gold of 30.8% even though it is
+    within 1%, while 63.9 days still passes for 63.86. A money gold whose
+    decimals are all zero counts to the whole unit, because FinanceBench pads
+    every money gold to two places ("$1616.00" for a filing's $1,615.9 million).
+    Anything strict accepts, the main rule accepts too.
     """
     unit = question_unit(question)
     asked = asked_decimals(question)
@@ -205,20 +212,30 @@ def grade_numeric(pred: str, gold: str, rel_tol: float = 0.01, question: str = "
         decimals = max(g.decimals, asked)
         tol = max(rel_tol * abs(target), 0.5 * 10.0 ** -decimals * scale if decimals else 0.0)
         money = g.money or scale != 1
+        # half a unit of the gold's last place, for strict
+        gold_half = 0.5 * 10.0 ** -(0 if money and g.value == round(g.value) else g.decimals) * scale
         # a bare predicted number may be in the unit the question asked for, else the gold's
         bare_unit = 1.0 if g.pct else (unit if unit != 1 else scale)
         for p in preds:
             if p.pct and money:
                 continue
-            readings = [p.value * p.scale] if p.scale != 1 else {p.value, p.value * bare_unit}
-            for x in readings:
+            readings = [(p.value * p.scale, p.scale)] if p.scale != 1 else [(p.value, 1.0), (p.value * bare_unit, bare_unit)]
+            for x, x_unit in readings:
                 if outflow and target > 0:
                     x = abs(x)
+                pred_half = 0.5 * 10.0 ** -p.decimals * x_unit
                 # a percentage against a plain gold is only ever x / 100: 0.014% is not 0.014
-                pairs = [(x / 100, target, tol)] if p.pct and not g.pct else [(x, target, tol)]
+                if p.pct and not g.pct:
+                    pairs = [(x / 100, target, tol, gold_half, pred_half / 100)]
+                else:
+                    pairs = [(x, target, tol, gold_half, pred_half)]
                 if g.pct and not p.pct:
-                    pairs.append((x, target / 100, tol / 100))
-                for a, b, t in pairs:
+                    pairs.append((x, target / 100, tol / 100, gold_half / 100, pred_half))
+                for a, b, t, hg, hp in pairs:
+                    if strict:
+                        # agree at the coarser of the two precisions (63.9 is fine for a gold of
+                        # 63.86, 63.6 is not), and never more loosely than the main rule
+                        t = min(t, max(hg, hp))
                     if _close(a, b, t):
                         return "correct"
                     if money and any(_close(a, b * f, t * f) for f in _UNIT_SLIPS):
@@ -406,11 +423,12 @@ def grade_row(q: dict, row: dict, cache: dict | None = None, path=None, judge_mo
     answer = row.get("answer") or ""
     line = extract_answer_line(answer)
     numeric = is_numeric_gold(q["answer"], q["question"])
-    verdict = judged = None
+    verdict = judged = strict = None
     if numeric:
         verdict = grade_numeric(answer, q["answer"], question=q["question"])
         if verdict == "incorrect" and not _numbers(line) and looks_like_refusal(answer):
             verdict = "refused"
+        strict = int(grade_numeric(answer, q["answer"], question=q["question"], strict=True) == "correct")
     if answer.strip() and cache is not None:
         judged = judge_cached(q, row, cache, path, judge_model, call=call_judge and (validate or not numeric))
     if not numeric:
@@ -422,6 +440,7 @@ def grade_row(q: dict, row: dict, cache: dict | None = None, path=None, judge_mo
         "method": "numeric" if numeric else "judge",
         "verdict": verdict,
         "correct": None if verdict is None else int(verdict == "correct"),
+        "strict_correct": strict,  # numeric questions only: grade_numeric(strict=True)
         "judge_verdict": judged["verdict"] if judged else None,
         "judge_reason": judged["reason"] if judged else "",
         "answer_line": line,

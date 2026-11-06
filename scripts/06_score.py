@@ -118,7 +118,10 @@ def report(df, questions, n_files, judge_model):
         "if a number on the reply's `Answer:` line is within 1% of the gold, or rounds to it (some golds are given "
         "to one significant figure), with 25% and 0.25 counted as equal. A money figure off by a factor of a "
         "thousand, million or billion is counted wrong and labelled a unit error. For capex and dividends, a "
-        "minus sign copied from the cash flow statement does not count against the answer. The rest are graded by "
+        "minus sign copied from the cash flow statement does not count against the answer, and two different "
+        "figures joined by 'or' count as a hedge, which is wrong. The strict column asks for more: the figure has "
+        "to round to the gold at the gold's own precision, so 31.0% no longer passes for a gold of 30.8% (money "
+        "golds count to the whole unit, as FinanceBench pads them to two decimals). The rest are graded by "
         f"{judge_model} with a strict rubric. It sees the question, the gold answer and its justification and "
         "the reply, never which config or model wrote it. Intervals are 95% percentile bootstraps over questions "
         "(2,000 resamples).\n",
@@ -137,6 +140,7 @@ def report(df, questions, n_files, judge_model):
         rows.append({"model": m, "config": c, "answered": n, "graded": len(g),
                      "accuracy % [95% CI]": pct_ci(g["correct"]) if len(g) else "",
                      "numeric questions": share(g.loc[g["method"] == "numeric", "correct"]),
+                     "numeric, strict": share(g.loc[g["method"] == "numeric", "strict_correct"].astype(float)),
                      "judged questions": share(g.loc[g["method"] == "judge", "correct"])})
     out += ["## Accuracy\n", md(rows) + "\n"]
 
