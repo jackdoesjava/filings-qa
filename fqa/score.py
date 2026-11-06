@@ -159,6 +159,24 @@ def _close(a: float, b: float, tol: float) -> bool:
     return abs(a - b) <= tol * (1 + 1e-9)
 
 
+_FIGURE = r"\(?-?\$?\s?\(?\d[\d,]*(?:\.\d+)?\)?(?:\s?(?:%|[A-Za-z]+))?"
+_EITHER = re.compile(rf"({_FIGURE})\s*,?\s+or\s+({_FIGURE})", re.I)
+
+
+def is_hedge(line: str) -> bool:
+    """Two different figures of the same kind offered as alternatives, as in
+    "$389 million or $3.89 billion". The filings' own "$210 million, or 12.5%"
+    restates a change as a percentage and is not a hedge, and nor is the same
+    figure in two units."""
+    for m in _EITHER.finditer(line):
+        a, b = _numbers(m.group(1)), _numbers(m.group(2))
+        if a and b and a[0].pct == b[0].pct:
+            x, y = a[0].value * a[0].scale, b[0].value * b[0].scale
+            if not _close(x, y, 0.01 * max(abs(x), abs(y))):
+                return True
+    return False
+
+
 def grade_numeric(pred: str, gold: str, rel_tol: float = 0.01, question: str = "") -> str:
     """'correct', 'unit_error' or 'incorrect'.
 
@@ -171,12 +189,16 @@ def grade_numeric(pred: str, gold: str, rel_tol: float = 0.01, question: str = "
     for, so "1,577" answers "in USD millions". For capex and dividends the sign
     is ignored when the gold is positive, since the cash flow statement prints
     them as negatives. A money figure that is off by a factor of 1e3, 1e6 or 1e9
-    is a unit error.
+    is a unit error. Offering two figures, "$389 million or $3.89 billion", is
+    wrong however close one of them is, as it is for the judge.
     """
     unit = question_unit(question)
     asked = asked_decimals(question)
     outflow = bool(_OUTFLOW.search(question)) and not _NET.search(question)
-    preds = _numbers(extract_answer_line(pred))
+    line = extract_answer_line(pred)
+    if is_hedge(line):
+        return "incorrect"
+    preds = _numbers(line)
     verdict = "incorrect"
     for g in _gold_numbers(gold):
         scale = g.scale if (g.scale != 1 or g.pct) else unit

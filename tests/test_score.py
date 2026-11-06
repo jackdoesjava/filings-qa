@@ -117,6 +117,26 @@ def test_grade_numeric_reads_only_the_answer_line():
     assert grade_numeric(reply, "$1577.00", question=Q_MILLIONS) == "incorrect"
 
 
+@pytest.mark.parametrize("line, want", [
+    ("$389 million or $3.89 billion", True),
+    ("3.8% or 4.0%", True),
+    ("1,577 or 1,373", True),
+    ("$210 million, or 12.5%", False),  # how the filings restate a change
+    ("$1.2 billion or $1,200 million", False),  # one figure, two units
+    ("$(1,577) million or $(1.577) billion", False),
+    ("Revenue grew 12% (or 11% organically)", False),
+    ("Yes, or 12%", False),
+])
+def test_is_hedge(line, want):
+    assert score.is_hedge(line) == want
+
+
+def test_a_hedge_is_wrong_even_when_one_figure_is_right():
+    # the one hedge among qwen2.5:3b's first RAG answers, on AWK's FY2020 dividends
+    assert grade_numeric("Answer: $389 million or $3.89 billion", "$0.39", question=Q_BILLIONS) == "incorrect"
+    assert grade_numeric("Answer: $389 million", "$0.39", question=Q_BILLIONS) == "correct"
+
+
 @pytest.mark.parametrize("gold, question, want", [
     ("$1577.00", Q_MILLIONS, True),
     ("$400,000,000 increase.", "By how much did Pepsico increase its credit agreement?", True),
