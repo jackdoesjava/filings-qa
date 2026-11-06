@@ -185,10 +185,13 @@ def grade_numeric(pred: str, gold: str, rel_tol: float = 0.01, question: str = "
     """'correct', 'unit_error' or 'incorrect'.
 
     pred can be the whole reply or just its answer line; only the answer line is
-    read. A number there is correct if it is within rel_tol of a gold number, or
-    within half a unit of the gold's last decimal place (the golds are rounded,
-    some to a single significant figure, so 1% alone would fail a correct 1.93%
-    against a gold of 1.9%). 25% and 0.25 count as equal, and a percentage never
+    read (the last non-empty line, if there is no "Answer:"). A number there is
+    correct if it is within rel_tol of a gold number, or within half a unit of
+    the gold's last decimal place or of the place the question asks for,
+    whichever is finer, so "0.8" asked to two places is read as 0.80. The golds
+    are rounded, some to a single significant figure, so 1% alone would fail a
+    correct 1.93% against a gold of 1.9%; a whole-number gold gets only the 1%.
+    25% and 0.25 count as equal, and a percentage never
     matches a money figure. A bare number is read in the unit the question asks
     for, so "1,577" answers "in USD millions". For capex and dividends the sign
     is ignored when the gold is positive, since the cash flow statement prints
