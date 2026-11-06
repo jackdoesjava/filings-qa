@@ -30,8 +30,12 @@ PROMPT_BUDGET = NUM_CTX - NUM_PREDICT - 400
 # The examples are placeholders, not figures: given real ones, the small models
 # copied them out as the answer when the excerpts did not have it. The same went
 # for the calculate tool's description, which once had a worked example in it:
-# llama3.2:3b called the tool with that example's numbers in 34 of 150 questions.
-# No prompt text here has a digit in it (tests/test_agent.py checks).
+# llama3.2:3b called the tool with that example's numbers in 32 of 150 questions
+# (reports/agent.md). With placeholders it copied the placeholder instead, (new -
+# old) / old * 100, which the calculator rejects, so no made-up figure gets in that
+# way. No prompt
+# text here has a digit in it apart from the * 100 that turns a ratio into a
+# percentage (tests/test_agent.py checks).
 SYSTEM = (
     "You answer questions about a company's financial filing. Answer from the filing and show your "
     "working briefly. Finish with one line of the form \"Answer: <value with unit>\", for example "
@@ -254,8 +258,9 @@ def agent(q, model, index, method="hybrid", k=5, max_steps=5):
             messages.append({"role": "tool", "content": content, "tool_name": name})
             # for a search, `result` is the pages it hit; the text is in chunks.jsonl
             rec["tool_calls"].append({"name": name, "arguments": args, "from_text": from_text, "result": result})
-    if reply is None or not text_of(reply):
-        # out of steps, or an empty reply: one more call, with no tools on offer
+    if reply is None or not text_of(reply) or BROKEN_CALL.search(text_of(reply)):
+        # out of steps, an empty reply, or a tool call too garbled to read (which is
+        # not an answer either): one more call, with no tools on offer
         messages.append({"role": "user", "content": FINAL_ASK})
         reply = send()
     return finish(rec, reply)
@@ -280,7 +285,17 @@ def text_tool_calls(text):
     the same inside <tool_call> tags or a ```json fence, Llama's "parameters"
     spelling, arguments given as a JSON string, and the argument put next to
     the name. Only our two tool names count, so a JSON final answer stays an
-    answer."""
+    answer. Llama sometimes escapes underscores the Markdown way ("cash\\_from"),
+    which is not valid JSON, so a second try drops backslashes JSON does not allow."""
+    return _calls_in_json(text) or _calls_in_json(BAD_ESCAPE.sub("", text))
+
+
+BAD_ESCAPE = re.compile(r'\\(?!["\\/bfnrtu])')
+# what is left of a call to one of our tools that could not be read even so
+BROKEN_CALL = re.compile(r'"name"\s*:\s*"(?:search|calculate)"')
+
+
+def _calls_in_json(text):
     decoder = json.JSONDecoder()
     calls = []
     i = text.find("{")
@@ -324,6 +339,9 @@ def arg(args, key):
         # small models sometimes give the argument a different name
         key = next(iter(args))
     value = args.get(key)
+    if isinstance(value, dict):
+        # or wrap it one level too deep: {"query": {"query": "net revenue 2022"}}
+        return arg(value, key) if value else ""
     return "" if value is None else str(value).strip()
 
 

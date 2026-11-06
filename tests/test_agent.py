@@ -156,9 +156,18 @@ def test_calculator_powers_that_are_fine():
     ('{"answer": "$1,200 million"}', []),
     ('{"name": "final_answer", "arguments": {"answer": "1200"}}', []),
     ('{"name": "search", "arguments": {"query": "unfinished"', []),
+    # llama3.2:3b's reply on 03856, with the underscores escaped the Markdown way
+    ('{"name": "calculate", "parameters": {"expression": "(cash\\_from\\_operations / total\\_current\\_liabilities)"}}',
+     [("calculate", {"expression": "(cash_from_operations / total_current_liabilities)"})]),
 ])
 def test_text_tool_calls(text, calls):
     assert text_tool_calls(text) == calls
+
+
+def test_arg_unwraps_an_argument_given_one_level_too_deep():
+    assert fa.arg({"query": {"query": "net revenue 2022"}}, "query") == "net revenue 2022"
+    assert fa.arg({"q": "revenue"}, "query") == "revenue"
+    assert fa.arg({"query": {}}, "query") == ""
 
 
 # ---- the agent loop ---------------------------------------------------------
@@ -237,6 +246,16 @@ def test_agent_asks_again_after_an_empty_reply(fake_chat):
     assert rec["answer"] == "Answer: No, it fell."
     assert rec["steps"] == 2
     assert fake.requests[1]["tools"] is None
+
+
+def test_a_tool_call_too_broken_to_read_is_not_taken_as_the_answer(fake_chat):
+    # cut off by num_predict half way through the arguments
+    fake = fake_chat(said('{"name": "search", "arguments": {"query": "revenue 20'), said("Answer: 20%"))
+    rec = agent(Q, "m", FakeIndex())
+    assert rec["answer"] == "Answer: 20%"
+    assert rec["steps"] == 2 and rec["tool_calls"] == []
+    assert fake.requests[1]["tools"] is None
+    assert fake.requests[1]["messages"][-1] == {"role": "user", "content": FINAL_ASK}
 
 
 def test_agent_answers_unknown_tools_and_missing_arguments(fake_chat):
