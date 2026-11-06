@@ -8,6 +8,11 @@
   5,
   10
  ],
+ "words_top5": {
+  "bm25": 924.2,
+  "dense": 917.1866666666666,
+  "hybrid": 926.66
+ },
  "single": {
   "bm25": {
    "recall@1": {
@@ -806,15 +811,18 @@
    "single": {
     "bm25": {
      "first": 17,
-     "all": 17
+     "all": 17,
+     "words@5": 990
     },
     "dense": {
      "first": 23,
-     "all": 23
+     "all": 23,
+     "words@5": 1000
     },
     "hybrid": {
      "first": 7,
-     "all": 7
+     "all": 7,
+     "words@5": 990
     }
    },
    "shared": {
@@ -846,15 +854,18 @@
    "single": {
     "bm25": {
      "first": 197,
-     "all": 197
+     "all": 197,
+     "words@5": 978
     },
     "dense": {
      "first": 55,
-     "all": 55
+     "all": 55,
+     "words@5": 1000
     },
     "hybrid": {
      "first": 109,
-     "all": 109
+     "all": 109,
+     "words@5": 894
     }
    },
    "shared": {
@@ -888,15 +899,18 @@
    "single": {
     "bm25": {
      "first": 95,
-     "all": 181
+     "all": 181,
+     "words@5": 1000
     },
     "dense": {
      "first": 30,
-     "all": 61
+     "all": 61,
+     "words@5": 865
     },
     "hybrid": {
      "first": 51,
-     "all": 98
+     "all": 98,
+     "words@5": 999
     }
    },
    "shared": {
@@ -928,15 +942,18 @@
    "single": {
     "bm25": {
      "first": 2,
-     "all": 2
+     "all": 2,
+     "words@5": 1000
     },
     "dense": {
      "first": 45,
-     "all": 45
+     "all": 45,
+     "words@5": 883
     },
     "hybrid": {
      "first": 11,
-     "all": 11
+     "all": 11,
+     "words@5": 999
     }
    },
    "shared": {
@@ -968,15 +985,18 @@
    "single": {
     "bm25": {
      "first": 48,
-     "all": 48
+     "all": 48,
+     "words@5": 1000
     },
     "dense": {
      "first": 113,
-     "all": 113
+     "all": 113,
+     "words@5": 883
     },
     "hybrid": {
      "first": 76,
-     "all": 76
+     "all": 76,
+     "words@5": 882
     }
    },
    "shared": {
@@ -1008,15 +1028,18 @@
    "single": {
     "bm25": {
      "first": 236,
-     "all": 236
+     "all": 236,
+     "words@5": 917
     },
     "dense": {
      "first": 84,
-     "all": 84
+     "all": 84,
+     "words@5": 935
     },
     "hybrid": {
      "first": 175,
-     "all": 175
+     "all": 175,
+     "words@5": 998
     }
    },
    "shared": {
@@ -1048,15 +1071,18 @@
    "single": {
     "bm25": {
      "first": 1,
-     "all": 1
+     "all": 1,
+     "words@5": 1000
     },
     "dense": {
      "first": 24,
-     "all": 24
+     "all": 24,
+     "words@5": 930
     },
     "hybrid": {
      "first": 9,
-     "all": 9
+     "all": 9,
+     "words@5": 1000
     }
    },
    "shared": {
@@ -1088,15 +1114,18 @@
    "single": {
     "bm25": {
      "first": 2,
-     "all": 2
+     "all": 2,
+     "words@5": 949
     },
     "dense": {
      "first": 5,
-     "all": 5
+     "all": 5,
+     "words@5": 935
     },
     "hybrid": {
      "first": 2,
-     "all": 2
+     "all": 2,
+     "words@5": 1000
     }
    },
    "shared": {
@@ -1129,15 +1158,18 @@
    "single": {
     "bm25": {
      "first": 142,
-     "all": 150
+     "all": 150,
+     "words@5": 954
     },
     "dense": {
      "first": 1,
-     "all": 6
+     "all": 6,
+     "words@5": 1000
     },
     "hybrid": {
      "first": 22,
-     "all": 28
+     "all": 28,
+     "words@5": 1000
     }
    },
    "shared": {
@@ -1170,15 +1202,18 @@
    "single": {
     "bm25": {
      "first": 67,
-     "all": 83
+     "all": 83,
+     "words@5": 726
     },
     "dense": {
      "first": 1,
-     "all": 2
+     "all": 2,
+     "words@5": 990
     },
     "hybrid": {
      "first": 7,
-     "all": 9
+     "all": 9,
+     "words@5": 1000
     }
    },
    "shared": {
@@ -1211,15 +1246,18 @@
    "single": {
     "bm25": {
      "first": 10,
-     "all": 20
+     "all": 20,
+     "words@5": 1000
     },
     "dense": {
      "first": 2,
-     "all": 3
+     "all": 3,
+     "words@5": 967
     },
     "hybrid": {
      "first": 2,
-     "all": 6
+     "all": 6,
+     "words@5": 967
     }
    },
    "shared": {
@@ -1251,15 +1289,18 @@
    "single": {
     "bm25": {
      "first": 26,
-     "all": 26
+     "all": 26,
+     "words@5": 1000
     },
     "dense": {
      "first": 1,
-     "all": 1
+     "all": 1,
+     "words@5": 943
     },
     "hybrid": {
      "first": 3,
-     "all": 3
+     "all": 3,
+     "words@5": 1000
     }
    },
    "shared": {
@@ -1292,15 +1333,18 @@
    "single": {
     "bm25": {
      "first": 10,
-     "all": 27
+     "all": 27,
+     "words@5": 1000
     },
     "dense": {
      "first": 1,
-     "all": 2
+     "all": 2,
+     "words@5": 1000
     },
     "hybrid": {
      "first": 1,
-     "all": 5
+     "all": 5,
+     "words@5": 1000
     }
    },
    "shared": {
@@ -1332,15 +1376,18 @@
    "single": {
     "bm25": {
      "first": 26,
-     "all": 26
+     "all": 26,
+     "words@5": 1000
     },
     "dense": {
      "first": 7,
-     "all": 7
+     "all": 7,
+     "words@5": 1000
     },
     "hybrid": {
      "first": 4,
-     "all": 4
+     "all": 4,
+     "words@5": 835
     }
    },
    "shared": {
@@ -1372,15 +1419,18 @@
    "single": {
     "bm25": {
      "first": 113,
-     "all": 113
+     "all": 113,
+     "words@5": 1000
     },
     "dense": {
      "first": 1,
-     "all": 1
+     "all": 1,
+     "words@5": 982
     },
     "hybrid": {
      "first": 18,
-     "all": 18
+     "all": 18,
+     "words@5": 993
     }
    },
    "shared": {
@@ -1412,15 +1462,18 @@
    "single": {
     "bm25": {
      "first": 2,
-     "all": 2
+     "all": 2,
+     "words@5": 879
     },
     "dense": {
      "first": 13,
-     "all": 13
+     "all": 13,
+     "words@5": 919
     },
     "hybrid": {
      "first": 3,
-     "all": 3
+     "all": 3,
+     "words@5": 876
     }
    },
    "shared": {
@@ -1453,15 +1506,18 @@
    "single": {
     "bm25": {
      "first": 13,
-     "all": 163
+     "all": 163,
+     "words@5": 912
     },
     "dense": {
      "first": 23,
-     "all": 56
+     "all": 56,
+     "words@5": 1000
     },
     "hybrid": {
      "first": 38,
-     "all": 43
+     "all": 43,
+     "words@5": 879
     }
    },
    "shared": {
@@ -1494,15 +1550,18 @@
    "single": {
     "bm25": {
      "first": 49,
-     "all": 113
+     "all": 113,
+     "words@5": 987
     },
     "dense": {
      "first": 76,
-     "all": 119
+     "all": 119,
+     "words@5": 987
     },
     "hybrid": {
      "first": 66,
-     "all": 124
+     "all": 124,
+     "words@5": 987
     }
    },
    "shared": {
@@ -1535,15 +1594,18 @@
    "single": {
     "bm25": {
      "first": 6,
-     "all": 144
+     "all": 144,
+     "words@5": 851
     },
     "dense": {
      "first": 6,
-     "all": 7
+     "all": 7,
+     "words@5": 1000
     },
     "hybrid": {
      "first": 1,
-     "all": 35
+     "all": 35,
+     "words@5": 901
     }
    },
    "shared": {
@@ -1575,15 +1637,18 @@
    "single": {
     "bm25": {
      "first": 60,
-     "all": 60
+     "all": 60,
+     "words@5": 950
     },
     "dense": {
      "first": 5,
-     "all": 5
+     "all": 5,
+     "words@5": 989
     },
     "hybrid": {
      "first": 16,
-     "all": 16
+     "all": 16,
+     "words@5": 1000
     }
    },
    "shared": {
@@ -1615,15 +1680,18 @@
    "single": {
     "bm25": {
      "first": 8,
-     "all": 8
+     "all": 8,
+     "words@5": 894
     },
     "dense": {
      "first": 1,
-     "all": 1
+     "all": 1,
+     "words@5": 986
     },
     "hybrid": {
      "first": 1,
-     "all": 1
+     "all": 1,
+     "words@5": 956
     }
    },
    "shared": {
@@ -1655,15 +1723,18 @@
    "single": {
     "bm25": {
      "first": 56,
-     "all": 56
+     "all": 56,
+     "words@5": 962
     },
     "dense": {
      "first": 1,
-     "all": 1
+     "all": 1,
+     "words@5": 976
     },
     "hybrid": {
      "first": 4,
-     "all": 4
+     "all": 4,
+     "words@5": 1000
     }
    },
    "shared": {
@@ -1695,15 +1766,18 @@
    "single": {
     "bm25": {
      "first": 3,
-     "all": 3
+     "all": 3,
+     "words@5": 797
     },
     "dense": {
      "first": 1,
-     "all": 1
+     "all": 1,
+     "words@5": 847
     },
     "hybrid": {
      "first": 3,
-     "all": 3
+     "all": 3,
+     "words@5": 797
     }
    },
    "shared": {
@@ -1735,15 +1809,18 @@
    "single": {
     "bm25": {
      "first": 307,
-     "all": 307
+     "all": 307,
+     "words@5": 839
     },
     "dense": {
      "first": 44,
-     "all": 44
+     "all": 44,
+     "words@5": 889
     },
     "hybrid": {
      "first": 108,
-     "all": 108
+     "all": 108,
+     "words@5": 986
     }
    },
    "shared": {
@@ -1775,15 +1852,18 @@
    "single": {
     "bm25": {
      "first": 24,
-     "all": 24
+     "all": 24,
+     "words@5": 870
     },
     "dense": {
      "first": 47,
-     "all": 47
+     "all": 47,
+     "words@5": 875
     },
     "hybrid": {
      "first": 20,
-     "all": 20
+     "all": 20,
+     "words@5": 889
     }
    },
    "shared": {
@@ -1815,15 +1895,18 @@
    "single": {
     "bm25": {
      "first": 11,
-     "all": 11
+     "all": 11,
+     "words@5": 805
     },
     "dense": {
      "first": 3,
-     "all": 3
+     "all": 3,
+     "words@5": 906
     },
     "hybrid": {
      "first": 2,
-     "all": 2
+     "all": 2,
+     "words@5": 803
     }
    },
    "shared": {
@@ -1855,15 +1938,18 @@
    "single": {
     "bm25": {
      "first": 16,
-     "all": 16
+     "all": 16,
+     "words@5": 1000
     },
     "dense": {
      "first": 2,
-     "all": 2
+     "all": 2,
+     "words@5": 989
     },
     "hybrid": {
      "first": 1,
-     "all": 1
+     "all": 1,
+     "words@5": 961
     }
    },
    "shared": {
@@ -1895,15 +1981,18 @@
    "single": {
     "bm25": {
      "first": 2,
-     "all": 2
+     "all": 2,
+     "words@5": 806
     },
     "dense": {
      "first": 8,
-     "all": 8
+     "all": 8,
+     "words@5": 1000
     },
     "hybrid": {
      "first": 1,
-     "all": 1
+     "all": 1,
+     "words@5": 904
     }
    },
    "shared": {
@@ -1935,15 +2024,18 @@
    "single": {
     "bm25": {
      "first": 5,
-     "all": 5
+     "all": 5,
+     "words@5": 968
     },
     "dense": {
      "first": 16,
-     "all": 16
+     "all": 16,
+     "words@5": 847
     },
     "hybrid": {
      "first": 9,
-     "all": 9
+     "all": 9,
+     "words@5": 968
     }
    },
    "shared": {
@@ -1975,15 +2067,18 @@
    "single": {
     "bm25": {
      "first": 1,
-     "all": 1
+     "all": 1,
+     "words@5": 925
     },
     "dense": {
      "first": 27,
-     "all": 27
+     "all": 27,
+     "words@5": 879
     },
     "hybrid": {
      "first": 9,
-     "all": 9
+     "all": 9,
+     "words@5": 879
     }
    },
    "shared": {
@@ -2016,15 +2111,18 @@
    "single": {
     "bm25": {
      "first": 17,
-     "all": 79
+     "all": 79,
+     "words@5": 791
     },
     "dense": {
      "first": 23,
-     "all": 112
+     "all": 112,
+     "words@5": 1000
     },
     "hybrid": {
      "first": 2,
-     "all": 93
+     "all": 93,
+     "words@5": 926
     }
    },
    "shared": {
@@ -2056,15 +2154,18 @@
    "single": {
     "bm25": {
      "first": 359,
-     "all": 359
+     "all": 359,
+     "words@5": 1000
     },
     "dense": {
      "first": 83,
-     "all": 83
+     "all": 83,
+     "words@5": 1000
     },
     "hybrid": {
      "first": 171,
-     "all": 171
+     "all": 171,
+     "words@5": 1000
     }
    },
    "shared": {
@@ -2096,15 +2197,18 @@
    "single": {
     "bm25": {
      "first": 31,
-     "all": 31
+     "all": 31,
+     "words@5": 1000
     },
     "dense": {
      "first": 12,
-     "all": 12
+     "all": 12,
+     "words@5": 1000
     },
     "hybrid": {
      "first": 10,
-     "all": 10
+     "all": 10,
+     "words@5": 1000
     }
    },
    "shared": {
@@ -2136,15 +2240,18 @@
    "single": {
     "bm25": {
      "first": 13,
-     "all": 13
+     "all": 13,
+     "words@5": 1000
     },
     "dense": {
      "first": 4,
-     "all": 4
+     "all": 4,
+     "words@5": 883
     },
     "hybrid": {
      "first": 9,
-     "all": 9
+     "all": 9,
+     "words@5": 914
     }
    },
    "shared": {
@@ -2176,15 +2283,18 @@
    "single": {
     "bm25": {
      "first": 1,
-     "all": 1
+     "all": 1,
+     "words@5": 920
     },
     "dense": {
      "first": 6,
-     "all": 6
+     "all": 6,
+     "words@5": 914
     },
     "hybrid": {
      "first": 1,
-     "all": 1
+     "all": 1,
+     "words@5": 914
     }
    },
    "shared": {
@@ -2216,15 +2326,18 @@
    "single": {
     "bm25": {
      "first": 4,
-     "all": 4
+     "all": 4,
+     "words@5": 962
     },
     "dense": {
      "first": 2,
-     "all": 2
+     "all": 2,
+     "words@5": 911
     },
     "hybrid": {
      "first": 1,
-     "all": 1
+     "all": 1,
+     "words@5": 962
     }
    },
    "shared": {
@@ -2256,15 +2369,18 @@
    "single": {
     "bm25": {
      "first": 4,
-     "all": 4
+     "all": 4,
+     "words@5": 1000
     },
     "dense": {
      "first": 28,
-     "all": 28
+     "all": 28,
+     "words@5": 949
     },
     "hybrid": {
      "first": 7,
-     "all": 7
+     "all": 7,
+     "words@5": 949
     }
    },
    "shared": {
@@ -2296,15 +2412,18 @@
    "single": {
     "bm25": {
      "first": 40,
-     "all": 40
+     "all": 40,
+     "words@5": 1000
     },
     "dense": {
      "first": 9,
-     "all": 9
+     "all": 9,
+     "words@5": 969
     },
     "hybrid": {
      "first": 17,
-     "all": 17
+     "all": 17,
+     "words@5": 969
     }
    },
    "shared": {
@@ -2336,15 +2455,18 @@
    "single": {
     "bm25": {
      "first": 1,
-     "all": 1
+     "all": 1,
+     "words@5": 1000
     },
     "dense": {
      "first": 1,
-     "all": 1
+     "all": 1,
+     "words@5": 1000
     },
     "hybrid": {
      "first": 1,
-     "all": 1
+     "all": 1,
+     "words@5": 1000
     }
    },
    "shared": {
@@ -2376,15 +2498,18 @@
    "single": {
     "bm25": {
      "first": 290,
-     "all": 290
+     "all": 290,
+     "words@5": 1000
     },
     "dense": {
      "first": 85,
-     "all": 85
+     "all": 85,
+     "words@5": 663
     },
     "hybrid": {
      "first": 141,
-     "all": 141
+     "all": 141,
+     "words@5": 656
     }
    },
    "shared": {
@@ -2416,15 +2541,18 @@
    "single": {
     "bm25": {
      "first": 398,
-     "all": 398
+     "all": 398,
+     "words@5": 1000
     },
     "dense": {
      "first": 316,
-     "all": 316
+     "all": 316,
+     "words@5": 777
     },
     "hybrid": {
      "first": 453,
-     "all": 453
+     "all": 453,
+     "words@5": 1000
     }
    },
    "shared": {
@@ -2456,15 +2584,18 @@
    "single": {
     "bm25": {
      "first": 456,
-     "all": 456
+     "all": 456,
+     "words@5": 1000
     },
     "dense": {
      "first": 312,
-     "all": 312
+     "all": 312,
+     "words@5": 1000
     },
     "hybrid": {
      "first": 420,
-     "all": 420
+     "all": 420,
+     "words@5": 1000
     }
    },
    "shared": {
@@ -2496,15 +2627,18 @@
    "single": {
     "bm25": {
      "first": 83,
-     "all": 83
+     "all": 83,
+     "words@5": 792
     },
     "dense": {
      "first": 203,
-     "all": 203
+     "all": 203,
+     "words@5": 795
     },
     "hybrid": {
      "first": 123,
-     "all": 123
+     "all": 123,
+     "words@5": 862
     }
    },
    "shared": {
@@ -2536,15 +2670,18 @@
    "single": {
     "bm25": {
      "first": 150,
-     "all": 150
+     "all": 150,
+     "words@5": 998
     },
     "dense": {
      "first": 57,
-     "all": 57
+     "all": 57,
+     "words@5": 708
     },
     "hybrid": {
      "first": 88,
-     "all": 88
+     "all": 88,
+     "words@5": 1000
     }
    },
    "shared": {
@@ -2576,15 +2713,18 @@
    "single": {
     "bm25": {
      "first": 59,
-     "all": 59
+     "all": 59,
+     "words@5": 1000
     },
     "dense": {
      "first": 119,
-     "all": 119
+     "all": 119,
+     "words@5": 625
     },
     "hybrid": {
      "first": 122,
-     "all": 122
+     "all": 122,
+     "words@5": 955
     }
    },
    "shared": {
@@ -2616,15 +2756,18 @@
    "single": {
     "bm25": {
      "first": 16,
-     "all": 16
+     "all": 16,
+     "words@5": 1000
     },
     "dense": {
      "first": 1,
-     "all": 1
+     "all": 1,
+     "words@5": 955
     },
     "hybrid": {
      "first": 2,
-     "all": 2
+     "all": 2,
+     "words@5": 1000
     }
    },
    "shared": {
@@ -2657,15 +2800,18 @@
    "single": {
     "bm25": {
      "first": 3,
-     "all": 11
+     "all": 11,
+     "words@5": 821
     },
     "dense": {
      "first": 1,
-     "all": 2
+     "all": 2,
+     "words@5": 925
     },
     "hybrid": {
      "first": 1,
-     "all": 3
+     "all": 3,
+     "words@5": 957
     }
    },
    "shared": {
@@ -2698,15 +2844,18 @@
    "single": {
     "bm25": {
      "first": 68,
-     "all": 132
+     "all": 132,
+     "words@5": 923
     },
     "dense": {
      "first": 2,
-     "all": 13
+     "all": 13,
+     "words@5": 1000
     },
     "hybrid": {
      "first": 14,
-     "all": 37
+     "all": 37,
+     "words@5": 1000
     }
    },
    "shared": {
@@ -2738,15 +2887,18 @@
    "single": {
     "bm25": {
      "first": 8,
-     "all": 8
+     "all": 8,
+     "words@5": 1000
     },
     "dense": {
      "first": 1,
-     "all": 1
+     "all": 1,
+     "words@5": 818
     },
     "hybrid": {
      "first": 4,
-     "all": 4
+     "all": 4,
+     "words@5": 906
     }
    },
    "shared": {
@@ -2778,15 +2930,18 @@
    "single": {
     "bm25": {
      "first": 14,
-     "all": 14
+     "all": 14,
+     "words@5": 965
     },
     "dense": {
      "first": 6,
-     "all": 6
+     "all": 6,
+     "words@5": 883
     },
     "hybrid": {
      "first": 3,
-     "all": 3
+     "all": 3,
+     "words@5": 1000
     }
    },
    "shared": {
@@ -2818,15 +2973,18 @@
    "single": {
     "bm25": {
      "first": 114,
-     "all": 114
+     "all": 114,
+     "words@5": 1000
     },
     "dense": {
      "first": 114,
-     "all": 114
+     "all": 114,
+     "words@5": 879
     },
     "hybrid": {
      "first": 119,
-     "all": 119
+     "all": 119,
+     "words@5": 975
     }
    },
    "shared": {
@@ -2858,15 +3016,18 @@
    "single": {
     "bm25": {
      "first": 7,
-     "all": 7
+     "all": 7,
+     "words@5": 1000
     },
     "dense": {
      "first": 51,
-     "all": 51
+     "all": 51,
+     "words@5": 1000
     },
     "hybrid": {
      "first": 18,
-     "all": 18
+     "all": 18,
+     "words@5": 1000
     }
    },
    "shared": {
@@ -2898,15 +3059,18 @@
    "single": {
     "bm25": {
      "first": 3,
-     "all": 3
+     "all": 3,
+     "words@5": 940
     },
     "dense": {
      "first": 12,
-     "all": 12
+     "all": 12,
+     "words@5": 986
     },
     "hybrid": {
      "first": 4,
-     "all": 4
+     "all": 4,
+     "words@5": 986
     }
    },
    "shared": {
@@ -2938,15 +3102,18 @@
    "single": {
     "bm25": {
      "first": 3,
-     "all": 3
+     "all": 3,
+     "words@5": 721
     },
     "dense": {
      "first": 1,
-     "all": 1
+     "all": 1,
+     "words@5": 722
     },
     "hybrid": {
      "first": 1,
-     "all": 1
+     "all": 1,
+     "words@5": 721
     }
    },
    "shared": {
@@ -2978,15 +3145,18 @@
    "single": {
     "bm25": {
      "first": 1,
-     "all": 1
+     "all": 1,
+     "words@5": 1000
     },
     "dense": {
      "first": 1,
-     "all": 1
+     "all": 1,
+     "words@5": 845
     },
     "hybrid": {
      "first": 1,
-     "all": 1
+     "all": 1,
+     "words@5": 1000
     }
    },
    "shared": {
@@ -3018,15 +3188,18 @@
    "single": {
     "bm25": {
      "first": 4,
-     "all": 4
+     "all": 4,
+     "words@5": 1000
     },
     "dense": {
      "first": 21,
-     "all": 21
+     "all": 21,
+     "words@5": 807
     },
     "hybrid": {
      "first": 13,
-     "all": 13
+     "all": 13,
+     "words@5": 1000
     }
    },
    "shared": {
@@ -3058,15 +3231,18 @@
    "single": {
     "bm25": {
      "first": 1,
-     "all": 1
+     "all": 1,
+     "words@5": 853
     },
     "dense": {
      "first": 1,
-     "all": 1
+     "all": 1,
+     "words@5": 848
     },
     "hybrid": {
      "first": 1,
-     "all": 1
+     "all": 1,
+     "words@5": 1000
     }
    },
    "shared": {
@@ -3098,15 +3274,18 @@
    "single": {
     "bm25": {
      "first": 17,
-     "all": 17
+     "all": 17,
+     "words@5": 974
     },
     "dense": {
      "first": 2,
-     "all": 2
+     "all": 2,
+     "words@5": 921
     },
     "hybrid": {
      "first": 3,
-     "all": 3
+     "all": 3,
+     "words@5": 921
     }
    },
    "shared": {
@@ -3138,15 +3317,18 @@
    "single": {
     "bm25": {
      "first": 10,
-     "all": 10
+     "all": 10,
+     "words@5": 862
     },
     "dense": {
      "first": 2,
-     "all": 2
+     "all": 2,
+     "words@5": 928
     },
     "hybrid": {
      "first": 1,
-     "all": 1
+     "all": 1,
+     "words@5": 928
     }
    },
    "shared": {
@@ -3178,15 +3360,18 @@
    "single": {
     "bm25": {
      "first": 13,
-     "all": 13
+     "all": 13,
+     "words@5": 1000
     },
     "dense": {
      "first": 3,
-     "all": 3
+     "all": 3,
+     "words@5": 970
     },
     "hybrid": {
      "first": 2,
-     "all": 2
+     "all": 2,
+     "words@5": 970
     }
    },
    "shared": {
@@ -3218,15 +3403,18 @@
    "single": {
     "bm25": {
      "first": 102,
-     "all": 102
+     "all": 102,
+     "words@5": 1000
     },
     "dense": {
      "first": 2,
-     "all": 2
+     "all": 2,
+     "words@5": 974
     },
     "hybrid": {
      "first": 9,
-     "all": 9
+     "all": 9,
+     "words@5": 931
     }
    },
    "shared": {
@@ -3258,15 +3446,18 @@
    "single": {
     "bm25": {
      "first": 8,
-     "all": 8
+     "all": 8,
+     "words@5": 1000
     },
     "dense": {
      "first": 1,
-     "all": 1
+     "all": 1,
+     "words@5": 1000
     },
     "hybrid": {
      "first": 2,
-     "all": 2
+     "all": 2,
+     "words@5": 1000
     }
    },
    "shared": {
@@ -3298,15 +3489,18 @@
    "single": {
     "bm25": {
      "first": 101,
-     "all": 101
+     "all": 101,
+     "words@5": 844
     },
     "dense": {
      "first": 7,
-     "all": 7
+     "all": 7,
+     "words@5": 989
     },
     "hybrid": {
      "first": 18,
-     "all": 18
+     "all": 18,
+     "words@5": 766
     }
    },
    "shared": {
@@ -3340,15 +3534,18 @@
    "single": {
     "bm25": {
      "first": 54,
-     "all": 320
+     "all": 320,
+     "words@5": 793
     },
     "dense": {
      "first": 52,
-     "all": 209
+     "all": 209,
+     "words@5": 883
     },
     "hybrid": {
      "first": 51,
-     "all": 264
+     "all": 264,
+     "words@5": 780
     }
    },
    "shared": {
@@ -3380,15 +3577,18 @@
    "single": {
     "bm25": {
      "first": 42,
-     "all": 42
+     "all": 42,
+     "words@5": 920
     },
     "dense": {
      "first": 13,
-     "all": 13
+     "all": 13,
+     "words@5": 1000
     },
     "hybrid": {
      "first": 38,
-     "all": 38
+     "all": 38,
+     "words@5": 989
     }
    },
    "shared": {
@@ -3420,15 +3620,18 @@
    "single": {
     "bm25": {
      "first": 1,
-     "all": 1
+     "all": 1,
+     "words@5": 844
     },
     "dense": {
      "first": 1,
-     "all": 1
+     "all": 1,
+     "words@5": 985
     },
     "hybrid": {
      "first": 1,
-     "all": 1
+     "all": 1,
+     "words@5": 1000
     }
    },
    "shared": {
@@ -3460,15 +3663,18 @@
    "single": {
     "bm25": {
      "first": 44,
-     "all": 44
+     "all": 44,
+     "words@5": 1000
     },
     "dense": {
      "first": 2,
-     "all": 2
+     "all": 2,
+     "words@5": 985
     },
     "hybrid": {
      "first": 12,
-     "all": 12
+     "all": 12,
+     "words@5": 1000
     }
    },
    "shared": {
@@ -3501,15 +3707,18 @@
    "single": {
     "bm25": {
      "first": 22,
-     "all": 154
+     "all": 154,
+     "words@5": 1000
     },
     "dense": {
      "first": 1,
-     "all": 5
+     "all": 5,
+     "words@5": 915
     },
     "hybrid": {
      "first": 2,
-     "all": 23
+     "all": 23,
+     "words@5": 859
     }
    },
    "shared": {
@@ -3541,15 +3750,18 @@
    "single": {
     "bm25": {
      "first": 35,
-     "all": 35
+     "all": 35,
+     "words@5": 897
     },
     "dense": {
      "first": 1,
-     "all": 1
+     "all": 1,
+     "words@5": 962
     },
     "hybrid": {
      "first": 7,
-     "all": 7
+     "all": 7,
+     "words@5": 1000
     }
    },
    "shared": {
@@ -3582,15 +3794,18 @@
    "single": {
     "bm25": {
      "first": 12,
-     "all": 19
+     "all": 19,
+     "words@5": 970
     },
     "dense": {
      "first": 5,
-     "all": 7
+     "all": 7,
+     "words@5": 972
     },
     "hybrid": {
      "first": 4,
-     "all": 6
+     "all": 6,
+     "words@5": 906
     }
    },
    "shared": {
@@ -3623,15 +3838,18 @@
    "single": {
     "bm25": {
      "first": 10,
-     "all": 219
+     "all": 219,
+     "words@5": 917
     },
     "dense": {
      "first": 6,
-     "all": 30
+     "all": 30,
+     "words@5": 862
     },
     "hybrid": {
      "first": 2,
-     "all": 72
+     "all": 72,
+     "words@5": 935
     }
    },
    "shared": {
@@ -3663,15 +3881,18 @@
    "single": {
     "bm25": {
      "first": 3,
-     "all": 3
+     "all": 3,
+     "words@5": 905
     },
     "dense": {
      "first": 2,
-     "all": 2
+     "all": 2,
+     "words@5": 879
     },
     "hybrid": {
      "first": 2,
-     "all": 2
+     "all": 2,
+     "words@5": 952
     }
    },
    "shared": {
@@ -3703,15 +3924,18 @@
    "single": {
     "bm25": {
      "first": 9,
-     "all": 9
+     "all": 9,
+     "words@5": 873
     },
     "dense": {
      "first": 3,
-     "all": 3
+     "all": 3,
+     "words@5": 930
     },
     "hybrid": {
      "first": 3,
-     "all": 3
+     "all": 3,
+     "words@5": 955
     }
    },
    "shared": {
@@ -3743,15 +3967,18 @@
    "single": {
     "bm25": {
      "first": 58,
-     "all": 58
+     "all": 58,
+     "words@5": 779
     },
     "dense": {
      "first": 12,
-     "all": 12
+     "all": 12,
+     "words@5": 766
     },
     "hybrid": {
      "first": 50,
-     "all": 50
+     "all": 50,
+     "words@5": 917
     }
    },
    "shared": {
@@ -3783,15 +4010,18 @@
    "single": {
     "bm25": {
      "first": 5,
-     "all": 5
+     "all": 5,
+     "words@5": 1000
     },
     "dense": {
      "first": 1,
-     "all": 1
+     "all": 1,
+     "words@5": 860
     },
     "hybrid": {
      "first": 1,
-     "all": 1
+     "all": 1,
+     "words@5": 804
     }
    },
    "shared": {
@@ -3824,15 +4054,18 @@
    "single": {
     "bm25": {
      "first": 151,
-     "all": 233
+     "all": 233,
+     "words@5": 968
     },
     "dense": {
      "first": 1,
-     "all": 15
+     "all": 15,
+     "words@5": 953
     },
     "hybrid": {
      "first": 24,
-     "all": 50
+     "all": 50,
+     "words@5": 953
     }
    },
    "shared": {
@@ -3865,15 +4098,18 @@
    "single": {
     "bm25": {
      "first": 66,
-     "all": 115
+     "all": 115,
+     "words@5": 962
     },
     "dense": {
      "first": 37,
-     "all": 39
+     "all": 39,
+     "words@5": 843
     },
     "hybrid": {
      "first": 41,
-     "all": 77
+     "all": 77,
+     "words@5": 843
     }
    },
    "shared": {
@@ -3906,15 +4142,18 @@
    "single": {
     "bm25": {
      "first": 10,
-     "all": 78
+     "all": 78,
+     "words@5": 1000
     },
     "dense": {
      "first": 1,
-     "all": 41
+     "all": 41,
+     "words@5": 1000
     },
     "hybrid": {
      "first": 2,
-     "all": 111
+     "all": 111,
+     "words@5": 1000
     }
    },
    "shared": {
@@ -3946,15 +4185,18 @@
    "single": {
     "bm25": {
      "first": 1,
-     "all": 1
+     "all": 1,
+     "words@5": 909
     },
     "dense": {
      "first": 1,
-     "all": 1
+     "all": 1,
+     "words@5": 752
     },
     "hybrid": {
      "first": 1,
-     "all": 1
+     "all": 1,
+     "words@5": 909
     }
    },
    "shared": {
@@ -3986,15 +4228,18 @@
    "single": {
     "bm25": {
      "first": 25,
-     "all": 25
+     "all": 25,
+     "words@5": 883
     },
     "dense": {
      "first": 10,
-     "all": 10
+     "all": 10,
+     "words@5": 883
     },
     "hybrid": {
      "first": 17,
-     "all": 17
+     "all": 17,
+     "words@5": 883
     }
    },
    "shared": {
@@ -4026,15 +4271,18 @@
    "single": {
     "bm25": {
      "first": 1,
-     "all": 1
+     "all": 1,
+     "words@5": 930
     },
     "dense": {
      "first": 1,
-     "all": 1
+     "all": 1,
+     "words@5": 782
     },
     "hybrid": {
      "first": 1,
-     "all": 1
+     "all": 1,
+     "words@5": 930
     }
    },
    "shared": {
@@ -4067,15 +4315,18 @@
    "single": {
     "bm25": {
      "first": 97,
-     "all": 175
+     "all": 175,
+     "words@5": 794
     },
     "dense": {
      "first": 3,
-     "all": 12
+     "all": 12,
+     "words@5": 993
     },
     "hybrid": {
      "first": 10,
-     "all": 38
+     "all": 38,
+     "words@5": 995
     }
    },
    "shared": {
@@ -4107,15 +4358,18 @@
    "single": {
     "bm25": {
      "first": 2,
-     "all": 2
+     "all": 2,
+     "words@5": 995
     },
     "dense": {
      "first": 1,
-     "all": 1
+     "all": 1,
+     "words@5": 995
     },
     "hybrid": {
      "first": 1,
-     "all": 1
+     "all": 1,
+     "words@5": 995
     }
    },
    "shared": {
@@ -4147,15 +4401,18 @@
    "single": {
     "bm25": {
      "first": 9,
-     "all": 9
+     "all": 9,
+     "words@5": 865
     },
     "dense": {
      "first": 1,
-     "all": 1
+     "all": 1,
+     "words@5": 770
     },
     "hybrid": {
      "first": 2,
-     "all": 2
+     "all": 2,
+     "words@5": 775
     }
    },
    "shared": {
@@ -4188,15 +4445,18 @@
    "single": {
     "bm25": {
      "first": 11,
-     "all": 33
+     "all": 33,
+     "words@5": 951
     },
     "dense": {
      "first": 5,
-     "all": 12
+     "all": 12,
+     "words@5": 1000
     },
     "hybrid": {
      "first": 3,
-     "all": 13
+     "all": 13,
+     "words@5": 910
     }
    },
    "shared": {
@@ -4228,15 +4488,18 @@
    "single": {
     "bm25": {
      "first": 2,
-     "all": 2
+     "all": 2,
+     "words@5": 928
     },
     "dense": {
      "first": 46,
-     "all": 46
+     "all": 46,
+     "words@5": 792
     },
     "hybrid": {
      "first": 6,
-     "all": 6
+     "all": 6,
+     "words@5": 738
     }
    },
    "shared": {
@@ -4268,15 +4531,18 @@
    "single": {
     "bm25": {
      "first": 320,
-     "all": 320
+     "all": 320,
+     "words@5": 936
     },
     "dense": {
      "first": 192,
-     "all": 192
+     "all": 192,
+     "words@5": 874
     },
     "hybrid": {
      "first": 293,
-     "all": 293
+     "all": 293,
+     "words@5": 717
     }
    },
    "shared": {
@@ -4309,15 +4575,18 @@
    "single": {
     "bm25": {
      "first": 151,
-     "all": 342
+     "all": 342,
+     "words@5": 930
     },
     "dense": {
      "first": 18,
-     "all": 23
+     "all": 23,
+     "words@5": 904
     },
     "hybrid": {
      "first": 47,
-     "all": 62
+     "all": 62,
+     "words@5": 941
     }
    },
    "shared": {
@@ -4349,15 +4618,18 @@
    "single": {
     "bm25": {
      "first": 1,
-     "all": 1
+     "all": 1,
+     "words@5": 782
     },
     "dense": {
      "first": 1,
-     "all": 1
+     "all": 1,
+     "words@5": 694
     },
     "hybrid": {
      "first": 1,
-     "all": 1
+     "all": 1,
+     "words@5": 749
     }
    },
    "shared": {
@@ -4389,15 +4661,18 @@
    "single": {
     "bm25": {
      "first": 18,
-     "all": 18
+     "all": 18,
+     "words@5": 838
     },
     "dense": {
      "first": 19,
-     "all": 19
+     "all": 19,
+     "words@5": 834
     },
     "hybrid": {
      "first": 17,
-     "all": 17
+     "all": 17,
+     "words@5": 840
     }
    },
    "shared": {
@@ -4429,15 +4704,18 @@
    "single": {
     "bm25": {
      "first": 1,
-     "all": 1
+     "all": 1,
+     "words@5": 649
     },
     "dense": {
      "first": 1,
-     "all": 1
+     "all": 1,
+     "words@5": 796
     },
     "hybrid": {
      "first": 1,
-     "all": 1
+     "all": 1,
+     "words@5": 796
     }
    },
    "shared": {
@@ -4469,15 +4747,18 @@
    "single": {
     "bm25": {
      "first": 1,
-     "all": 1
+     "all": 1,
+     "words@5": 796
     },
     "dense": {
      "first": 1,
-     "all": 1
+     "all": 1,
+     "words@5": 884
     },
     "hybrid": {
      "first": 1,
-     "all": 1
+     "all": 1,
+     "words@5": 890
     }
    },
    "shared": {
@@ -4509,15 +4790,18 @@
    "single": {
     "bm25": {
      "first": 1,
-     "all": 1
+     "all": 1,
+     "words@5": 875
     },
     "dense": {
      "first": 1,
-     "all": 1
+     "all": 1,
+     "words@5": 875
     },
     "hybrid": {
      "first": 1,
-     "all": 1
+     "all": 1,
+     "words@5": 875
     }
    },
    "shared": {
@@ -4549,15 +4833,18 @@
    "single": {
     "bm25": {
      "first": 3,
-     "all": 3
+     "all": 3,
+     "words@5": 889
     },
     "dense": {
      "first": 6,
-     "all": 6
+     "all": 6,
+     "words@5": 926
     },
     "hybrid": {
      "first": 3,
-     "all": 3
+     "all": 3,
+     "words@5": 856
     }
    },
    "shared": {
@@ -4589,15 +4876,18 @@
    "single": {
     "bm25": {
      "first": 53,
-     "all": 53
+     "all": 53,
+     "words@5": 933
     },
     "dense": {
      "first": 9,
-     "all": 9
+     "all": 9,
+     "words@5": 1000
     },
     "hybrid": {
      "first": 21,
-     "all": 21
+     "all": 21,
+     "words@5": 1000
     }
    },
    "shared": {
@@ -4629,15 +4919,18 @@
    "single": {
     "bm25": {
      "first": 37,
-     "all": 37
+     "all": 37,
+     "words@5": 947
     },
     "dense": {
      "first": 65,
-     "all": 65
+     "all": 65,
+     "words@5": 1000
     },
     "hybrid": {
      "first": 92,
-     "all": 92
+     "all": 92,
+     "words@5": 1000
     }
    },
    "shared": {
@@ -4669,15 +4962,18 @@
    "single": {
     "bm25": {
      "first": 204,
-     "all": 204
+     "all": 204,
+     "words@5": 1000
     },
     "dense": {
      "first": 482,
-     "all": 482
+     "all": 482,
+     "words@5": 1000
     },
     "hybrid": {
      "first": 311,
-     "all": 311
+     "all": 311,
+     "words@5": 892
     }
    },
    "shared": {
@@ -4709,15 +5005,18 @@
    "single": {
     "bm25": {
      "first": 47,
-     "all": 47
+     "all": 47,
+     "words@5": 897
     },
     "dense": {
      "first": 6,
-     "all": 6
+     "all": 6,
+     "words@5": 981
     },
     "hybrid": {
      "first": 14,
-     "all": 14
+     "all": 14,
+     "words@5": 1000
     }
    },
    "shared": {
@@ -4749,15 +5048,18 @@
    "single": {
     "bm25": {
      "first": 1,
-     "all": 1
+     "all": 1,
+     "words@5": 846
     },
     "dense": {
      "first": 3,
-     "all": 3
+     "all": 3,
+     "words@5": 851
     },
     "hybrid": {
      "first": 1,
-     "all": 1
+     "all": 1,
+     "words@5": 846
     }
    },
    "shared": {
@@ -4790,15 +5092,18 @@
    "single": {
     "bm25": {
      "first": 179,
-     "all": 287
+     "all": 287,
+     "words@5": 911
     },
     "dense": {
      "first": 3,
-     "all": 11
+     "all": 11,
+     "words@5": 1000
     },
     "hybrid": {
      "first": 15,
-     "all": 48
+     "all": 48,
+     "words@5": 1000
     }
    },
    "shared": {
@@ -4831,15 +5136,18 @@
    "single": {
     "bm25": {
      "first": 45,
-     "all": 230
+     "all": 230,
+     "words@5": 1000
     },
     "dense": {
      "first": 1,
-     "all": 3
+     "all": 3,
+     "words@5": 1000
     },
     "hybrid": {
      "first": 6,
-     "all": 31
+     "all": 31,
+     "words@5": 994
     }
    },
    "shared": {
@@ -4871,15 +5179,18 @@
    "single": {
     "bm25": {
      "first": 1,
-     "all": 1
+     "all": 1,
+     "words@5": 1000
     },
     "dense": {
      "first": 1,
-     "all": 1
+     "all": 1,
+     "words@5": 944
     },
     "hybrid": {
      "first": 1,
-     "all": 1
+     "all": 1,
+     "words@5": 1000
     }
    },
    "shared": {
@@ -4911,15 +5222,18 @@
    "single": {
     "bm25": {
      "first": 38,
-     "all": 38
+     "all": 38,
+     "words@5": 1000
     },
     "dense": {
      "first": 1,
-     "all": 1
+     "all": 1,
+     "words@5": 951
     },
     "hybrid": {
      "first": 7,
-     "all": 7
+     "all": 7,
+     "words@5": 833
     }
    },
    "shared": {
@@ -4951,15 +5265,18 @@
    "single": {
     "bm25": {
      "first": 10,
-     "all": 10
+     "all": 10,
+     "words@5": 911
     },
     "dense": {
      "first": 1,
-     "all": 1
+     "all": 1,
+     "words@5": 872
     },
     "hybrid": {
      "first": 1,
-     "all": 1
+     "all": 1,
+     "words@5": 966
     }
    },
    "shared": {
@@ -4992,15 +5309,18 @@
    "single": {
     "bm25": {
      "first": 11,
-     "all": 49
+     "all": 49,
+     "words@5": 942
     },
     "dense": {
      "first": 1,
-     "all": 2
+     "all": 2,
+     "words@5": 1000
     },
     "hybrid": {
      "first": 2,
-     "all": 24
+     "all": 24,
+     "words@5": 905
     }
    },
    "shared": {
@@ -5032,15 +5352,18 @@
    "single": {
     "bm25": {
      "first": 2,
-     "all": 2
+     "all": 2,
+     "words@5": 845
     },
     "dense": {
      "first": 2,
-     "all": 2
+     "all": 2,
+     "words@5": 900
     },
     "hybrid": {
      "first": 2,
-     "all": 2
+     "all": 2,
+     "words@5": 963
     }
    },
    "shared": {
@@ -5072,15 +5395,18 @@
    "single": {
     "bm25": {
      "first": 1,
-     "all": 1
+     "all": 1,
+     "words@5": 937
     },
     "dense": {
      "first": 4,
-     "all": 4
+     "all": 4,
+     "words@5": 985
     },
     "hybrid": {
      "first": 3,
-     "all": 3
+     "all": 3,
+     "words@5": 985
     }
    },
    "shared": {
@@ -5112,15 +5438,18 @@
    "single": {
     "bm25": {
      "first": 1,
-     "all": 1
+     "all": 1,
+     "words@5": 942
     },
     "dense": {
      "first": 1,
-     "all": 1
+     "all": 1,
+     "words@5": 985
     },
     "hybrid": {
      "first": 1,
-     "all": 1
+     "all": 1,
+     "words@5": 1000
     }
    },
    "shared": {
@@ -5153,15 +5482,18 @@
    "single": {
     "bm25": {
      "first": 10,
-     "all": 21
+     "all": 21,
+     "words@5": 927
     },
     "dense": {
      "first": 7,
-     "all": 21
+     "all": 21,
+     "words@5": 985
     },
     "hybrid": {
      "first": 14,
-     "all": 15
+     "all": 15,
+     "words@5": 952
     }
    },
    "shared": {
@@ -5193,15 +5525,18 @@
    "single": {
     "bm25": {
      "first": 2,
-     "all": 2
+     "all": 2,
+     "words@5": 891
     },
     "dense": {
      "first": 1,
-     "all": 1
+     "all": 1,
+     "words@5": 866
     },
     "hybrid": {
      "first": 1,
-     "all": 1
+     "all": 1,
+     "words@5": 983
     }
    },
    "shared": {
@@ -5233,15 +5568,18 @@
    "single": {
     "bm25": {
      "first": 72,
-     "all": 72
+     "all": 72,
+     "words@5": 1000
     },
     "dense": {
      "first": 13,
-     "all": 13
+     "all": 13,
+     "words@5": 1000
     },
     "hybrid": {
      "first": 23,
-     "all": 23
+     "all": 23,
+     "words@5": 1000
     }
    },
    "shared": {
@@ -5273,15 +5611,18 @@
    "single": {
     "bm25": {
      "first": 36,
-     "all": 36
+     "all": 36,
+     "words@5": 972
     },
     "dense": {
      "first": 41,
-     "all": 41
+     "all": 41,
+     "words@5": 1000
     },
     "hybrid": {
      "first": 28,
-     "all": 28
+     "all": 28,
+     "words@5": 1000
     }
    },
    "shared": {
@@ -5314,15 +5655,18 @@
    "single": {
     "bm25": {
      "first": 10,
-     "all": 42
+     "all": 42,
+     "words@5": 962
     },
     "dense": {
      "first": 2,
-     "all": 28
+     "all": 28,
+     "words@5": 1000
     },
     "hybrid": {
      "first": 4,
-     "all": 27
+     "all": 27,
+     "words@5": 962
     }
    },
    "shared": {
@@ -5354,15 +5698,18 @@
    "single": {
     "bm25": {
      "first": 2,
-     "all": 2
+     "all": 2,
+     "words@5": 1000
     },
     "dense": {
      "first": 1,
-     "all": 1
+     "all": 1,
+     "words@5": 933
     },
     "hybrid": {
      "first": 1,
-     "all": 1
+     "all": 1,
+     "words@5": 1000
     }
    },
    "shared": {
@@ -5394,15 +5741,18 @@
    "single": {
     "bm25": {
      "first": 15,
-     "all": 15
+     "all": 15,
+     "words@5": 1000
     },
     "dense": {
      "first": 5,
-     "all": 5
+     "all": 5,
+     "words@5": 940
     },
     "hybrid": {
      "first": 2,
-     "all": 2
+     "all": 2,
+     "words@5": 940
     }
    },
    "shared": {
@@ -5434,15 +5784,18 @@
    "single": {
     "bm25": {
      "first": 3,
-     "all": 3
+     "all": 3,
+     "words@5": 847
     },
     "dense": {
      "first": 1,
-     "all": 1
+     "all": 1,
+     "words@5": 1000
     },
     "hybrid": {
      "first": 1,
-     "all": 1
+     "all": 1,
+     "words@5": 915
     }
    },
    "shared": {
@@ -5475,15 +5828,18 @@
    "single": {
     "bm25": {
      "first": 11,
-     "all": 30
+     "all": 30,
+     "words@5": 891
     },
     "dense": {
      "first": 2,
-     "all": 3
+     "all": 3,
+     "words@5": 936
     },
     "hybrid": {
      "first": 2,
-     "all": 24
+     "all": 24,
+     "words@5": 851
     }
    },
    "shared": {
@@ -5515,15 +5871,18 @@
    "single": {
     "bm25": {
      "first": 1,
-     "all": 1
+     "all": 1,
+     "words@5": 976
     },
     "dense": {
      "first": 1,
-     "all": 1
+     "all": 1,
+     "words@5": 983
     },
     "hybrid": {
      "first": 1,
-     "all": 1
+     "all": 1,
+     "words@5": 885
     }
    },
    "shared": {
@@ -5555,15 +5914,18 @@
    "single": {
     "bm25": {
      "first": 44,
-     "all": 44
+     "all": 44,
+     "words@5": 921
     },
     "dense": {
      "first": 6,
-     "all": 6
+     "all": 6,
+     "words@5": 1000
     },
     "hybrid": {
      "first": 27,
-     "all": 27
+     "all": 27,
+     "words@5": 921
     }
    },
    "shared": {
@@ -5595,15 +5957,18 @@
    "single": {
     "bm25": {
      "first": 6,
-     "all": 6
+     "all": 6,
+     "words@5": 1000
     },
     "dense": {
      "first": 4,
-     "all": 4
+     "all": 4,
+     "words@5": 1000
     },
     "hybrid": {
      "first": 1,
-     "all": 1
+     "all": 1,
+     "words@5": 969
     }
    },
    "shared": {
@@ -5636,15 +6001,18 @@
    "single": {
     "bm25": {
      "first": 53,
-     "all": 413
+     "all": 413,
+     "words@5": 991
     },
     "dense": {
      "first": 16,
-     "all": 184
+     "all": 184,
+     "words@5": 876
     },
     "hybrid": {
      "first": 62,
-     "all": 107
+     "all": 107,
+     "words@5": 956
     }
    },
    "shared": {
@@ -5676,15 +6044,18 @@
    "single": {
     "bm25": {
      "first": 158,
-     "all": 158
+     "all": 158,
+     "words@5": 1000
     },
     "dense": {
      "first": 422,
-     "all": 422
+     "all": 422,
+     "words@5": 995
     },
     "hybrid": {
      "first": 262,
-     "all": 262
+     "all": 262,
+     "words@5": 753
     }
    },
    "shared": {
@@ -5716,15 +6087,18 @@
    "single": {
     "bm25": {
      "first": 4,
-     "all": 4
+     "all": 4,
+     "words@5": 919
     },
     "dense": {
      "first": 9,
-     "all": 9
+     "all": 9,
+     "words@5": 901
     },
     "hybrid": {
      "first": 2,
-     "all": 2
+     "all": 2,
+     "words@5": 919
     }
    },
    "shared": {
@@ -5757,15 +6131,18 @@
    "single": {
     "bm25": {
      "first": 1,
-     "all": 20
+     "all": 20,
+     "words@5": 832
     },
     "dense": {
      "first": 10,
-     "all": 92
+     "all": 92,
+     "words@5": 867
     },
     "hybrid": {
      "first": 2,
-     "all": 21
+     "all": 21,
+     "words@5": 895
     }
    },
    "shared": {
@@ -5798,15 +6175,18 @@
    "single": {
     "bm25": {
      "first": 12,
-     "all": 39
+     "all": 39,
+     "words@5": 1000
     },
     "dense": {
      "first": 14,
-     "all": 57
+     "all": 57,
+     "words@5": 716
     },
     "hybrid": {
      "first": 2,
-     "all": 20
+     "all": 20,
+     "words@5": 994
     }
    },
    "shared": {
@@ -5838,15 +6218,18 @@
    "single": {
     "bm25": {
      "first": 1,
-     "all": 1
+     "all": 1,
+     "words@5": 668
     },
     "dense": {
      "first": 2,
-     "all": 2
+     "all": 2,
+     "words@5": 668
     },
     "hybrid": {
      "first": 2,
-     "all": 2
+     "all": 2,
+     "words@5": 668
     }
    },
    "shared": {
@@ -5878,15 +6261,18 @@
    "single": {
     "bm25": {
      "first": 1,
-     "all": 1
+     "all": 1,
+     "words@5": 874
     },
     "dense": {
      "first": 1,
-     "all": 1
+     "all": 1,
+     "words@5": 1000
     },
     "hybrid": {
      "first": 1,
-     "all": 1
+     "all": 1,
+     "words@5": 859
     }
    },
    "shared": {
@@ -5918,15 +6304,18 @@
    "single": {
     "bm25": {
      "first": 1,
-     "all": 1
+     "all": 1,
+     "words@5": 874
     },
     "dense": {
      "first": 1,
-     "all": 1
+     "all": 1,
+     "words@5": 1000
     },
     "hybrid": {
      "first": 1,
-     "all": 1
+     "all": 1,
+     "words@5": 1000
     }
    },
    "shared": {
@@ -5958,15 +6347,18 @@
    "single": {
     "bm25": {
      "first": 2,
-     "all": 2
+     "all": 2,
+     "words@5": 899
     },
     "dense": {
      "first": 1,
-     "all": 1
+     "all": 1,
+     "words@5": 843
     },
     "hybrid": {
      "first": 1,
-     "all": 1
+     "all": 1,
+     "words@5": 843
     }
    },
    "shared": {
@@ -5998,15 +6390,18 @@
    "single": {
     "bm25": {
      "first": 2,
-     "all": 2
+     "all": 2,
+     "words@5": 899
     },
     "dense": {
      "first": 1,
-     "all": 1
+     "all": 1,
+     "words@5": 843
     },
     "hybrid": {
      "first": 1,
-     "all": 1
+     "all": 1,
+     "words@5": 843
     }
    },
    "shared": {
@@ -6038,15 +6433,18 @@
    "single": {
     "bm25": {
      "first": 32,
-     "all": 32
+     "all": 32,
+     "words@5": 734
     },
     "dense": {
      "first": 58,
-     "all": 58
+     "all": 58,
+     "words@5": 821
     },
     "hybrid": {
      "first": 20,
-     "all": 20
+     "all": 20,
+     "words@5": 1000
     }
    },
    "shared": {
@@ -6078,15 +6476,18 @@
    "single": {
     "bm25": {
      "first": 13,
-     "all": 13
+     "all": 13,
+     "words@5": 1000
     },
     "dense": {
      "first": 3,
-     "all": 3
+     "all": 3,
+     "words@5": 1000
     },
     "hybrid": {
      "first": 2,
-     "all": 2
+     "all": 2,
+     "words@5": 1000
     }
    },
    "shared": {
@@ -6119,15 +6520,18 @@
    "single": {
     "bm25": {
      "first": 14,
-     "all": 23
+     "all": 23,
+     "words@5": 1000
     },
     "dense": {
      "first": 19,
-     "all": 20
+     "all": 20,
+     "words@5": 852
     },
     "hybrid": {
      "first": 7,
-     "all": 10
+     "all": 10,
+     "words@5": 1000
     }
    },
    "shared": {
@@ -6159,15 +6563,18 @@
    "single": {
     "bm25": {
      "first": 9,
-     "all": 9
+     "all": 9,
+     "words@5": 973
     },
     "dense": {
      "first": 1,
-     "all": 1
+     "all": 1,
+     "words@5": 1000
     },
     "hybrid": {
      "first": 1,
-     "all": 1
+     "all": 1,
+     "words@5": 913
     }
    },
    "shared": {
@@ -6199,15 +6606,18 @@
    "single": {
     "bm25": {
      "first": 12,
-     "all": 12
+     "all": 12,
+     "words@5": 842
     },
     "dense": {
      "first": 26,
-     "all": 26
+     "all": 26,
+     "words@5": 1000
     },
     "hybrid": {
      "first": 9,
-     "all": 9
+     "all": 9,
+     "words@5": 1000
     }
    },
    "shared": {
@@ -6239,15 +6649,18 @@
    "single": {
     "bm25": {
      "first": 15,
-     "all": 15
+     "all": 15,
+     "words@5": 1000
     },
     "dense": {
      "first": 3,
-     "all": 3
+     "all": 3,
+     "words@5": 1000
     },
     "hybrid": {
      "first": 2,
-     "all": 2
+     "all": 2,
+     "words@5": 1000
     }
    },
    "shared": {
@@ -6279,15 +6692,18 @@
    "single": {
     "bm25": {
      "first": 1,
-     "all": 1
+     "all": 1,
+     "words@5": 942
     },
     "dense": {
      "first": 1,
-     "all": 1
+     "all": 1,
+     "words@5": 940
     },
     "hybrid": {
      "first": 1,
-     "all": 1
+     "all": 1,
+     "words@5": 940
     }
    },
    "shared": {
@@ -6319,15 +6735,18 @@
    "single": {
     "bm25": {
      "first": 6,
-     "all": 6
+     "all": 6,
+     "words@5": 764
     },
     "dense": {
      "first": 12,
-     "all": 12
+     "all": 12,
+     "words@5": 1000
     },
     "hybrid": {
      "first": 5,
-     "all": 5
+     "all": 5,
+     "words@5": 961
     }
    },
    "shared": {
@@ -6359,15 +6778,18 @@
    "single": {
     "bm25": {
      "first": 2,
-     "all": 2
+     "all": 2,
+     "words@5": 875
     },
     "dense": {
      "first": 1,
-     "all": 1
+     "all": 1,
+     "words@5": 754
     },
     "hybrid": {
      "first": 1,
-     "all": 1
+     "all": 1,
+     "words@5": 740
     }
    },
    "shared": {
@@ -6399,15 +6821,18 @@
    "single": {
     "bm25": {
      "first": 1,
-     "all": 1
+     "all": 1,
+     "words@5": 877
     },
     "dense": {
      "first": 12,
-     "all": 12
+     "all": 12,
+     "words@5": 957
     },
     "hybrid": {
      "first": 8,
-     "all": 8
+     "all": 8,
+     "words@5": 877
     }
    },
    "shared": {
@@ -6439,15 +6864,18 @@
    "single": {
     "bm25": {
      "first": 3,
-     "all": 3
+     "all": 3,
+     "words@5": 943
     },
     "dense": {
      "first": 12,
-     "all": 12
+     "all": 12,
+     "words@5": 957
     },
     "hybrid": {
      "first": 7,
-     "all": 7
+     "all": 7,
+     "words@5": 957
     }
    },
    "shared": {
@@ -6479,15 +6907,18 @@
    "single": {
     "bm25": {
      "first": 9,
-     "all": 9
+     "all": 9,
+     "words@5": 920
     },
     "dense": {
      "first": 10,
-     "all": 10
+     "all": 10,
+     "words@5": 957
     },
     "hybrid": {
      "first": 9,
-     "all": 9
+     "all": 9,
+     "words@5": 920
     }
    },
    "shared": {
@@ -6519,15 +6950,18 @@
    "single": {
     "bm25": {
      "first": 1,
-     "all": 1
+     "all": 1,
+     "words@5": 1000
     },
     "dense": {
      "first": 1,
-     "all": 1
+     "all": 1,
+     "words@5": 803
     },
     "hybrid": {
      "first": 1,
-     "all": 1
+     "all": 1,
+     "words@5": 831
     }
    },
    "shared": {
@@ -6560,15 +6994,18 @@
    "single": {
     "bm25": {
      "first": 3,
-     "all": 257
+     "all": 257,
+     "words@5": 835
     },
     "dense": {
      "first": 1,
-     "all": 132
+     "all": 132,
+     "words@5": 625
     },
     "hybrid": {
      "first": 8,
-     "all": 248
+     "all": 248,
+     "words@5": 647
     }
    },
    "shared": {
@@ -6600,15 +7037,18 @@
    "single": {
     "bm25": {
      "first": 375,
-     "all": 375
+     "all": 375,
+     "words@5": 846
     },
     "dense": {
      "first": 24,
-     "all": 24
+     "all": 24,
+     "words@5": 846
     },
     "hybrid": {
      "first": 72,
-     "all": 72
+     "all": 72,
+     "words@5": 834
     }
    },
    "shared": {
@@ -6641,15 +7081,18 @@
    "single": {
     "bm25": {
      "first": 12,
-     "all": 108
+     "all": 108,
+     "words@5": 1000
     },
     "dense": {
      "first": 1,
-     "all": 9
+     "all": 9,
+     "words@5": 1000
     },
     "hybrid": {
      "first": 4,
-     "all": 29
+     "all": 29,
+     "words@5": 1000
     }
    },
    "shared": {
@@ -6681,15 +7124,18 @@
    "single": {
     "bm25": {
      "first": 23,
-     "all": 23
+     "all": 23,
+     "words@5": 859
     },
     "dense": {
      "first": 5,
-     "all": 5
+     "all": 5,
+     "words@5": 723
     },
     "hybrid": {
      "first": 6,
-     "all": 6
+     "all": 6,
+     "words@5": 735
     }
    },
    "shared": {
@@ -6722,15 +7168,18 @@
    "single": {
     "bm25": {
      "first": 168,
-     "all": 172
+     "all": 172,
+     "words@5": 844
     },
     "dense": {
      "first": 65,
-     "all": 178
+     "all": 178,
+     "words@5": 988
     },
     "hybrid": {
      "first": 87,
-     "all": 190
+     "all": 190,
+     "words@5": 991
     }
    },
    "shared": {
@@ -6762,15 +7211,18 @@
    "single": {
     "bm25": {
      "first": 55,
-     "all": 55
+     "all": 55,
+     "words@5": 870
     },
     "dense": {
      "first": 24,
-     "all": 24
+     "all": 24,
+     "words@5": 939
     },
     "hybrid": {
      "first": 22,
-     "all": 22
+     "all": 22,
+     "words@5": 958
     }
    },
    "shared": {
@@ -6803,15 +7255,18 @@
    "single": {
     "bm25": {
      "first": 14,
-     "all": 81
+     "all": 81,
+     "words@5": 949
     },
     "dense": {
      "first": 2,
-     "all": 100
+     "all": 100,
+     "words@5": 1000
     },
     "hybrid": {
      "first": 3,
-     "all": 74
+     "all": 74,
+     "words@5": 1000
     }
    },
    "shared": {

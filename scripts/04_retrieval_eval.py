@@ -56,7 +56,9 @@ for i, q in enumerate(questions):
     for m in METHODS:
         res = index.search(doc, q["question"], k=None, method=m) if doc in index.rows else []
         rec["single"][m] = {"first": first_rank(res, lambda r: r["page"] in gold),
-                            "all": all_gold_rank(res, gold)}
+                            "all": all_gold_rank(res, gold),
+                            # what the RAG answerer is shown with this method
+                            "words@5": sum(len(r["text"].split()) for r in res[:5])}
         top = index.search_all(q["question"], k=max(CURVE), method=m)
         rec["shared"][m] = {"doc": first_rank(top, lambda r: r["doc"] == doc),
                             "company": first_rank(top, lambda r: doc_company.get(r["doc"]) == q["company"]),
@@ -134,10 +136,12 @@ unreachable = [r["id"] for r in per_q if not r["reachable"]]
 missing = sorted({q["doc"] for q in questions} - set(index.rows))
 per_doc = np.array([len(rows) for rows in index.rows.values()])
 words = np.array([len(c["text"].split()) for c in index.chunks])
+words_top5 = {m: float(np.mean(ranks("single", m, "words@5"))) for m in METHODS}
 filings_per_company = Counter(doc_company.values())
 
 out = {
     "n_questions": len(questions), "n_chunks": len(index.chunks), "n_filings": len(index.rows), "ks": list(KS),
+    "words_top5": words_top5,
     "single": single, "single_diff": single_diff, "random": random_baseline, "multi_page": multi_page,
     "by_qtype": by_qtype, "shared": shared, "shared_diff": shared_diff, "curves": curves,
     "unreachable": unreachable, "missing_docs": missing, "per_question": per_q,
@@ -189,8 +193,12 @@ with open(REPORTS / "retrieval.md", "w", encoding="utf-8") as fh:
         f"(overlapping windows of up to {words.max()} words that never cross a page, {words.mean():.0f} words on "
         f"average) from {len(index.rows)} filings, between {per_doc.min()} and {per_doc.max()} chunks per filing "
         f"(median {np.median(per_doc):.0f}).\n\n"
-        "A hit at k means at least one of the top k chunks is from a gold evidence page. k counts chunks, so k = 5 "
-        f"is about {5 * words.mean():.0f} words, the amount of context the RAG answerer gets. MRR is the mean of "
+        "A hit at k means at least one of the top k chunks is from a gold evidence page. k counts chunks. The top 5, "
+        "which is what the RAG answerer is shown, come to "
+        + ", ".join(f"{w:.0f} words on average with {m}" if j == 0 else f"{w:.0f} with {m}"
+                    for j, (m, w) in enumerate(words_top5.items()))
+        + f" (five chunks of average length would be {5 * words.mean():.0f}; the ones that come back are more "
+        "often full windows). MRR is the mean of "
         "1/rank of the first chunk from a gold page, 0 if none comes back. Intervals are 95% percentile bootstraps "
         "over questions (2,000 resamples); differences are paired, using the same resampled questions for both "
         "methods.\n\n"
