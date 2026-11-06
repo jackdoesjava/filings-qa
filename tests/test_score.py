@@ -1,3 +1,4 @@
+import json
 from collections import Counter
 
 import pytest
@@ -173,14 +174,25 @@ def test_numeric_golds_grade_themselves_correct():
 
 
 @pytest.mark.parametrize("content, want", [
-    ('{"reason": "same figure", "verdict": "Correct"}', "correct"),
-    ('{"reason": "misses one driver", "verdict": "partially correct"}', "incorrect"),
-    ('{"verdict": "refused", "reason": "says it is not in the filing"}', "refused"),
-    ('{"reason": "x", "verdict": "refused"', "refused"),  # cut off before the closing brace
+    ('{"reason": "same figure", "commits": true, "matches": true}', "correct"),
+    ('{"reason": "misses one driver", "commits": true, "matches": false}', "incorrect"),
+    ('{"reason": "says it is not in the filing", "commits": false, "matches": false}', "refused"),
+    # what the old one-verdict judge got wrong: an answer that does not commit can't be correct
+    ('{"reason": "says there is not enough information", "commits": false, "matches": true}', "refused"),
+    ('{"reason": "x", "commits": "False", "matches": "false"}', "refused"),  # strings instead of booleans
+    ('{"reason": "x", "commits": true, "matches": tr', "incorrect"),  # cut off
+    ('{"reason": "x", "commits": false, "matc', "refused"),
+    ('{"reason": "x", "verdict": "correct"}', "incorrect"),  # the old format is not trusted
     ("not json at all", "incorrect"),
 ])
 def test_parse_verdict(content, want):
     assert parse_verdict(content)["verdict"] == want
+
+
+def test_parse_verdict_keeps_both_answers_and_flags_unclear_replies():
+    out = parse_verdict('{"reason": "same figure", "commits": true, "matches": true}')
+    assert out == {"verdict": "correct", "reason": "same figure", "commits": True, "matches": True}
+    assert parse_verdict("not json at all")["reason"].startswith("unclear reply")
 
 
 TEXT_Q = {"id": "q1", "doc": "ACME_2022_10K", "question": "What drove the change in gross margin?",
@@ -196,9 +208,11 @@ ROW = {"config": "rag_hybrid", "model": "qwen2.5:3b", "answer": "Costs went up.\
 def fake_judge(monkeypatch, verdict="correct"):
     prompts = []
 
+    commits, matches = {"correct": (True, True), "incorrect": (True, False), "refused": (False, False)}[verdict]
+
     def ask(model, prompt):
         prompts.append(prompt)
-        return '{"reason": "fake", "verdict": "%s"}' % verdict
+        return json.dumps({"reason": "fake", "commits": commits, "matches": matches})
 
     monkeypatch.setattr(score, "_ask_json", ask)
     return prompts

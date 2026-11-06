@@ -17,7 +17,6 @@ import numpy as np
 from .llm import chat
 
 JUDGE = "qwen2.5:7b"
-VERDICTS = ("correct", "incorrect", "refused")
 NO_RETRIEVAL = ("closed_book", "oracle")
 
 
@@ -260,16 +259,21 @@ def looks_like_refusal(text: str) -> bool:
 # The fixed part of the judge's prompt goes first, as a system message, so that
 # Ollama can reuse it from one call to the next instead of processing it again.
 # On the CPU that saves about six seconds a verdict.
+#
+# The judge answers two yes/no questions and the verdict is worked out from them
+# (parse_verdict). An earlier version asked for the verdict itself, and on the
+# closed-book answers qwen2.5:7b sometimes wrote a reason saying the answer did
+# not commit to anything and then a verdict of "correct" anyway.
 JUDGE_SYSTEM = """You are checking answers to questions about company filings (10-Ks, 10-Qs, 8-Ks and earnings releases). Each message gives a question, a reference answer written by a financial analyst, sometimes the analyst's working, and an answer to check.
 
 Compare the answer with the reference answer only, not with what you know about the company. The answer was asked to end with a line starting "Answer:". Judge that final answer, and use any working above it only to understand what it means.
 
-Verdicts:
-- "correct": it agrees with the reference. Figures must match the reference allowing for rounding (about 1%); the same figure in the wrong unit or scale, such as millions for billions, is not correct. For a yes/no question the yes or no must match and the reasons must not contradict the reference. For an explanation or a list it must contain the main points of the reference; extra points are fine as long as they do not contradict it.
-- "incorrect": anything else, including partly right answers, answers that hedge between options and answers that give several conflicting figures.
-- "refused": it does not commit to an answer, for example it says the information is not available or cannot be worked out. If the reference itself says something does not exist or does not apply, an answer saying the same is "correct", not "refused".
+Answer two questions about it.
 
-Reply with JSON only, in this form: {"reason": "<one short sentence>", "verdict": "correct" or "incorrect" or "refused"}"""
+1. commits: does the answer commit to an answer to the question? It does not if it says the information is not available or not provided, that it cannot be worked out, or if it gives no answer at all. An answer that says something does not exist or does not apply has committed, if that is its answer.
+2. matches: does that answer agree with the reference answer? Figures must match the reference allowing for rounding (about 1%); the same figure in the wrong unit or scale, such as millions for billions, does not match. For a yes/no question the yes or no must match and the reasons must not contradict the reference. For an explanation or a list it must contain the main points of the reference; extra points are fine as long as they do not contradict it. Partly right answers, answers that hedge between options and answers that give several conflicting figures do not match. An answer that does not commit does not match.
+
+Reply with JSON only, in this form: {"reason": "<one short sentence>", "commits": true or false, "matches": true or false}"""
 
 
 def judge_prompt(question: str, gold: str, justification: str, pred: str) -> str:
@@ -292,19 +296,29 @@ def _ask_json(model: str, prompt: str) -> str:
     return reply["message"]["content"]
 
 
+def _flag(value) -> bool | None:
+    if isinstance(value, str):
+        value = {"true": True, "yes": True, "false": False, "no": False}.get(value.strip().lower())
+    return value if isinstance(value, bool) else None
+
+
 def parse_verdict(content: str) -> dict:
+    """refused if the answer does not commit, correct if it matches, incorrect
+    otherwise. A reply that is cut off or garbled counts against the answer."""
     try:
         out = json.loads(content)
-        verdict, reason = str(out.get("verdict", "")), str(out.get("reason", ""))
-    except (json.JSONDecodeError, AttributeError):
-        m = re.search(r'"verdict"\s*:\s*"([^"]*)"', content)
-        verdict, reason = (m.group(1) if m else ""), content
-    verdict = verdict.strip().lower()
-    if verdict not in VERDICTS:
-        # anything short of a clean verdict counts against the answer
-        reason = f"unclear verdict {verdict!r}: {reason}"
-        verdict = "refused" if verdict.startswith("refus") else "incorrect"
-    return {"verdict": verdict, "reason": reason.strip()[:500]}
+        if not isinstance(out, dict):
+            raise ValueError
+    except ValueError:
+        out = {k: m.group(1) for k in ("commits", "matches")
+               if (m := re.search(rf'"{k}"\s*:\s*"?(true|false)', content, re.I))}
+        out["reason"] = content
+    commits, matches = _flag(out.get("commits")), _flag(out.get("matches"))
+    reason = str(out.get("reason", "")).strip()
+    if commits is None or matches is None:
+        reason = f"unclear reply: {reason}"
+    verdict = "refused" if commits is False else "correct" if matches is True else "incorrect"
+    return {"verdict": verdict, "reason": reason[:500], "commits": commits, "matches": matches}
 
 
 def judge(question: str, gold: str, justification: str, pred: str, model: str = JUDGE) -> dict:
