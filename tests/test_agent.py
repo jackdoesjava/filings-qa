@@ -425,6 +425,13 @@ def test_prompts_fit_the_window():
     assert PROMPT_BUDGET + fa.NUM_PREDICT < fa.NUM_CTX
 
 
+def test_no_figure_in_any_prompt_for_the_model_to_copy():
+    # a worked example with real numbers gets copied out as the answer by the small models;
+    # the * 100 that turns a ratio into a percentage is the one number allowed
+    for text in (fa.SYSTEM, fa.AGENT_HINT, fa.FINAL_ASK, fa.DROPPED, json.dumps(TOOLS)):
+        assert not any(ch.isdigit() for ch in text.replace("* 100", "")), text
+
+
 # ---- llm.chat ---------------------------------------------------------------
 
 

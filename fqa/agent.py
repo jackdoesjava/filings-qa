@@ -28,7 +28,10 @@ NUM_PREDICT = 512
 PROMPT_BUDGET = NUM_CTX - NUM_PREDICT - 400
 
 # The examples are placeholders, not figures: given real ones, the small models
-# copied them out as the answer when the excerpts did not have it.
+# copied them out as the answer when the excerpts did not have it. The same went
+# for the calculate tool's description, which once had a worked example in it:
+# llama3.2:3b called the tool with that example's numbers in 34 of 150 questions.
+# No prompt text here has a digit in it (tests/test_agent.py checks).
 SYSTEM = (
     "You answer questions about a company's financial filing. Answer from the filing and show your "
     "working briefly. Finish with one line of the form \"Answer: <value with unit>\", for example "
@@ -61,8 +64,8 @@ TOOLS = [
         "type": "function",
         "function": {
             "name": "calculate",
-            "description": "Work out an arithmetic expression such as (2453 - 2108) / 2108 * 100. "
-            "Numbers, + - * / ** % and brackets only.",
+            "description": "Work out an arithmetic expression made of figures from the filing, for example "
+            "(new - old) / old * 100 with the two figures written in. Numbers, + - * / ** % and brackets only.",
             "parameters": {
                 "type": "object",
                 "properties": {"expression": {"type": "string", "description": "The expression to work out"}},
