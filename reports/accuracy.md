@@ -14,7 +14,7 @@ Gold answers that disagree with the filing are corrected before grading (05718: 
 | llama3.2:3b  | rag_bm25    |        150 |      150 | 22.0 [15.3, 28.7]     | 21.0 (n=62)         | 17.7 (n=62)       | 22.7 (n=88)        |
 | llama3.2:3b  | rag_dense   |        150 |      150 | 28.7 [22.0, 36.7]     | 41.9 (n=62)         | 33.9 (n=62)       | 19.3 (n=88)        |
 | llama3.2:3b  | rag_hybrid  |        150 |      150 | 28.7 [21.3, 36.0]     | 38.7 (n=62)         | 35.5 (n=62)       | 21.6 (n=88)        |
-| llama3.2:3b  | agent       |        150 |      150 | 16.0 [10.0, 22.0]     | 11.3 (n=62)         | 11.3 (n=62)       | 19.3 (n=88)        |
+| llama3.2:3b  | agent       |        150 |      150 | 16.0 [10.7, 22.0]     | 11.3 (n=62)         | 11.3 (n=62)       | 19.3 (n=88)        |
 | llama3.2:3b  | oracle      |        150 |      150 | 50.0 [42.0, 58.7]     | 51.6 (n=62)         | 33.9 (n=62)       | 48.9 (n=88)        |
 | qwen2.5:1.5b | closed_book |        150 |      150 | 10.0 [5.3, 15.3]      | 0.0 (n=62)          | 0.0 (n=62)        | 17.0 (n=88)        |
 | qwen2.5:1.5b | rag_bm25    |        150 |      150 | 24.0 [17.3, 30.7]     | 11.3 (n=62)         | 11.3 (n=62)       | 33.0 (n=88)        |
@@ -26,7 +26,7 @@ Gold answers that disagree with the filing are corrected before grading (05718: 
 | qwen2.5:3b   | rag_bm25    |        150 |      150 | 26.7 [19.3, 33.3]     | 22.6 (n=62)         | 19.4 (n=62)       | 29.5 (n=88)        |
 | qwen2.5:3b   | rag_dense   |        150 |      150 | 32.0 [24.7, 39.3]     | 37.1 (n=62)         | 25.8 (n=62)       | 28.4 (n=88)        |
 | qwen2.5:3b   | rag_hybrid  |        150 |      150 | 30.7 [23.3, 38.0]     | 30.6 (n=62)         | 27.4 (n=62)       | 30.7 (n=88)        |
-| qwen2.5:3b   | agent       |        150 |      150 | 21.3 [14.7, 28.7]     | 21.0 (n=62)         | 21.0 (n=62)       | 21.6 (n=88)        |
+| qwen2.5:3b   | agent       |        150 |      150 | 21.3 [15.3, 28.0]     | 21.0 (n=62)         | 21.0 (n=62)       | 21.6 (n=88)        |
 | qwen2.5:3b   | oracle      |        150 |      150 | 49.3 [42.0, 58.0]     | 43.5 (n=62)         | 35.5 (n=62)       | 53.4 (n=88)        |
 
 ## Paired differences
@@ -45,7 +45,7 @@ Same model, same questions, each config against closed_book, rag_bm25 and rag_hy
 | llama3.2:3b  | agent - rag_bm25         |         150 | -6.0 [-13.3, +1.3]            |
 | llama3.2:3b  | oracle - rag_bm25        |         150 | +28.0 [+18.7, +37.3]          |
 | llama3.2:3b  | rag_dense - rag_hybrid   |         150 | +0.0 [-7.3, +8.0]             |
-| llama3.2:3b  | agent - rag_hybrid       |         150 | -12.7 [-20.7, -4.7]           |
+| llama3.2:3b  | agent - rag_hybrid       |         150 | -12.7 [-20.7, -5.3]           |
 | llama3.2:3b  | oracle - rag_hybrid      |         150 | +21.3 [+12.7, +30.7]          |
 | qwen2.5:1.5b | rag_bm25 - closed_book   |         150 | +14.0 [+7.3, +20.7]           |
 | qwen2.5:1.5b | rag_dense - closed_book  |         150 | +13.3 [+6.7, +20.7]           |
@@ -62,14 +62,14 @@ Same model, same questions, each config against closed_book, rag_bm25 and rag_hy
 | qwen2.5:3b   | rag_bm25 - closed_book   |         150 | +12.0 [+4.0, +19.3]           |
 | qwen2.5:3b   | rag_dense - closed_book  |         150 | +17.3 [+8.0, +26.7]           |
 | qwen2.5:3b   | rag_hybrid - closed_book |         150 | +16.0 [+6.7, +25.3]           |
-| qwen2.5:3b   | agent - closed_book      |         150 | +6.7 [-2.0, +15.3]            |
+| qwen2.5:3b   | agent - closed_book      |         150 | +6.7 [-2.0, +16.0]            |
 | qwen2.5:3b   | oracle - closed_book     |         150 | +34.7 [+26.0, +44.0]          |
 | qwen2.5:3b   | rag_dense - rag_bm25     |         150 | +5.3 [-2.0, +12.7]            |
 | qwen2.5:3b   | rag_hybrid - rag_bm25    |         150 | +4.0 [-2.7, +10.7]            |
-| qwen2.5:3b   | agent - rag_bm25         |         150 | -5.3 [-12.7, +2.7]            |
+| qwen2.5:3b   | agent - rag_bm25         |         150 | -5.3 [-13.3, +2.7]            |
 | qwen2.5:3b   | oracle - rag_bm25        |         150 | +22.7 [+14.0, +32.0]          |
 | qwen2.5:3b   | rag_dense - rag_hybrid   |         150 | +1.3 [-5.3, +8.0]             |
-| qwen2.5:3b   | agent - rag_hybrid       |         150 | -9.3 [-16.7, -1.3]            |
+| qwen2.5:3b   | agent - rag_hybrid       |         150 | -9.3 [-17.3, -1.3]            |
 | qwen2.5:3b   | oracle - rag_hybrid      |         150 | +18.7 [+9.3, +28.7]           |
 
 ## By question type
@@ -107,7 +107,7 @@ Per question, summed over every model call it took. Cached is the part of the pr
 | llama3.2:3b  | rag_bm25    |         150 |               1.0 |              0.0 |              1551.8 |        139.1 |               110.2 |             210.2 |              22.2 |                11.8 |                   8.8 |
 | llama3.2:3b  | rag_dense   |         150 |               1.0 |              0.0 |              1707.6 |        149.9 |                91.8 |             210.7 |              21.6 |                11.9 |                   9.4 |
 | llama3.2:3b  | rag_hybrid  |         150 |               1.0 |              0.0 |              1644.2 |        131.3 |               102.5 |             210.5 |              21.1 |                12.2 |                   9.5 |
-| llama3.2:3b  | agent       |         150 |               2.0 |              1.2 |              1775.4 |        499.0 |               150.8 |             202.5 |              24.7 |                12.6 |                  11.7 |
+| llama3.2:3b  | agent       |         150 |               2.0 |              1.2 |              1781.5 |        499.3 |               153.8 |             202.4 |              24.8 |                12.8 |                  11.7 |
 | llama3.2:3b  | oracle      |         150 |               1.0 |              0.0 |              1001.7 |        197.1 |                99.4 |             210.2 |              23.8 |                 8.1 |                   6.6 |
 | qwen2.5:1.5b | closed_book |         150 |               1.0 |              0.0 |               161.5 |        110.1 |                22.0 |             334.3 |              63.0 |                 0.6 |                   0.4 |
 | qwen2.5:1.5b | rag_bm25    |         150 |               1.0 |              0.0 |              1719.0 |        128.7 |                21.6 |             445.2 |              59.7 |                 4.0 |                   3.8 |
@@ -119,7 +119,7 @@ Per question, summed over every model call it took. Cached is the part of the pr
 | qwen2.5:3b   | rag_bm25    |         150 |               1.0 |              0.0 |              1719.0 |        133.5 |                97.0 |             208.8 |              32.5 |                10.6 |                   9.5 |
 | qwen2.5:3b   | rag_dense   |         150 |               1.0 |              0.0 |              1990.9 |        146.3 |               111.6 |             206.9 |              32.0 |                12.5 |                  11.7 |
 | qwen2.5:3b   | rag_hybrid  |         150 |               1.0 |              0.0 |              1871.4 |        123.6 |               112.7 |             207.3 |              32.2 |                12.0 |                  10.5 |
-| qwen2.5:3b   | agent       |         150 |               2.1 |              1.1 |              2920.5 |       1099.1 |               187.8 |             196.9 |              32.5 |                15.2 |                  13.5 |
+| qwen2.5:3b   | agent       |         150 |               2.1 |              1.1 |              2921.0 |       1097.0 |               185.3 |             197.0 |              32.5 |                15.2 |                  13.5 |
 | qwen2.5:3b   | oracle      |         150 |               1.0 |              0.0 |              1176.2 |        241.0 |               107.6 |             205.9 |              32.5 |                 7.9 |                   6.7 |
 
 ## Why answers were wrong
@@ -149,14 +149,14 @@ Each wrong answer gets the first label that applies. Unit error: the right figur
 
 ## Judge against the automatic grade
 
-The judge also marked 1116 numerically graded answers, where the automatic grade is the reference. It agrees on 93.3 [90.6, 95.6]% of them (Cohen's kappa 0.80, correct versus not). Of the 26 unit errors it accepted 9. Agreement here is the best evidence there is for trusting its verdicts on the other questions, which are harder to judge. The same question comes up once per config and model, so the interval resamples questions, each with all of its answers. Kappa is 0 when either of the two gives every answer the same mark, and blank when both mark every answer correct or both mark every answer wrong.
+The judge also marked 1116 numerically graded answers, where the automatic grade is the reference. It agrees on 93.5 [90.9, 95.8]% of them (Cohen's kappa 0.81, correct versus not). Of the 26 unit errors it accepted 9. Agreement here is the best evidence there is for trusting its verdicts on the other questions, which are harder to judge. The same question comes up once per config and model, so the interval resamples questions, each with all of its answers. Kappa is 0 when either of the two gives every answer the same mark, and blank when both mark every answer correct or both mark every answer wrong.
 
 | answers     |    n |   agreement % |   Cohen's kappa |   both correct |   both wrong |   judge accepts, grader rejects |   judge rejects, grader accepts |
 |:------------|-----:|--------------:|----------------:|---------------:|-------------:|--------------------------------:|--------------------------------:|
-| all         | 1116 |          93.3 |            0.80 |            203 |          838 |                              34 |                              41 |
+| all         | 1116 |          93.5 |            0.81 |            203 |          840 |                              32 |                              41 |
 | closed_book |  186 |          98.4 |            0.66 |              3 |          180 |                               2 |                               1 |
 | rag_bm25    |  186 |          94.6 |            0.82 |             30 |          146 |                               6 |                               4 |
 | rag_dense   |  186 |          89.2 |            0.75 |             48 |          118 |                               9 |                              11 |
 | rag_hybrid  |  186 |          91.9 |            0.80 |             45 |          126 |                               6 |                               9 |
-| agent       |  186 |          96.2 |            0.84 |             21 |          158 |                               7 |                               0 |
+| agent       |  186 |          97.3 |            0.88 |             21 |          160 |                               5 |                               0 |
 | oracle      |  186 |          89.2 |            0.77 |             56 |          110 |                               4 |                              16 |
