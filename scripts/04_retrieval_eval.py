@@ -26,7 +26,7 @@ from fqa.stats import bootstrap_ci, paired_diff_ci
 
 KS = (1, 3, 5, 10)
 CURVE = range(1, 21)
-PAIRS = (("hybrid", "bm25"), ("dense", "bm25"))
+PAIRS = (("hybrid", "bm25"), ("dense", "bm25"), ("hybrid", "dense"))
 SHARED = {"doc": "right filing", "company": "right company", "page": "gold page"}
 
 questions = load_questions()
