@@ -3,17 +3,36 @@ rag_hybrid for the same model (same retriever, same k, but the question itself
 as the query). Writes reports/agent.md. No model calls."""
 
 import json
+import re
 import sys
 from collections import Counter
 
 import numpy as np
 import pandas as pd
 
+from fqa.agent import arg
 from fqa.data import REPORTS, RESULTS, load_questions
-from fqa.score import retrieval_hit
+from fqa.score import has_answer_line, retrieval_hit
 from fqa.stats import paired_diff_ci
 
 ANSWERS = RESULTS / "answers"
+# the first runs, made while the calculate tool's description had a worked example
+# with real numbers in it, (2453 - 2108) / 2108 * 100
+FIRST_RUNS = RESULTS / "agent_tool_example"
+
+
+def expression(call):
+    return arg(call["arguments"], "expression")
+
+
+def copies_placeholder(call):
+    # the description's (new - old) / old * 100, word for word
+    return call["name"] == "calculate" and bool(re.search(r"\bnew\b", expression(call))) \
+        and bool(re.search(r"\bold\b", expression(call)))
+
+
+def copies_example(call):
+    return call["name"] == "calculate" and "2453" in expression(call) and "2108" in expression(call)
 
 
 def read(path):
@@ -25,7 +44,7 @@ def summary(model, agent, rag, questions):
     ids = [i for i in agent if i in rag and i in questions]
     searches = [[c for c in agent[i]["tool_calls"] if c["name"] == "search"] for i in ids]
     calcs = [c for i in ids for c in agent[i]["tool_calls"] if c["name"] == "calculate"]
-    first = [s[0]["arguments"].get("query", "") for s in searches if s]
+    first = [arg(s[0]["arguments"], "query") for s in searches if s]
     hit_agent = np.array([float(retrieval_hit(questions[i], agent[i])) for i in ids])
     hit_rag = np.array([float(retrieval_hit(questions[i], rag[i])) for i in ids])
     d, lo, hi = paired_diff_ci(hit_agent, hit_rag)
@@ -44,8 +63,10 @@ def summary(model, agent, rag, questions):
         "difference, points [95% CI]": f"{100 * d:+.1f} [{100 * lo:+.1f}, {100 * hi:+.1f}]",
         "calculate calls": len(calcs),
         "calculate errors": sum(str(c["result"]).startswith("Error") for c in calcs),
+        "questions where calculate got the description's placeholder":
+            sum(any(copies_placeholder(c) for c in agent[i]["tool_calls"]) for i in ids),
         "tool calls written as text": sum(c["from_text"] for i in ids for c in agent[i]["tool_calls"]),
-        "replies with no Answer line": sum("answer:" not in agent[i]["answer"].lower() for i in ids),
+        "replies with no Answer line": sum(not has_answer_line(agent[i]["answer"]) for i in ids),
         "model calls / q": np.mean([agent[i]["steps"] for i in ids]),
     }
     return {k: f"{v:.1f}" if isinstance(v, float) else v for k, v in row.items()}
@@ -70,6 +91,18 @@ def main():
            "paired over the same questions (95% bootstrap interval). An error from calculate is a message sent "
            "back to the model, such as a variable name in the expression; the model can try again.\n",
            table.to_markdown() + "\n"]
+    first = []
+    for path in sorted(FIRST_RUNS.glob("agent__*.jsonl")):
+        runs = read(path)
+        first.append({"model": next(iter(runs.values()))["model"], "questions": len(runs),
+                      "calculate called with the example's numbers":
+                          sum(any(copies_example(c) for c in r["tool_calls"]) for r in runs.values())})
+    if first:
+        out += ["## The first runs\n",
+                "The first agent runs, in results/agent_tool_example/, were made while the calculate tool's "
+                "description had a worked example with real numbers in it, (2453 - 2108) / 2108 * 100. They "
+                "were replaced by the runs above once it was clear the small models were copying it.\n",
+                pd.DataFrame(first).to_markdown(index=False) + "\n"]
     REPORTS.mkdir(parents=True, exist_ok=True)
     (REPORTS / "agent.md").write_text("\n".join(out), encoding="utf-8", newline="\n")
     print(f"wrote {REPORTS / 'agent.md'}")
